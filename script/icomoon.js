@@ -136,6 +136,7 @@ $dplMdlDeploy.on('click', () => {
       }
     });
     let preferences = Object.assign({
+      gridSize: data.preferences.gridSize,
       fontPref: data.preferences.fontPref,
       imagePref: data.preferences.imagePref
     }, omit(data.metadata, ['lastOpened']));
