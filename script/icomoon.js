@@ -183,7 +183,7 @@ var init = () => {
       let iconSets = data.iconSets.map((iconset) => {
         iconset.icons.forEach((icon, index) => {
           let iconData = Object.assign(
-            omit(icon, ['attrs', 'colorPermutations', 'grid', 'isMulticolor', 'isMulticolor2']),
+            omit(icon, ['colorPermutations', 'grid', 'isMulticolor', 'isMulticolor2']),
             omit(iconset.selection[index], ['id', 'prevSize', 'tempChar', 'codes']),
             { iconset: iconset.id }
           )
@@ -201,10 +201,6 @@ var init = () => {
         fontPref: data.preferences.fontPref,
         imagePref: data.preferences.imagePref
       }, omit(data.metadata, ['lastOpened']));
-
-      // preferences = JSON.stringify(preferences);
-      // iconSets = JSON.stringify(iconSets);
-      // icons = JSON.stringify(icons);
 
       $.ajax({
         url: 'http://10.1.149.160:8001/api/icons/deploy',

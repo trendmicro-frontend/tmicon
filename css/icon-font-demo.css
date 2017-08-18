@@ -6,6 +6,15 @@ body {
   line-height: 1.5;
   color: #555;
   background: #fff;
+  left: 0;
+  right: 0;
+  height: 100%;
+  position: absolute;
+}
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  display: inline-block;
 }
 h1 {
   font-size: 1.5em;
@@ -139,6 +148,9 @@ p {
   line-height: 1.5;
   height: 1.5em;
 }
+.test-drive {
+  margin-bottom: 80px;
+}
 #testDrive {
   display: block;
   padding-top: 24px;
@@ -151,3 +163,9 @@ p {
   font-size: 16px;
 }
 
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
