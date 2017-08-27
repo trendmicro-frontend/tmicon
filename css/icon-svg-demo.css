@@ -48,6 +48,7 @@ input:focus {
   font-size: 16px;
   margin-right: 1.5em;
   float: left;
+  width: 15em;
 }
 svg {
   color: #222;
