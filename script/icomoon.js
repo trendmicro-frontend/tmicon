@@ -1,28 +1,15 @@
-var XHR = window.XMLHttpRequest;
-window.XMLHttpRequest = function () {
-  var xhr = new XHR();
-  xhr.onreadystatechange = function () {
-      if(xhr.readyState === XHR.DONE && xhr.status === 200) {
-        //console.log(xhr);
-          //console.log(xhr.responseText);
-      }
-  };
-  return xhr;
-};
-
-var main = () => {
-  if (!window.$) {
-    setTimeout(() => {
-      main();
-    }, 20);
-  } else {
-    init();
-  }
-}
+var main = () => !window.$ ? setTimeout(() => main(), 20) : init();
 var init = () => {
   const style = `
-    .glyph { padding-left: 10px; padding-right: 54px; }
+    .glyph { padding-left: 10px; padding-right: 10px; margin-right: 10px; min-width: 220px; }
     .glyph.unit.not-ready { background: #fff; }
+    [ng-click="editGlyph(glyph)"] {
+      pointer-events: none;
+    }
+    .glyph:hover .glyph-button {
+      display: none;
+    }
+    .set .miFileZone + h1 > label { pointer-events: none; }
     .w-main .sep-right.selected .btn4 { width: 30%; }
     .deploy-button { width: 40% !important; margin-left: 46px; background: #3c5875; color: #fff; }
     .overlay.hide { display:none; }
@@ -35,14 +22,34 @@ var init = () => {
     .unitRight.size1of2, [ng-click="showUniCharts(glyph)"] { display: none !important; }
   `;
   $(`<style>${style}</style>`).appendTo('head');
+
   let $window = $(window), $document = $(document);
+  let XHR = window.XMLHttpRequest;
+  let _XMLHttpRequest = window.XMLHttpRequest = function () {
+    let xhr = new XHR();
+    let url;
+    xhr.onreadystatechange = function () {
+        if(xhr.readyState === XHR.HEADERS_RECEIVED) {
+          url = xhr.responseURL;
+          !_XMLHttpRequest.reqs[url] ? _XMLHttpRequest.reqs[url] = [xhr] : _XMLHttpRequest.reqs[url].push(xhr);
+        }
+        if(xhr.readyState === XHR.DONE && xhr.status === 200) {
+          _XMLHttpRequest.reqs[url].splice(_XMLHttpRequest.reqs[url].indexOf(xhr), 1);
+          if (_XMLHttpRequest.reqs[url].length === 0) $document.trigger(`complete:${url}`);
+        }
+    };
+    return xhr;
+  };
+  window.XMLHttpRequest.reqs = {};
+  window.XMLHttpRequest.listen = (type, url, callback) => $document.on(`${type}:${url}`, callback);
   var $dplMdl,
     $dplMdlWindow,
     $dplMdlClose,
     $dplMdlCancel,
     $dplMdlDeploy,
     $dplMdlContent,
-    $dplButton;
+    $dplButton = $('<button class="btn4 deploy-button"><span>Deploy Icons</span></button>');
+
   $dplMdl = $('<div class="overlay hide"></div>').append(
     $dplMdlWindow = $('<div class="overlayWindow overlayWindow-large m2-size3of4 m1-size4of5"><h3>Deploy Icons</h3></div>')
       .append(
@@ -55,26 +62,24 @@ var init = () => {
           )
       )
   ).appendTo('body');
+
   const dplMdlShow = (e) => $dplMdl.removeClass('hide');
   const dplMdlHide = (e) => $dplMdl.addClass('hide');
   const appendDeployIcon = (callback) => {
     let tab = $('.w-main span.sep-right.selected');
-    tab.length === 0 ? setTimeout(() => { appendDeployIcon(callback); }, 100) : tab.append($dplButton = $('<button class="btn4 deploy-button"><span>Deploy Icons</span></button>')) && callback();
+    tab.length === 0 ? setTimeout(() => { appendDeployIcon(callback); }, 100) : tab.append($dplButton.attr('disabled', true)) && callback();
   }
   const setDeployState = () => {
     return getIndexedDB((data) => {
-      let selectedCont = parseInt($('.w-main a[href="#/select"] .m1-hidden').text().match(/[\d]+/gi)[0], 10);
+      let selectedCont = parseInt($('.bar-btm .w-main').children().eq(1).find('.m1-hidden').text().match(/[\d]+/gi)[0], 10);
       let total = data.iconSets.reduce((acc, set) => acc + set.selection.length, 0);
       let enable = { disabled: false, title: null };
       let disable = { disabled: true, title: 'You can not deploy icons to the Style Portal until whole icons are seleted!' };
       selectedCont !== total ? $dplButton.attr(disable) : $dplButton.attr(enable);
     }),
     true;
-  }
-  const disableButon = () => {
-    $('#pref').attr('disabled', true);
-    $('[ng-click="visiblePanels.reset = true"]').attr('disabled', true);
-  }
+  };
+  const disableButon = () => $('#pref, [ng-click="visiblePanels.reset = true"], [ng-click="visiblePanels.fontPref = true"]').attr('disabled', true);
   const initialHackSite = () => setDeployState() && disableButon();
   const getIndexedDB = (callback) => {
     let request = indexedDB.open("IDBWrapper-storage");
@@ -93,7 +98,7 @@ var init = () => {
         }
       };
     };
-  }
+  };
   const omit = (obj, keys) => Object.keys(obj).filter((key) => keys.indexOf(key) < 0).reduce((newObj, key) => Object.assign(newObj, { [key]: obj[key] }), {});
   $document
     .on('click', '[ng-click="removeGlyph(glyph)"]', () => setDeployState())
@@ -166,6 +171,46 @@ var init = () => {
           $dplMdlContent.text('').append($wording);
         });
       });
+    })
+    .on('focus', '[contenteditable]', function() {
+      var $this = $(this);
+      $this.data('before', $this.html());
+      return $this;
+    })
+    .on('blur', '[contenteditable]', function() {
+        var $this = $(this);
+        if ($this.data('before') !== $this.html()) {
+            $this.data('before', $this.html());
+            $this.trigger('change');
+        }
+        return $this;
+    })
+    .on('mousedown', 'mi-box', (e) => {
+      if ($('[class*="embossed"]').is(`[ng-click="mode = 'delete'"]`) === true) {
+        $dplButton.attr('disabled', true);
+      }
+      if ($('[class*="embossed"]').is(`[ng-click="mode = 'move'"]`) === true) {
+        console.log(this);
+        $dplButton.attr('disabled', true);
+      }
+    })
+    .on('change', `
+        .glyph input,
+        [contenteditable],
+        [ng-model="metadata.name"],
+        [ng-model="metadata.designer"],
+        [ng-click="moveSet(set, -1)"],
+        [ng-click="moveSet(set, 1)"],
+        [ng-click="selectAllNone($index, true)"],
+        [ng-click="selectAllNone($index, false)"],
+        [ng-click="copySelectionToSet($index, true)"],
+        [ng-click="removeSet($index)"]
+      `, (e) => {
+        $dplButton.attr('disabled', true);
+      }
+    );
+    window.XMLHttpRequest.listen('complete', 'https://i.icomoon.io/storesession', () => {
+      setDeployState();
     });
   $dplMdlClose.add($dplMdlCancel).on('click', dplMdlHide);
   $dplMdlDeploy.on('click', () => {
@@ -183,7 +228,7 @@ var init = () => {
       let iconSets = data.iconSets.map((iconset) => {
         iconset.icons.forEach((icon, index) => {
           let iconData = Object.assign(
-            omit(icon, ['colorPermutations', 'grid', 'isMulticolor', 'isMulticolor2']),
+            omit(icon, ['colorPermutations', 'isMulticolor', 'isMulticolor2']),
             omit(iconset.selection[index], ['id', 'prevSize', 'tempChar', 'codes']),
             { iconset: iconset.id }
           )
