@@ -105,7 +105,7 @@ var init = () => {
     .on('click', '.sep-right .deploy-button', (e) => {
       dplMdlShow();
       $.ajax({
-        url: 'http://10.1.149.160:8001/api/icons/info',
+        url: 'http://style-portal.tw.trendnet.org:9001/api/icons/info',
         dataType: 'json'
       })
       .done((info) => {
@@ -248,7 +248,7 @@ var init = () => {
       }, omit(data.metadata, ['lastOpened']));
 
       $.ajax({
-        url: 'http://10.1.149.160:8001/api/icons/deploy',
+        url: 'http://style-portal.tw.trendnet.org:9001/api/icons/deploy',
         method: 'post',
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify({
