@@ -225,7 +225,7 @@ var init = () => {
       $pref.add($dplMdlDeploy).attr('disabled', true);
       data.preferences.fontPref.metadata.minorVersion = userMiNumber;
       let icons = [];
-      let iconSets = data.iconSets.map((iconset) => {
+      let iconsets = data.iconSets.map((iconset) => {
         iconset.icons.forEach((icon, index) => {
           let iconData = Object.assign(
             omit(icon, ['colorPermutations', 'isMulticolor', 'isMulticolor2']),
@@ -253,12 +253,15 @@ var init = () => {
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify({
           preferences,
-          iconSets,
+          iconsets,
           icons
         })
       })
       .done((data) => {
         $dplMdlContent.children().append('<span class="fs6-fixed ff0 mls fgc4"><i class="mrs icon-check fgc-success"></i>Deployed!</span>');
+        var openStylePortal = $('<a href="http://style-portal:9003/#/styles/minimalism/latest/aca6f1ac-609a-431c-8fca-739b6c060299" target="_blank">Open Review Site!</a>');
+        $('body').append(openStylePortal);
+        openStylePortal[0].click();
       })
       .fail((req, status, error) => {
         alert( "Something fail!" );
