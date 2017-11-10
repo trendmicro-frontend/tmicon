@@ -1,6 +1,15 @@
 var main = () => !window.$ ? setTimeout(() => main(), 20) : init();
 var init = () => {
   const style = `
+    @keyframes spinner {
+      0% {
+        transform: rotate(0deg);
+      }
+      
+      100% {
+        transform: rotate(360deg);
+      }
+    }
     .glyph { padding-left: 10px; padding-right: 10px; margin-right: 10px; min-width: 220px; }
     .glyph.unit.not-ready { background: #fff; }
     [ng-click="editGlyph(glyph)"] {
@@ -8,6 +17,25 @@ var init = () => {
     }
     .glyph:hover .glyph-button {
       display: none;
+    }
+    .loader {
+      display: inline-block;
+      margin: 0 auto;
+      position: relative;
+      text-indent: -9999em;
+      vertical-align: top;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      border-left-color: rgba(0, 0, 0, 0.8);
+      transform: translateZ(0);
+      animation: spinner 1s infinite linear;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+    }
+    .deploy-button .loader {
+      border-color: rgba(255, 255, 255, 0.4);
+      border-left-color: #fff;    
     }
     .set .miFileZone + h1 > label { pointer-events: none; }
     .w-main .sep-right.selected .btn4 { width: 30%; }
@@ -17,13 +45,14 @@ var init = () => {
     .overlayWindow h3 { position: absolute; top: 0; left: 0; margin: 0.4em 1.2em; }
     .action-buttons { text-align: right; position: relative; bottom: -20px; }
     .overlayWindow button { height: 32px;}
-    .overlayWindow .deploy-button { margin-left: 12px; width: 120px !important; }
+    .overlayWindow .deploy-button { margin-left: 12px; width: auto !important; line-height: 20px; }
     .unit.size1of2 { width: 100%; }
     .unitRight.size1of2, [ng-click="showUniCharts(glyph)"] { display: none !important; }
   `;
   $(`<style>${style}</style>`).appendTo('head');
 
   let $window = $(window), $document = $(document);
+  let $loader = $('<span class="loader loader-small"></span>');
   let XHR = window.XMLHttpRequest;
   let _XMLHttpRequest = window.XMLHttpRequest = function () {
     let xhr = new XHR();
@@ -153,10 +182,10 @@ var init = () => {
             return acc;
           }, []);
           if (!newIcons.length && !removedIcons.length && !modifiedIcons.length ) {
-            $dplMdlDeploy.attr('disabled', true);
+            $dplMdlDeploy.hide();
             $wording.append('You haven\'t changed anything yet!');
           } else {
-            $dplMdlDeploy.attr('disabled', false);
+            $dplMdlDeploy.show().attr('disabled', false);
             let latestMjVersion = oPreferences.fontPref ? oPreferences.fontPref.metadata.majorVersion : data.preferences.fontPref.metadata.majorVersion;
             let latestMiVersion = oPreferences.fontPref ? (oPreferences.fontPref.metadata.minorVersion + 1) : data.preferences.fontPref.metadata.minorVersion;
             let contents = [];
@@ -214,11 +243,13 @@ var init = () => {
     });
   $dplMdlClose.add($dplMdlCancel).on('click', dplMdlHide);
   $dplMdlDeploy.on('click', () => {
+    $dplMdlDeploy.prepend($loader);
+    let $deployMiVersion = $('#deployMiVersion');
     getIndexedDB((data) => {
       let $pref = $('#pref');
       $pref.attr('disabled', false).trigger('click');
       let $closePref = $('button[ng-click="visiblePanels.fontPref = false"]');
-      let userMiNumber = parseInt($('#deployMiVersion').val(), 10);
+      let userMiNumber = parseInt($deployMiVersion.val(), 10);
       let $miNumber = $('mi-number[model="fontPref.metadata.minorVersion"] input').val(userMiNumber);
       angular.element($miNumber[0]).triggerHandler('change');
       angular.element($closePref[0]).triggerHandler('click');
@@ -247,6 +278,7 @@ var init = () => {
         imagePref: data.preferences.imagePref
       }, omit(data.metadata, ['lastOpened']));
 
+      $deployMiVersion.add($dplMdlCancel).add($dplMdlClose).attr('disabled', true);      
       $.ajax({
         url: 'http://style-portal.tw.trendnet.org:9001/api/icons/deploy',
         method: 'post',
@@ -258,10 +290,13 @@ var init = () => {
         })
       })
       .done((data) => {
+        $loader.remove();
+        $deployMiVersion.add($dplMdlCancel).add($dplMdlClose).attr('disabled', false);  
         $dplMdlContent.children().append('<span class="fs6-fixed ff0 mls fgc4"><i class="mrs icon-check fgc-success"></i>Deployed!</span>');
         var openStylePortal = $('<a href="http://style-portal:9003/#/styles/minimalism/latest/aca6f1ac-609a-431c-8fca-739b6c060299" target="_blank">Open Review Site!</a>');
         $('body').append(openStylePortal);
         openStylePortal[0].click();
+        openStylePortal.remove();
       })
       .fail((req, status, error) => {
         alert( "Something fail!" );
