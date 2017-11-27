@@ -304,7 +304,7 @@ var init = () => {
         var openStylePortal = $('<a href="http://style-portal:9003/#/styles/minimalism/latest/1811bd76-57b6-4fb9-930f-b6899313fa41" target="_blank">Open Review Site!</a>');
         $('body').append(openStylePortal);
         setTimeout(function () {
-          document.location.reload();
+          document.location.href = 'https://icomoon.io/app/#/select/font';
           openStylePortal[0].click();
           openStylePortal.remove();
         }, 2000);
