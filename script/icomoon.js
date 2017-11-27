@@ -134,7 +134,8 @@ var init = () => {
     .on('click', '.sep-right .deploy-button', (e) => {
       dplMdlShow();
       $.ajax({
-        url: 'http://style-portal.tw.trendnet.org:9001/api/icons/info',
+        // url: 'http://style-portal.tw.trendnet.org:9001/api/icons/info',
+        url: 'http://localhost:8001/api/icons/info',
         dataType: 'json'
       })
       .done((info) => {
@@ -241,9 +242,15 @@ var init = () => {
     window.XMLHttpRequest.listen('complete', 'https://i.icomoon.io/storesession', () => {
       setDeployState();
     });
+    window.XMLHttpRequest.listen('complete', 'https://i.icomoon.io/getsessiontime', () => {
+      if ($loader.is(':visible')) {
+        deploy();
+      }
+    });
   $dplMdlClose.add($dplMdlCancel).on('click', dplMdlHide);
-  $dplMdlDeploy.on('click', () => {
-    $dplMdlDeploy.prepend($loader);
+
+  function deploy() {
+    $('.bar-btm .w-main .sep-right')[0].click();
     let $deployMiVersion = $('#deployMiVersion');
     getIndexedDB((data) => {
       let $pref = $('#pref');
@@ -280,7 +287,8 @@ var init = () => {
 
       $deployMiVersion.add($dplMdlCancel).add($dplMdlClose).attr('disabled', true);      
       $.ajax({
-        url: 'http://style-portal.tw.trendnet.org:9001/api/icons/deploy',
+        // url: 'http://style-portal.tw.trendnet.org:9001/api/icons/deploy',
+        url: 'http://localhost:8001/api/icons/deploy',
         method: 'post',
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify({
@@ -305,6 +313,11 @@ var init = () => {
         alert( "Something fail!" );
       });
     });
+  }
+  $dplMdlDeploy.on('click', () => {
+    $dplMdlDeploy.prepend($loader);
+    let $deployMiVersion = $('#deployMiVersion');
+    $('.sep-right .deploy-button').closest('.w-main').find('.sep-left')[0].click();
   });
   $window
     .on('hashchange', (e) => {
