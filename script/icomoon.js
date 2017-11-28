@@ -264,6 +264,7 @@ var init = () => {
       let icons = [];
       let iconsets = data.iconSets.map((iconset) => {
         iconset.icons.forEach((icon, index) => {
+          console.log(icon)
           let iconData = Object.assign(
             omit(icon, ['colorPermutations', 'isMulticolor', 'isMulticolor2']),
             omit(iconset.selection[index], ['id', 'prevSize', 'tempChar', 'codes']),
