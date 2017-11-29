@@ -92,7 +92,7 @@ var init = () => {
           )
       )
   ).appendTo('body');
-
+  
   const dplMdlShow = (e) => $dplMdl.removeClass('hide');
   const dplMdlHide = (e) => $dplMdl.addClass('hide');
   const appendDeployIcon = (callback) => {
@@ -224,7 +224,7 @@ var init = () => {
         $dplButton.attr('disabled', true);
       }
       if ($('[class*="embossed"]').is(`[ng-click="mode = 'move'"]`) === true) {
-        console.log(this);
+        // console.log(this);
         $dplButton.attr('disabled', true);
       }
     })
@@ -245,6 +245,9 @@ var init = () => {
     );
     window.XMLHttpRequest.listen('complete', 'https://i.icomoon.io/storesession', () => {
       setDeployState();
+      if ($loader.is(':visible')) {
+        deploy();
+      }
     });
     window.XMLHttpRequest.listen('complete', 'https://i.icomoon.io/getsessiontime', () => {
       if ($loader.is(':visible')) {
@@ -252,8 +255,13 @@ var init = () => {
       }
     });
   $dplMdlClose.add($dplMdlCancel).on('click', dplMdlHide);
-
+  
+  var isDeploying = false;
   function deploy() {
+
+    if (isDeploying) return;
+
+    isDeploying = true;
     $('.bar-btm .w-main .sep-right')[0].click();
     let $deployMiVersion = $('#deployMiVersion');
     getIndexedDB((data) => {
@@ -269,7 +277,7 @@ var init = () => {
       let icons = [];
       let iconsets = data.iconSets.map((iconset) => {
         iconset.icons.forEach((icon, index) => {
-          console.log(icon)
+          //console.log(icon)
           let iconData = Object.assign(
             omit(icon, ['colorPermutations', 'isMulticolor', 'isMulticolor2']),
             omit(iconset.selection[index], ['id', 'prevSize', 'tempChar', 'codes']),
@@ -307,10 +315,11 @@ var init = () => {
         $dplMdlContent.children().append('<span class="fs6-fixed ff0 mls fgc4"><i class="mrs icon-check fgc-success"></i>Deployed!</span>');
         var openStylePortal = $('<a href="http://style-portal.tw.trendnet.org:9003/#/styles/minimalism/latest/1811bd76-57b6-4fb9-930f-b6899313fa41" target="_blank">Open Review Site!</a>');
         $('body').append(openStylePortal);
+        isDeploying = false;
         setTimeout(function () {
-          document.location.href = 'https://icomoon.io/app/#/select/font';
           openStylePortal[0].click();
           openStylePortal.remove();
+          document.location.href = 'https://icomoon.io/app/#/select/font';
         }, 2000);
         
       })
