@@ -1,4 +1,5 @@
-var main = () => !window.$ ? setTimeout(() => main(), 20) : init();
+const main = () => !window.$ ? setTimeout(() => main(), 20) : init();
+const PROJECT_KEY = 1511252817024;
 var init = () => {
   const style = `
     @keyframes spinner {
@@ -95,8 +96,12 @@ var init = () => {
   const dplMdlShow = (e) => $dplMdl.removeClass('hide');
   const dplMdlHide = (e) => $dplMdl.addClass('hide');
   const appendDeployIcon = (callback) => {
+    getIndexedDB(function (data) {
+      if (data.metadata.created !== PROJECT_KEY) return;
+
     let tab = $('.w-main span.sep-right.selected');
     tab.length === 0 ? setTimeout(() => { appendDeployIcon(callback); }, 100) : tab.append($dplButton.attr('disabled', true)) && callback();
+    });
   }
   const setDeployState = () => {
     return getIndexedDB((data) => {
