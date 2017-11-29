@@ -134,7 +134,7 @@ var init = () => {
     .on('click', '.sep-right .deploy-button', (e) => {
       dplMdlShow();
       $.ajax({
-        url: 'http://localhost:8001/api/icons/info',
+        url: 'http://style-portal.tw.trendnet.org:8001/api/icons/info',
         dataType: 'json'
       })
       .done((info) => {
@@ -287,7 +287,7 @@ var init = () => {
 
       $deployMiVersion.add($dplMdlCancel).add($dplMdlClose).attr('disabled', true);      
       $.ajax({
-        url: 'http://localhost:8001/api/icons/deploy',
+        url: 'http://style-portal.tw.trendnet.org:8001/api/icons/deploy',
         method: 'post',
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify({
@@ -300,7 +300,7 @@ var init = () => {
         $loader.remove();
         $deployMiVersion.add($dplMdlCancel).add($dplMdlClose).attr('disabled', false);  
         $dplMdlContent.children().append('<span class="fs6-fixed ff0 mls fgc4"><i class="mrs icon-check fgc-success"></i>Deployed!</span>');
-        var openStylePortal = $('<a href="http://localhost:9003/#/styles/minimalism/latest/1811bd76-57b6-4fb9-930f-b6899313fa41" target="_blank">Open Review Site!</a>');
+        var openStylePortal = $('<a href="http://style-portal.tw.trendnet.org:9003/#/styles/minimalism/latest/1811bd76-57b6-4fb9-930f-b6899313fa41" target="_blank">Open Review Site!</a>');
         $('body').append(openStylePortal);
         setTimeout(function () {
           document.location.href = 'https://icomoon.io/app/#/select/font';
