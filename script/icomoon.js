@@ -1,4 +1,5 @@
-var main = () => !window.$ ? setTimeout(() => main(), 20) : init();
+const main = () => !window.$ ? setTimeout(() => main(), 20) : init();
+const PROJECT_KEY = 1511252817024;
 var init = () => {
   const style = `
     @keyframes spinner {
@@ -91,12 +92,16 @@ var init = () => {
           )
       )
   ).appendTo('body');
-
+  
   const dplMdlShow = (e) => $dplMdl.removeClass('hide');
   const dplMdlHide = (e) => $dplMdl.addClass('hide');
   const appendDeployIcon = (callback) => {
+    getIndexedDB(function (data) {
+      if (data.metadata.created !== PROJECT_KEY) return;
+
     let tab = $('.w-main span.sep-right.selected');
     tab.length === 0 ? setTimeout(() => { appendDeployIcon(callback); }, 100) : tab.append($dplButton.attr('disabled', true)) && callback();
+    });
   }
   const setDeployState = () => {
     return getIndexedDB((data) => {
@@ -219,7 +224,6 @@ var init = () => {
         $dplButton.attr('disabled', true);
       }
       if ($('[class*="embossed"]').is(`[ng-click="mode = 'move'"]`) === true) {
-        console.log(this);
         $dplButton.attr('disabled', true);
       }
     })
@@ -240,10 +244,24 @@ var init = () => {
     );
     window.XMLHttpRequest.listen('complete', 'https://i.icomoon.io/storesession', () => {
       setDeployState();
+      if ($loader.is(':visible')) {
+        deploy();
+      }
+    });
+    window.XMLHttpRequest.listen('complete', 'https://i.icomoon.io/getsessiontime', () => {
+      if ($loader.is(':visible')) {
+        deploy();
+      }
     });
   $dplMdlClose.add($dplMdlCancel).on('click', dplMdlHide);
-  $dplMdlDeploy.on('click', () => {
-    $dplMdlDeploy.prepend($loader);
+  
+  var isDeploying = false;
+  function deploy() {
+
+    if (isDeploying) return;
+
+    isDeploying = true;
+    $('.bar-btm .w-main .sep-right')[0].click();
     let $deployMiVersion = $('#deployMiVersion');
     getIndexedDB((data) => {
       let $pref = $('#pref');
@@ -293,15 +311,25 @@ var init = () => {
         $loader.remove();
         $deployMiVersion.add($dplMdlCancel).add($dplMdlClose).attr('disabled', false);  
         $dplMdlContent.children().append('<span class="fs6-fixed ff0 mls fgc4"><i class="mrs icon-check fgc-success"></i>Deployed!</span>');
-        var openStylePortal = $('<a href="http://style-portal:9003/#/styles/minimalism/latest/aca6f1ac-609a-431c-8fca-739b6c060299" target="_blank">Open Review Site!</a>');
+        var openStylePortal = $('<a href="http://style-portal.tw.trendnet.org:9003/#/styles/minimalism/latest/1811bd76-57b6-4fb9-930f-b6899313fa41" target="_blank">Open Review Site!</a>');
         $('body').append(openStylePortal);
-        openStylePortal[0].click();
-        openStylePortal.remove();
+        isDeploying = false;
+        setTimeout(function () {
+          openStylePortal[0].click();
+          openStylePortal.remove();
+          document.location.href = 'https://icomoon.io/app/#/select/font';
+        }, 2000);
+        
       })
       .fail((req, status, error) => {
         alert( "Something fail!" );
       });
     });
+  }
+  $dplMdlDeploy.on('click', () => {
+    $dplMdlDeploy.prepend($loader);
+    let $deployMiVersion = $('#deployMiVersion');
+    $('.sep-right .deploy-button').closest('.w-main').find('.sep-left')[0].click();
   });
   $window
     .on('hashchange', (e) => {

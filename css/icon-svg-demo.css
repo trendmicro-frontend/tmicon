@@ -144,5 +144,6 @@ p {
 .name {
   font-size: 0.5em;
   margin-left: 1em;
+  vertical-align: top;
 }
 

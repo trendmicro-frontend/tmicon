@@ -50,7 +50,7 @@ var init = function () {
       
       if (differents && differents.length > 0) {
         reviewSite.isOfficial = true;
-        var deployButton = $('<button class="btn btn-default" data-toggle="modal" data-target="#modal-deploy-icons">Deploy icons!</button>').appendTo($('header > .pull-right'));
+        var deployButton = $('<button class="btn btn-primary" data-toggle="modal" data-target="#modal-deploy-icons">Deploy icons!</button>').appendTo($('header > .pull-right'));
         $(deployModal).appendTo('body');
         $('#deployBtn').on('click', function () {
           $.ajax({
