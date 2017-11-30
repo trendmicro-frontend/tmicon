@@ -3,19 +3,22 @@ var deployModal = `<div id="modal-deploy-icons" class="modal" tabindex="-1" role
         <div class="modal-dialog modal-xs" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon icon-modal-close"></span></button>
+              <button id="deployModalCanel" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon icon-modal-close"></span></button>
               <h3 class="modal-title">Deploy Icons Confirmation</h3>
             </div>
             <div class="modal-body body-xs">
-              Are you shure you want to deploy all icons and preferences to the official site now?
+              Are you sure you want to deploy all icons and preferences to the official site now?
             </div>
             <div class="modal-footer">
-              <button id="deployBtn" type="button" class="btn btn-primary">Deploy Now!</button><button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              <button id="deployBtn" type="button" class="btn btn-primary">Deploy Now!</button><button id="deployCancel" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
             </div>
           </div>
         </div>
       </div>`;
+
 var init = function () {
+  var $loader = $('<span class="loader loader-small"></span>');
+  var openOfficialSite = $('<a href="http://style-portal.tw.trendnet.org/#/styles/minimalism/latest/1811bd76-57b6-4fb9-930f-b6899313fa41" target="_blank">Open Review Site!</a>');
   var diff = DeepDiff.noConflict();
   var getReviewSiteIconInfo = new Promise((resolve, reject) => {
     $.ajax({
@@ -44,15 +47,23 @@ var init = function () {
   Promise
     .all([getReviewSiteIconInfo, getOfficalSiteIconInfo])
     .then(function(infos) {
+      
       var reviewSite = infos[0];
       var officialSite = infos[1];
+      delete reviewSite.preferences.fontPref.metadata.date;
+      delete officialSite.preferences.fontPref.metadata.date;
       var differents = diff(reviewSite, officialSite);
       
       if (differents && differents.length > 0) {
         reviewSite.isOfficial = true;
         var deployButton = $('<button class="btn btn-primary" data-toggle="modal" data-target="#modal-deploy-icons">Deploy icons!</button>').appendTo($('header > .pull-right'));
         $(deployModal).appendTo('body');
-        $('#deployBtn').on('click', function () {
+        
+        var deployNow = $('#deployBtn').on('click', function () {
+          var $deployCancel = $('#deployCancel');
+          var $deployModalCanel = $('#deployModalCanel');
+          deployNow.prepend($loader).add($deployCancel).add($deployModalCanel).attr('disabled', true);
+          
           $.ajax({
             url: 'http://style-portal.tw.trendnet.org:8080/api/icons/deploy',
             method: 'post',
@@ -60,7 +71,13 @@ var init = function () {
             data: JSON.stringify(reviewSite)
           })
           .done((data) => {
-            console.log(data);
+            $loader.remove();
+            deployNow.add(deployCancel).add(deployModalCanel).attr('disabled', false);
+            setTimeout(function () {
+              $deployCancel.trigger('click');
+              openOfficialSite[0].click();
+              openOfficialSite.remove();
+            }, 2000);
           })
           .fail((req, status, error) => {
             alert( "Something fail! Please contact administrator to solve this problem!" );
