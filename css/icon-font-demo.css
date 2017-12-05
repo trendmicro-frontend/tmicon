@@ -52,7 +52,7 @@ input:focus {
 }
 .glyph {
   font-size: 13px;
-  width: 15em;
+  width: 250px;
   padding-bottom: 1em;
   margin-right: 2em;
   margin-bottom: 1em;
@@ -67,6 +67,9 @@ input:focus {
   font-size: 16px;
   vertical-align: middle;
 }
+.char-code {
+  color: #999;
+}
 .liga {
   width: 80%;
   width: calc(100% - 2.5em);
@@ -79,6 +82,8 @@ input:focus {
 }
 .bgc1 {
   background: #f1f1f1;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 .fgc1 {
   color: #999;
@@ -116,6 +121,8 @@ p {
 }
 .ptl {
   padding-top: 1.5em;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 .pbs, .pvs {
   padding-bottom: .25em;
@@ -155,6 +162,7 @@ p {
 }
 .test-drive {
   margin-bottom: 80px;
+  padding: 0 24px;
 }
 #testDrive {
   display: block;
