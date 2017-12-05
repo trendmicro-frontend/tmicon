@@ -12,13 +12,13 @@
         <div class="bgc1 clearfix">
             <h1 class="mvm"><span class="fgc1">TM Icon Font Preview</span></h1>
             <p>
-                For detailed guidelines, please go to the <a href="http://style-portal.tw.trendnet.org:9003/#/styles/minimalism/latest/f558e7db-82df-426a-93a6-c0ad072bb894">Trend Micro Style Portal</a>.<br/>
+                For detailed guidelines, please go to the <a href="http://style-portal.tw.trendnet.org/#/styles/minimalism/latest/f558e7db-82df-426a-93a6-c0ad072bb894">Trend Micro Style Portal</a>.<br/>
                 Font: _fontName <span class="fgc1">(Glyphs:&nbsp;_glyphsCount)</span><br/>
                 Date generated: _generatedDate
             </p>
         </div>
         <div class="clearfix ptl">
-            <h1 class="mvm mtn fgc1">Grid size: _gridSize</h1>
+            <h1 class="mvm mtn fgc1">Grid size: _gridSize px</h1>
             <!--Icons repeater-->
         </div>
 
