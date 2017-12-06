@@ -18,7 +18,7 @@
             </p>
         </div>
         <div class="clearfix ptl">
-            <h1 class="mvm mtn fgc1">Grid size: _gridSize px</h1>
+            <h1 class="grid-size mvm mtn fgc1">Grid size: _gridSize px</h1>
             <!--Icons repeater-->
         </div>
 
