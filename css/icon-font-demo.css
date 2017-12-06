@@ -4,7 +4,7 @@ body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 13px;
   line-height: 20px;
-  color: #555;
+  color: #222;
   background: #fff;
   left: 0;
   right: 0;
@@ -24,12 +24,13 @@ small {
   font-size: .66666667em;
 }
 a {
-  color: #e74c3c;
+  color: #0096cc;
   text-decoration: none;
 }
 a:hover, a:focus {
-  box-shadow: 0 1px #e74c3c;
+  color: #db3d44;
 }
+
 input:hover {
   box-shadow: inset 0 -2px #ccc;
 }
