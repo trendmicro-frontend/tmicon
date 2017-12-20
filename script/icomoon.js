@@ -49,9 +49,44 @@ var init = () => {
     .overlayWindow .deploy-button { margin-left: 12px; width: auto !important; line-height: 20px; }
     .unit.size1of2 { width: 100%; }
     .unitRight.size1of2, [ng-click="showUniCharts(glyph)"] { display: none !important; }
+    .dropdown {
+      display: inline-block;
+    }
+    .dropdown-menu {
+      position: absolute;
+      background: #fff;
+      z-index: 2;
+      padding: 12px;
+      border-radius: 4px;
+      margin: 0;
+      border: 1px solid;
+      list-style: none;
+      display: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+    .dropdown.open .dropdown-menu {
+      display: block;
+    }
+    .caret {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      vertical-align: middle;
+      border-top: 4px dashed #666666;
+      border-top: 4px solid \9;
+      border-right: 4px solid transparent;
+      border-left: 4px solid transparent;
+    }
+    button:hover .caret {
+      border-top: 4px dashed #ffffff;
+    }
+    .input-checkbox {
+      -webkit-appearance: checkbox;
+      box-shadow: none;
+      margin-right: 8px;
+    }
   `;
   $(`<style>${style}</style>`).appendTo('head');
-
   let $window = $(window), $document = $(document);
   let $loader = $('<span class="loader loader-small"></span>');
   let XHR = window.XMLHttpRequest;
@@ -93,6 +128,21 @@ var init = () => {
       )
   ).appendTo('body');
   
+  const array2object = function (array, key) {
+    var object = {};
+
+    array.forEach(function (item, index) {
+      if (key) {
+        object[item[key]] = item;
+      }
+
+      else {
+        object[index] = item;
+      }
+    });
+
+    return object;
+  }
   const dplMdlShow = (e) => $dplMdl.removeClass('hide');
   const dplMdlHide = (e) => $dplMdl.addClass('hide');
   const appendDeployIcon = (callback) => {
@@ -138,73 +188,99 @@ var init = () => {
     .on('click', '[ng-click="removeGlyph(glyph)"]', () => setDeployState())
     .on('click', '.sep-right .deploy-button', (e) => {
       dplMdlShow();
-      $.ajax({
+      var themesDeffered = $.ajax({
+        url: 'http://style-portal.tw.trendnet.org:9001/api/themes',
+        dataType: 'json'
+      });
+      var iconsDeffered = $.ajax({
         url: 'http://style-portal.tw.trendnet.org:9001/api/icons/info',
         dataType: 'json'
-      })
-      .done((info) => {
-        let oPreferences = info.preferences;
-        let oIcons = info.icons.reduce((acc, icon) => {
-          acc[icon.code] = icon;
-          return acc;
-        }, {});
-        getIndexedDB((data) => {
-          let $wording = $('<p></p>');
-          let cIcons = data.iconSets.reduce((acc, set) => {
-            set.selection.forEach((icon, index) => {
-              icon.code = (icon.code).toString(16);
-              icon.iconset = set.id;
-              acc[icon.code] = Object.assign(icon, set.icons[index]);
-            })
+      });
+      $.when(themesDeffered, iconsDeffered)
+        .done(function (themeInfo, iconsInfo) {
+          let oThemes = array2object(themeInfo[0], 'id');
+          let oPreferences = iconsInfo[0].preferences;
+          let oIcons = iconsInfo[0].icons.reduce((acc, icon) => {
+            acc[icon.code] = icon;
             return acc;
           }, {});
-          let modifiedIcons = [];
-          let newIcons = Object.keys(cIcons).reduce((acc, key) => {
-            var oIcon = oIcons[key];
-            var cIcon = cIcons[key];
-
-            if (Object.keys(oIcons).indexOf(key) === -1) {
-              acc.push(cIcon);
-            } else {
-              cIcon.tags = cIcon.tags.filter((x) => x !== '');
-              if (oIcon.iconset !== cIcon.iconset ||
-                  oIcon.name !== cIcon.name ||
-                  oIcon.order !== cIcon.order ||
-                  oIcon.tags
-                    .filter(x => cIcon.tags.indexOf(x) === -1)
-                    .concat(cIcon.tags.filter(x => oIcon.tags.indexOf(x) == -1)).length > 0 ||
-                  oIcon.paths
-                    .filter(x => cIcon.paths.indexOf(x) === -1)
-                    .concat(cIcon.paths.filter(x => oIcon.paths.indexOf(x) == -1)).length > 0
-              ) {
-                modifiedIcons.push(cIcon);
+          getIndexedDB((data) => {
+            let $wording = $('<p></p>');
+            let cIcons = data.iconSets.reduce((acc, set) => {
+              set.selection.forEach((icon, index) => {
+                icon.code = (icon.code).toString(16);
+                icon.iconset = set.id;
+                acc[icon.code] = Object.assign(icon, set.icons[index]);
+              })
+              return acc;
+            }, {});
+            let modifiedIcons = [];
+            let newIcons = Object.keys(cIcons).reduce((acc, key) => {
+              var oIcon = oIcons[key];
+              var cIcon = cIcons[key];
+  
+              if (Object.keys(oIcons).indexOf(key) === -1) {
+                acc.push(cIcon);
+              } else {
+                cIcon.tags = cIcon.tags.filter((x) => x !== '');
+                if (oIcon.iconset !== cIcon.iconset ||
+                    oIcon.name !== cIcon.name ||
+                    oIcon.order !== cIcon.order ||
+                    oIcon.tags
+                      .filter(x => cIcon.tags.indexOf(x) === -1)
+                      .concat(cIcon.tags.filter(x => oIcon.tags.indexOf(x) == -1)).length > 0 ||
+                    oIcon.paths
+                      .filter(x => cIcon.paths.indexOf(x) === -1)
+                      .concat(cIcon.paths.filter(x => oIcon.paths.indexOf(x) == -1)).length > 0
+                ) {
+                  modifiedIcons.push(cIcon);
+                }
               }
+              return acc;
+            }, []);
+            let removedIcons = Object.keys(oIcons).reduce((acc, key) => {
+              if (Object.keys(cIcons).indexOf(key) === -1) acc.push(oIcons[key]);
+              return acc;
+            }, []);
+            if (!newIcons.length && !removedIcons.length && !modifiedIcons.length ) {
+              $dplMdlDeploy.hide();
+              $wording.append('You haven\'t changed anything yet!');
+            } else {
+              $dplMdlDeploy.show().attr('disabled', false);
+              let latestMjVersion = oPreferences.fontPref ? oPreferences.fontPref.metadata.majorVersion : data.preferences.fontPref.metadata.majorVersion;
+              let latestMiVersion = oPreferences.fontPref ? (oPreferences.fontPref.metadata.minorVersion + 1) : data.preferences.fontPref.metadata.minorVersion;
+              let contents = [];
+              let applyThemes = oPreferences.fontPref.metadata.applyThemes;
+              
+              if (newIcons.length > 0) contents.push('create <strong>' + newIcons.length + '</strong> new icon(s)');
+              if (removedIcons.length > 0) contents.push('remove <strong>' + removedIcons.length + '</strong> icon(s)');
+              if (modifiedIcons.length > 0) contents.push('modify <strong>' + modifiedIcons.length + '</strong> icon(s)');
+              $wording
+                .append('You will ')
+                .append(contents.length === 3 ? contents.map((item, index) => { return index === 2 ? 'and ' + item : item; } ).join(', ') : contents.join(' and '))
+                .append(' to the Trend Micro Font version- ' + latestMjVersion + '. <input id="deployMiVersion" style="width: 30px;" value="' + latestMiVersion + '"> and apply them with ')
+                .append(`<div id="theme-dropdown" class="dropdown">
+                  <button class="btn btn4 dropdown-toggle" type="button">
+                    Theme(s) <span class="caret"></span>
+                  </button>
+                  <ul id="themeList" class="dropdown-menu">
+                  ${Object.keys(oThemes).map(function(theme) {
+                    return `
+                    <li>
+                      <sapn class="checkbox">
+                        <input id="theme_${theme}" type="checkbox" class="input-checkbox" value="${theme}" ${applyThemes.indexOf(theme) > -1 ? 'checked': ''}>
+                        <label for="theme_${theme}">${oThemes[theme].name}</label>
+                      </sapn>
+                    </li>
+                    `
+                  }).join('')}
+                  
+                  </ul>
+                </div>`);
             }
-            return acc;
-          }, []);
-          let removedIcons = Object.keys(oIcons).reduce((acc, key) => {
-            if (Object.keys(cIcons).indexOf(key) === -1) acc.push(oIcons[key]);
-            return acc;
-          }, []);
-          if (!newIcons.length && !removedIcons.length && !modifiedIcons.length ) {
-            $dplMdlDeploy.hide();
-            $wording.append('You haven\'t changed anything yet!');
-          } else {
-            $dplMdlDeploy.show().attr('disabled', false);
-            let latestMjVersion = oPreferences.fontPref ? oPreferences.fontPref.metadata.majorVersion : data.preferences.fontPref.metadata.majorVersion;
-            let latestMiVersion = oPreferences.fontPref ? (oPreferences.fontPref.metadata.minorVersion + 1) : data.preferences.fontPref.metadata.minorVersion;
-            let contents = [];
-            if (newIcons.length > 0) contents.push('create <strong>' + newIcons.length + '</strong> new icon(s)');
-            if (removedIcons.length > 0) contents.push('remove <strong>' + removedIcons.length + '</strong> icon(s)');
-            if (modifiedIcons.length > 0) contents.push('modify <strong>' + modifiedIcons.length + '</strong> icon(s)');
-            $wording
-              .append('You will ')
-              .append(contents.length === 3 ? contents.map((item, index) => { return index === 2 ? 'and ' + item : item; } ).join(', ') : contents.join(' and '))
-              .append(' to the Trend Micro Font version- ' + latestMjVersion + '. <input id="deployMiVersion" style="width: 30px;" value="' + latestMiVersion + '">. Are you sure to deploy icons now?');
-          }
-          $dplMdlContent.text('').append($wording);
+            $dplMdlContent.text('').append($wording);
+          });
         });
-      });
     })
     .on('focus', '[contenteditable]', function() {
       var $this = $(this);
@@ -241,7 +317,14 @@ var init = () => {
       `, (e) => {
         $dplButton.attr('disabled', true);
       }
-    );
+    )
+    .on('click', '.dropdown button', function (e) {
+      if ($('#themeList').is(':visible')) {
+        $('#theme-dropdown').removeClass('open');
+      } else {
+        $('#theme-dropdown').addClass('open');
+      }
+    })
     window.XMLHttpRequest.listen('complete', 'https://i.icomoon.io/storesession', () => {
       setDeployState();
       if ($loader.is(':visible')) {
@@ -290,13 +373,19 @@ var init = () => {
           name: iconset.metadata.name
         }
       });
+      
+      let applyThemes = [];
+      $('#themeList').find('.input-checkbox:checked').each(function (index, checkbox) {
+        applyThemes.push(checkbox.value);
+      });
+      data.preferences.fontPref.metadata.applyThemes = applyThemes;
       let preferences = Object.assign({
         gridSize: data.preferences.gridSize,
         fontPref: data.preferences.fontPref,
         imagePref: data.preferences.imagePref
       }, omit(data.metadata, ['lastOpened']));
 
-      $deployMiVersion.add($dplMdlCancel).add($dplMdlClose).attr('disabled', true);      
+      $deployMiVersion.add($dplMdlCancel).add($dplMdlClose).attr('disabled', true);
       $.ajax({
         url: 'http://style-portal.tw.trendnet.org:9001/api/icons/deploy',
         method: 'post',
