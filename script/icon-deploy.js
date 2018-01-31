@@ -22,7 +22,7 @@ var init = function () {
   var diff = DeepDiff.noConflict();
   var getReviewSiteIconInfo = new Promise((resolve, reject) => {
     $.ajax({
-      url: 'http://style-portal.tw.trendnet.org:9001/api/icons/info',
+      url: 'http://style-portal.tw.trendnet.org:9003/api/icons/info',
       dataType: 'json'
     })
     .done((info) => {
