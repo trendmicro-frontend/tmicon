@@ -189,11 +189,11 @@ var init = () => {
     .on('click', '.sep-right .deploy-button', (e) => {
       dplMdlShow();
       var themesDeffered = $.ajax({
-        url: 'http://style-portal.tw.trendnet.org:9001/api/themes',
+        url: 'http://style-portal.tw.trendnet.org:9003/api/themes',
         dataType: 'json'
       });
       var iconsDeffered = $.ajax({
-        url: 'http://style-portal.tw.trendnet.org:9001/api/icons/info',
+        url: 'http://style-portal.tw.trendnet.org:9003/api/icons/info',
         dataType: 'json'
       });
       $.when(themesDeffered, iconsDeffered)
@@ -387,7 +387,7 @@ var init = () => {
 
       $deployMiVersion.add($dplMdlCancel).add($dplMdlClose).attr('disabled', true);
       $.ajax({
-        url: 'http://style-portal.tw.trendnet.org:9001/api/icons/deploy',
+        url: 'http://style-portal.tw.trendnet.org:9003/api/icons/deploy',
         method: 'post',
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify({
