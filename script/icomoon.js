@@ -250,7 +250,7 @@ var init = () => {
               let latestMjVersion = oPreferences.fontPref ? oPreferences.fontPref.metadata.majorVersion : data.preferences.fontPref.metadata.majorVersion;
               let latestMiVersion = oPreferences.fontPref ? (oPreferences.fontPref.metadata.minorVersion + 1) : data.preferences.fontPref.metadata.minorVersion;
               let contents = [];
-              let applyThemes = oPreferences.fontPref.metadata.applyThemes || [];
+              let applyThemes = oPreferences.fontPref? oPreferences.fontPref.metadata.applyThemes : [];
               
               if (newIcons.length > 0) contents.push('create <strong>' + newIcons.length + '</strong> new icon(s)');
               if (removedIcons.length > 0) contents.push('remove <strong>' + removedIcons.length + '</strong> icon(s)');
