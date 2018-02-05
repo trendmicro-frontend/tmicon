@@ -50,8 +50,9 @@ var init = function () {
       
       var reviewSite = infos[0];
       var officialSite = infos[1];
-      delete reviewSite.preferences.fontPref.metadata.date;
-      delete officialSite.preferences.fontPref.metadata.date;
+      if (reviewSite.preferences) delete reviewSite.preferences.fontPref.metadata.date;
+      if (officialSite.preferences) delete officialSite.preferences.fontPref.metadata.date;
+      
       var differents = diff(reviewSite, officialSite);
       
       if (differents && differents.length > 0) {
