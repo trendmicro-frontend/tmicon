@@ -34,7 +34,7 @@ var init = function () {
   });
   var getOfficalSiteIconInfo = new Promise((resolve, reject) => {
     $.ajax({
-      url: 'http://style-portal.tw.trendnet.org:8080/api/icons/info',
+      url: 'http://style-portal.tw.trendnet.org/api/icons/info',
       dataType: 'json'
     })
     .done((info) => {
@@ -66,7 +66,7 @@ var init = function () {
           deployNow.prepend($loader).add($deployCancel).add($deployModalCanel).attr('disabled', true);
           
           $.ajax({
-            url: 'http://style-portal.tw.trendnet.org:8080/api/icons/deploy',
+            url: 'http://style-portal.tw.trendnet.org/api/icons/deploy',
             method: 'post',
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify(reviewSite)
