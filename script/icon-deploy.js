@@ -78,6 +78,7 @@ var init = function () {
               $deployCancel.trigger('click');
               openOfficialSite[0].click();
               openOfficialSite.remove();
+              document.location.reload();
             }, 2000);
           })
           .fail((req, status, error) => {
