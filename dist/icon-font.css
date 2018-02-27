@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?s9a3jg');
-  src:  url('fonts/TMicon.eot?s9a3jg#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?s9a3jg') format('woff2'),
-    url('fonts/TMicon.ttf?s9a3jg') format('truetype'),
-    url('fonts/TMicon.woff?s9a3jg') format('woff'),
-    url('fonts/TMicon.svg?s9a3jg#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?egkxfw');
+  src:  url('fonts/TMicon.eot?egkxfw#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?egkxfw') format('woff2'),
+    url('fonts/TMicon.ttf?egkxfw') format('truetype'),
+    url('fonts/TMicon.woff?egkxfw') format('woff'),
+    url('fonts/TMicon.svg?egkxfw#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -25,6 +25,27 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.tmicon-fullscreen:before {
+  content: "\e099";
+}
+.tmicon-fullscreen-exit:before {
+  content: "\e0bb";
+}
+.tmicon-lifebuoy:before {
+  content: "\e0bc";
+}
+.tmicon-pause:before {
+  content: "\e0a0";
+}
+.tmicon-play:before {
+  content: "\e0a3";
+}
+.tmicon-stop:before {
+  content: "\e0ab";
+}
+.tmicon-city:before {
+  content: "\e08d";
+}
 .tmicon-refresh:before {
   content: "\e05e";
 }
@@ -769,6 +790,9 @@
 .tmicon-undo:before {
   content: "\ea10";
 }
+.tmicon-arrows:before {
+  content: "\e91b";
+}
 .tmicon-angle-down:before {
   content: "\e919";
 }
@@ -849,6 +873,9 @@
 }
 .tmicon-sort-down:before {
   content: "\e917";
+}
+.tmicon-map:before {
+  content: "\e805";
 }
 .tmicon-chart-area:before {
   content: "\e800";
