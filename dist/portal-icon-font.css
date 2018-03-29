@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'SP-TMicon';
-  src:  url('fonts/TMicon.eot?egkxfw');
-  src:  url('fonts/TMicon.eot?egkxfw#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?egkxfw') format('woff2'),
-    url('fonts/TMicon.ttf?egkxfw') format('truetype'),
-    url('fonts/TMicon.woff?egkxfw') format('woff'),
-    url('fonts/TMicon.svg?egkxfw#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?m9t9cy');
+  src:  url('fonts/TMicon.eot?m9t9cy#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?m9t9cy') format('woff2'),
+    url('fonts/TMicon.ttf?m9t9cy') format('truetype'),
+    url('fonts/TMicon.woff?m9t9cy') format('woff'),
+    url('fonts/TMicon.svg?m9t9cy#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -25,6 +25,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.portal-tmicon-box-upload:before {
+  content: "\e0c2";
+}
+.portal-tmicon-gavel:before {
+  content: "\e0be";
+}
+.portal-tmicon-inbox-upload:before {
+  content: "\e0c1";
+}
+.portal-tmicon-info-s:before {
+  content: "\e0c0";
+}
+.portal-tmicon-terminal:before {
+  content: "\e0bf";
+}
+.portal-tmicon-time-off:before {
+  content: "\ee0bd";
+}
 .portal-tmicon-fullscreen:before {
   content: "\e099";
 }
