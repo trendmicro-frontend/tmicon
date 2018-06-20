@@ -1,5 +1,5 @@
 .tmicon {
-  color: #666;
+  color: #666666;
   font-size: 16px;
   line-height: 20px;
   display: inline-block;
@@ -7,10 +7,10 @@
 }
 .tmicon.tmicon-hoverable:hover,
 .tmicon.tmicon-hoverable.hover {
-  color: #222;
+  color: #222222;
 }
 .tmicon-light {
-  color: #222;
+  color: #222222;
   opacity: 0.5;
 }
 .tmicon-light.tmicon-hoverable:hover,
@@ -49,7 +49,7 @@
 .tmicon-color-info,
 .tmicon-color-severity-info:hover,
 .tmicon-color-info:hover {
-  color: #bbb;
+  color: #bbbbbb;
 }
 .tmicon-color-brand,
 .tmicon-color-brand:hover {

@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'SP-TMicon';
-  src:  url('fonts/TMicon.eot?m9t9cy');
-  src:  url('fonts/TMicon.eot?m9t9cy#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?m9t9cy') format('woff2'),
-    url('fonts/TMicon.ttf?m9t9cy') format('truetype'),
-    url('fonts/TMicon.woff?m9t9cy') format('woff'),
-    url('fonts/TMicon.svg?m9t9cy#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?c1wpf5');
+  src:  url('fonts/TMicon.eot?c1wpf5#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?c1wpf5') format('woff2'),
+    url('fonts/TMicon.ttf?c1wpf5') format('truetype'),
+    url('fonts/TMicon.woff?c1wpf5') format('woff'),
+    url('fonts/TMicon.svg?c1wpf5#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -25,6 +25,33 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.portal-tmicon-moon:before {
+  content: "\e0c7";
+}
+.portal-tmicon-save:before {
+  content: "\e060";
+}
+.portal-tmicon-save-o:before {
+  content: "\e061";
+}
+.portal-tmicon-color:before {
+  content: "\e0c3";
+}
+.portal-tmicon-droplet:before {
+  content: "\e0c4";
+}
+.portal-tmicon-light:before {
+  content: "\e0c5";
+}
+.portal-tmicon-light-o:before {
+  content: "\e0c6";
+}
+.portal-tmicon-sun:before {
+  content: "\e0c8";
+}
+.portal-tmicon-sun-o:before {
+  content: "\e0c9";
+}
 .portal-tmicon-box-upload:before {
   content: "\e0c2";
 }
@@ -423,12 +450,6 @@
 }
 .portal-tmicon-location:before {
   content: "\e047";
-}
-.portal-tmicon-save-o:before {
-  content: "\e061";
-}
-.portal-tmicon-save:before {
-  content: "\e060";
 }
 .portal-tmicon-scan-o:before {
   content: "\e062";
@@ -954,7 +975,7 @@
 }
 /* Apply minimalism theme icon defination */
       .theme-minimalism .portal-tmicon {
-  color: #666;
+  color: #666666;
   font-size: 16px;
   line-height: 20px;
   display: inline-block;
@@ -962,10 +983,10 @@
 }
 .theme-minimalism .portal-tmicon.portal-tmicon-hoverable:hover,
 .theme-minimalism .portal-tmicon.portal-tmicon-hoverable.hover {
-  color: #222;
+  color: #222222;
 }
 .theme-minimalism .portal-tmicon-light {
-  color: #222;
+  color: #222222;
   opacity: 0.5;
 }
 .theme-minimalism .portal-tmicon-light.portal-tmicon-hoverable:hover,
@@ -1004,7 +1025,7 @@
 .theme-minimalism .portal-tmicon-color-info,
 .theme-minimalism .portal-tmicon-color-severity-info:hover,
 .theme-minimalism .portal-tmicon-color-info:hover {
-  color: #bbb;
+  color: #bbbbbb;
 }
 .theme-minimalism .portal-tmicon-color-brand,
 .theme-minimalism .portal-tmicon-color-brand:hover {
