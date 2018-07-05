@@ -105,6 +105,8 @@ var init = () => {
     };
     return xhr;
   };
+  let themesData;
+  let oThemes;
   window.XMLHttpRequest.reqs = {};
   window.XMLHttpRequest.listen = (type, url, callback) => $document.on(`${type}:${url}`, callback);
   var $dplMdl,
@@ -142,6 +144,12 @@ var init = () => {
     });
 
     return object;
+  }
+  const getUniqueValuesOfKey = function (array, key) {
+    return array.reduce(function(carry, item){
+      if(item[key] && !~carry.indexOf(item[key])) carry.push(item[key]);
+      return carry;
+    }, []);
   }
   const dplMdlShow = (e) => $dplMdl.removeClass('hide');
   const dplMdlHide = (e) => $dplMdl.addClass('hide');
@@ -198,7 +206,9 @@ var init = () => {
       });
       $.when(themesDeffered, iconsDeffered)
         .done(function (themeInfo, iconsInfo) {
-          let oThemes = array2object(themeInfo[0], 'id');
+          themesData = themeInfo[0];
+          oThemes = array2object(themeInfo[0], 'id');
+          
           let oPreferences = iconsInfo[0].preferences;
           let oIcons = iconsInfo[0].icons.reduce((acc, icon) => {
             acc[icon.code] = icon;
@@ -251,6 +261,8 @@ var init = () => {
               let latestMiVersion = oPreferences.fontPref ? (oPreferences.fontPref.metadata.minorVersion + 1) : data.preferences.fontPref.metadata.minorVersion;
               let contents = [];
               let applyThemes = oPreferences.fontPref? oPreferences.fontPref.metadata.applyThemes : [];
+              
+              applyThemes = getUniqueValuesOfKey(applyThemes, 'id');
               
               if (newIcons.length > 0) contents.push('create <strong>' + newIcons.length + '</strong> new icon(s)');
               if (removedIcons.length > 0) contents.push('remove <strong>' + removedIcons.length + '</strong> icon(s)');
@@ -376,7 +388,14 @@ var init = () => {
       
       let applyThemes = [];
       $('#themeList').find('.input-checkbox:checked').each(function (index, checkbox) {
-        applyThemes.push(checkbox.value);
+        themesData.forEach(theme => {
+          if (theme.id === checkbox.value) {
+            applyThemes.push({
+              "id": theme.id,
+              "mode": theme.mode
+            });
+          }
+        });
       });
       data.preferences.fontPref.metadata.applyThemes = applyThemes;
       let preferences = Object.assign({
