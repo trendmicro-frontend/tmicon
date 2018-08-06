@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?c1wpf5');
-  src:  url('fonts/TMicon.eot?c1wpf5#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?c1wpf5') format('woff2'),
-    url('fonts/TMicon.ttf?c1wpf5') format('truetype'),
-    url('fonts/TMicon.woff?c1wpf5') format('woff'),
-    url('fonts/TMicon.svg?c1wpf5#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?uisidg');
+  src:  url('fonts/TMicon.eot?uisidg#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?uisidg') format('woff2'),
+    url('fonts/TMicon.ttf?uisidg') format('truetype'),
+    url('fonts/TMicon.woff?uisidg') format('woff'),
+    url('fonts/TMicon.svg?uisidg#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -630,6 +630,15 @@
 }
 .tmicon-window-list:before {
   content: "\e085";
+}
+.tmicon-camera:before {
+  content: "\e61c";
+}
+.tmicon-nas:before {
+  content: "\e61d";
+}
+.tmicon-router:before {
+  content: "\e61e";
 }
 .tmicon-device-an:before {
   content: "\e61b";
