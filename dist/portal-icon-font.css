@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'SP-TMicon';
-  src:  url('fonts/TMicon.eot?uisidg');
-  src:  url('fonts/TMicon.eot?uisidg#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?uisidg') format('woff2'),
-    url('fonts/TMicon.ttf?uisidg') format('truetype'),
-    url('fonts/TMicon.woff?uisidg') format('woff'),
-    url('fonts/TMicon.svg?uisidg#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?tljhuq');
+  src:  url('fonts/TMicon.eot?tljhuq#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?tljhuq') format('woff2'),
+    url('fonts/TMicon.ttf?tljhuq') format('truetype'),
+    url('fonts/TMicon.woff?tljhuq') format('woff'),
+    url('fonts/TMicon.svg?tljhuq#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -778,6 +778,9 @@
 .portal-tmicon-file-zip-o:before {
   content: "\eb0e";
 }
+.portal-tmicon-link-thin:before {
+  content: "\ea14";
+}
 .portal-tmicon-link:before {
   content: "\ea11";
 }
@@ -838,6 +841,9 @@
 .portal-tmicon-undo:before {
   content: "\ea10";
 }
+.portal-tmicon-caret-down:before {
+  content: "\e908";
+}
 .portal-tmicon-arrows:before {
   content: "\e91b";
 }
@@ -883,9 +889,6 @@
 .portal-tmicon-caret-square-up:before {
   content: "\e90f";
 }
-.portal-tmicon-caret-down:before {
-  content: "\e908";
-}
 .portal-tmicon-caret-left:before {
   content: "\e909";
 }
@@ -921,6 +924,9 @@
 }
 .portal-tmicon-sort-down:before {
   content: "\e917";
+}
+.portal-tmicon-chart-dot:before {
+  content: "\e806";
 }
 .portal-tmicon-map:before {
   content: "\e805";
@@ -1038,6 +1044,1166 @@
 }
 .theme-minimalism.mode-light .portal-tmicon-color-brand,
 .theme-minimalism.mode-light .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (light) icon defination */
+.theme-minimalism.mode-light .portal-tmicon {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #222222;
+}
+.theme-minimalism.mode-light .portal-tmicon-light {
+  color: #222222;
+  opacity: 0.5;
+}
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-light .portal-tmicon-color-error,
+.theme-minimalism.mode-light .portal-tmicon-color-danger,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-light .portal-tmicon-color-warn,
+.theme-minimalism.mode-light .portal-tmicon-color-warning,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-light .portal-tmicon-color-notice,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-light .portal-tmicon-color-success,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-light .portal-tmicon-color-info,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-info:hover {
+  color: #bbbbbb;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-brand,
+.theme-minimalism.mode-light .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (light) icon defination */
+.theme-minimalism.mode-light .portal-tmicon {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #222222;
+}
+.theme-minimalism.mode-light .portal-tmicon-light {
+  color: #222222;
+  opacity: 0.5;
+}
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-light .portal-tmicon-color-error,
+.theme-minimalism.mode-light .portal-tmicon-color-danger,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-light .portal-tmicon-color-warn,
+.theme-minimalism.mode-light .portal-tmicon-color-warning,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-light .portal-tmicon-color-notice,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-light .portal-tmicon-color-success,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-light .portal-tmicon-color-info,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-info:hover {
+  color: #bbbbbb;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-brand,
+.theme-minimalism.mode-light .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (light) icon defination */
+.theme-minimalism.mode-light .portal-tmicon {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #222222;
+}
+.theme-minimalism.mode-light .portal-tmicon-light {
+  color: #222222;
+  opacity: 0.5;
+}
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-light .portal-tmicon-color-error,
+.theme-minimalism.mode-light .portal-tmicon-color-danger,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-light .portal-tmicon-color-warn,
+.theme-minimalism.mode-light .portal-tmicon-color-warning,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-light .portal-tmicon-color-notice,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-light .portal-tmicon-color-success,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-light .portal-tmicon-color-info,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-info:hover {
+  color: #bbbbbb;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-brand,
+.theme-minimalism.mode-light .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (light) icon defination */
+.theme-minimalism.mode-light .portal-tmicon {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #222222;
+}
+.theme-minimalism.mode-light .portal-tmicon-light {
+  color: #222222;
+  opacity: 0.5;
+}
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-light .portal-tmicon-color-error,
+.theme-minimalism.mode-light .portal-tmicon-color-danger,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-light .portal-tmicon-color-warn,
+.theme-minimalism.mode-light .portal-tmicon-color-warning,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-light .portal-tmicon-color-notice,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-light .portal-tmicon-color-success,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-light .portal-tmicon-color-info,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-info:hover {
+  color: #bbbbbb;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-brand,
+.theme-minimalism.mode-light .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (light) icon defination */
+.theme-minimalism.mode-light .portal-tmicon {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #222222;
+}
+.theme-minimalism.mode-light .portal-tmicon-light {
+  color: #222222;
+  opacity: 0.5;
+}
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-light .portal-tmicon-color-error,
+.theme-minimalism.mode-light .portal-tmicon-color-danger,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-light .portal-tmicon-color-warn,
+.theme-minimalism.mode-light .portal-tmicon-color-warning,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-light .portal-tmicon-color-notice,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-light .portal-tmicon-color-success,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-light .portal-tmicon-color-info,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-info:hover {
+  color: #bbbbbb;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-brand,
+.theme-minimalism.mode-light .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (light) icon defination */
+.theme-minimalism.mode-light .portal-tmicon {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #222222;
+}
+.theme-minimalism.mode-light .portal-tmicon-light {
+  color: #222222;
+  opacity: 0.5;
+}
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-light .portal-tmicon-color-error,
+.theme-minimalism.mode-light .portal-tmicon-color-danger,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-light .portal-tmicon-color-warn,
+.theme-minimalism.mode-light .portal-tmicon-color-warning,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-light .portal-tmicon-color-notice,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-light .portal-tmicon-color-success,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-light .portal-tmicon-color-info,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-info:hover {
+  color: #bbbbbb;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-brand,
+.theme-minimalism.mode-light .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (light) icon defination */
+.theme-minimalism.mode-light .portal-tmicon {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #222222;
+}
+.theme-minimalism.mode-light .portal-tmicon-light {
+  color: #222222;
+  opacity: 0.5;
+}
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-light .portal-tmicon-color-error,
+.theme-minimalism.mode-light .portal-tmicon-color-danger,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-light .portal-tmicon-color-warn,
+.theme-minimalism.mode-light .portal-tmicon-color-warning,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-light .portal-tmicon-color-notice,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-light .portal-tmicon-color-success,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-light .portal-tmicon-color-info,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-info:hover {
+  color: #bbbbbb;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-brand,
+.theme-minimalism.mode-light .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (light) icon defination */
+.theme-minimalism.mode-light .portal-tmicon {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #222222;
+}
+.theme-minimalism.mode-light .portal-tmicon-light {
+  color: #222222;
+  opacity: 0.5;
+}
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-light .portal-tmicon-color-error,
+.theme-minimalism.mode-light .portal-tmicon-color-danger,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-light .portal-tmicon-color-warn,
+.theme-minimalism.mode-light .portal-tmicon-color-warning,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-light .portal-tmicon-color-notice,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-light .portal-tmicon-color-success,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-light .portal-tmicon-color-info,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-info:hover {
+  color: #bbbbbb;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-brand,
+.theme-minimalism.mode-light .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (light) icon defination */
+.theme-minimalism.mode-light .portal-tmicon {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #222222;
+}
+.theme-minimalism.mode-light .portal-tmicon-light {
+  color: #222222;
+  opacity: 0.5;
+}
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-light .portal-tmicon-color-error,
+.theme-minimalism.mode-light .portal-tmicon-color-danger,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-light .portal-tmicon-color-warn,
+.theme-minimalism.mode-light .portal-tmicon-color-warning,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-light .portal-tmicon-color-notice,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-light .portal-tmicon-color-success,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-light .portal-tmicon-color-info,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-info:hover {
+  color: #bbbbbb;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-brand,
+.theme-minimalism.mode-light .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (light) icon defination */
+.theme-minimalism.mode-light .portal-tmicon {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #222222;
+}
+.theme-minimalism.mode-light .portal-tmicon-light {
+  color: #222222;
+  opacity: 0.5;
+}
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-light .portal-tmicon-color-error,
+.theme-minimalism.mode-light .portal-tmicon-color-danger,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-light .portal-tmicon-color-warn,
+.theme-minimalism.mode-light .portal-tmicon-color-warning,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-light .portal-tmicon-color-notice,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-light .portal-tmicon-color-success,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-light .portal-tmicon-color-info,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-info:hover {
+  color: #bbbbbb;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-brand,
+.theme-minimalism.mode-light .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (light) icon defination */
+.theme-minimalism.mode-light .portal-tmicon {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #222222;
+}
+.theme-minimalism.mode-light .portal-tmicon-light {
+  color: #222222;
+  opacity: 0.5;
+}
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-light .portal-tmicon-color-error,
+.theme-minimalism.mode-light .portal-tmicon-color-danger,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-light .portal-tmicon-color-warn,
+.theme-minimalism.mode-light .portal-tmicon-color-warning,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-light .portal-tmicon-color-notice,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-light .portal-tmicon-color-success,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-light .portal-tmicon-color-info,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-info:hover {
+  color: #bbbbbb;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-brand,
+.theme-minimalism.mode-light .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (light) icon defination */
+.theme-minimalism.mode-light .portal-tmicon {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #222222;
+}
+.theme-minimalism.mode-light .portal-tmicon-light {
+  color: #222222;
+  opacity: 0.5;
+}
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-light .portal-tmicon-color-error,
+.theme-minimalism.mode-light .portal-tmicon-color-danger,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-light .portal-tmicon-color-warn,
+.theme-minimalism.mode-light .portal-tmicon-color-warning,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-light .portal-tmicon-color-notice,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-light .portal-tmicon-color-success,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-light .portal-tmicon-color-info,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-info:hover {
+  color: #bbbbbb;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-brand,
+.theme-minimalism.mode-light .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (light) icon defination */
+.theme-minimalism.mode-light .portal-tmicon {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #222222;
+}
+.theme-minimalism.mode-light .portal-tmicon-light {
+  color: #222222;
+  opacity: 0.5;
+}
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-light .portal-tmicon-color-error,
+.theme-minimalism.mode-light .portal-tmicon-color-danger,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-light .portal-tmicon-color-warn,
+.theme-minimalism.mode-light .portal-tmicon-color-warning,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-light .portal-tmicon-color-notice,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-light .portal-tmicon-color-success,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-light .portal-tmicon-color-info,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-info:hover {
+  color: #bbbbbb;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-brand,
+.theme-minimalism.mode-light .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (light) icon defination */
+.theme-minimalism.mode-light .portal-tmicon {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #222222;
+}
+.theme-minimalism.mode-light .portal-tmicon-light {
+  color: #222222;
+  opacity: 0.5;
+}
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-light .portal-tmicon-color-error,
+.theme-minimalism.mode-light .portal-tmicon-color-danger,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-light .portal-tmicon-color-warn,
+.theme-minimalism.mode-light .portal-tmicon-color-warning,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-light .portal-tmicon-color-notice,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-light .portal-tmicon-color-success,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-light .portal-tmicon-color-info,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-info:hover {
+  color: #bbbbbb;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-brand,
+.theme-minimalism.mode-light .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (light) icon defination */
+.theme-minimalism.mode-light .portal-tmicon {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #222222;
+}
+.theme-minimalism.mode-light .portal-tmicon-light {
+  color: #222222;
+  opacity: 0.5;
+}
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-light .portal-tmicon-color-error,
+.theme-minimalism.mode-light .portal-tmicon-color-danger,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-light .portal-tmicon-color-warn,
+.theme-minimalism.mode-light .portal-tmicon-color-warning,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-light .portal-tmicon-color-notice,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-light .portal-tmicon-color-success,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-light .portal-tmicon-color-info,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-info:hover {
+  color: #bbbbbb;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-brand,
+.theme-minimalism.mode-light .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (light) icon defination */
+.theme-minimalism.mode-light .portal-tmicon {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #222222;
+}
+.theme-minimalism.mode-light .portal-tmicon-light {
+  color: #222222;
+  opacity: 0.5;
+}
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-light .portal-tmicon-color-error,
+.theme-minimalism.mode-light .portal-tmicon-color-danger,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-light .portal-tmicon-color-warn,
+.theme-minimalism.mode-light .portal-tmicon-color-warning,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-light .portal-tmicon-color-notice,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-light .portal-tmicon-color-success,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-light .portal-tmicon-color-info,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-info:hover {
+  color: #bbbbbb;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-brand,
+.theme-minimalism.mode-light .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (light) icon defination */
+.theme-minimalism.mode-light .portal-tmicon {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #222222;
+}
+.theme-minimalism.mode-light .portal-tmicon-light {
+  color: #222222;
+  opacity: 0.5;
+}
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-light .portal-tmicon-color-error,
+.theme-minimalism.mode-light .portal-tmicon-color-danger,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-light .portal-tmicon-color-warn,
+.theme-minimalism.mode-light .portal-tmicon-color-warning,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-light .portal-tmicon-color-notice,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-light .portal-tmicon-color-success,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-light .portal-tmicon-color-info,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-info:hover {
+  color: #bbbbbb;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-brand,
+.theme-minimalism.mode-light .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (light) icon defination */
+.theme-minimalism.mode-light .portal-tmicon {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #222222;
+}
+.theme-minimalism.mode-light .portal-tmicon-light {
+  color: #222222;
+  opacity: 0.5;
+}
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-light .portal-tmicon-light.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-light .portal-tmicon-color-error,
+.theme-minimalism.mode-light .portal-tmicon-color-danger,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-light .portal-tmicon-color-warn,
+.theme-minimalism.mode-light .portal-tmicon-color-warning,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-light .portal-tmicon-color-notice,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-light .portal-tmicon-color-success,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-light .portal-tmicon-color-info,
+.theme-minimalism.mode-light .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-light .portal-tmicon-color-info:hover {
+  color: #bbbbbb;
+}
+.theme-minimalism.mode-light .portal-tmicon-color-brand,
+.theme-minimalism.mode-light .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (dark) icon defination */
+.theme-minimalism.mode-dark .portal-tmicon {
+  color: #bbbbbb;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-dark .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-dark .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #ffffff;
+}
+.theme-minimalism.mode-dark .portal-tmicon-visible-low {
+  color: #ffffff;
+  opacity: 0.3;
+}
+.theme-minimalism.mode-dark .portal-tmicon-visible-low.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-dark .portal-tmicon-visible-low.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-dark .portal-tmicon-color-error,
+.theme-minimalism.mode-dark .portal-tmicon-color-danger,
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-dark .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-dark .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-dark .portal-tmicon-color-warn,
+.theme-minimalism.mode-dark .portal-tmicon-color-warning,
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-dark .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-dark .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-dark .portal-tmicon-color-notice,
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-dark .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-dark .portal-tmicon-color-success,
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-dark .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-dark .portal-tmicon-color-info,
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-dark .portal-tmicon-color-info:hover {
+  color: #888888;
+}
+.theme-minimalism.mode-dark .portal-tmicon-color-brand,
+.theme-minimalism.mode-dark .portal-tmicon-color-brand:hover {
+  color: #d71920;
+}
+/* Apply minimalism theme (dark) icon defination */
+.theme-minimalism.mode-dark .portal-tmicon {
+  color: #bbbbbb;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.theme-minimalism.mode-dark .portal-tmicon.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-dark .portal-tmicon.portal-tmicon-hoverable.hover {
+  color: #ffffff;
+}
+.theme-minimalism.mode-dark .portal-tmicon-visible-low {
+  color: #ffffff;
+  opacity: 0.3;
+}
+.theme-minimalism.mode-dark .portal-tmicon-visible-low.portal-tmicon-hoverable:hover,
+.theme-minimalism.mode-dark .portal-tmicon-visible-low.portal-tmicon-hoverable.hover {
+  opacity: 1;
+}
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-high,
+.theme-minimalism.mode-dark .portal-tmicon-color-error,
+.theme-minimalism.mode-dark .portal-tmicon-color-danger,
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-high:hover,
+.theme-minimalism.mode-dark .portal-tmicon-color-error:hover,
+.theme-minimalism.mode-dark .portal-tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-medium,
+.theme-minimalism.mode-dark .portal-tmicon-color-warn,
+.theme-minimalism.mode-dark .portal-tmicon-color-warning,
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-medium:hover,
+.theme-minimalism.mode-dark .portal-tmicon-color-warn:hover,
+.theme-minimalism.mode-dark .portal-tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-low,
+.theme-minimalism.mode-dark .portal-tmicon-color-notice,
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-low:hover,
+.theme-minimalism.mode-dark .portal-tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-safe,
+.theme-minimalism.mode-dark .portal-tmicon-color-success,
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-safe:hover,
+.theme-minimalism.mode-dark .portal-tmicon-color-success:hover {
+  color: #00a94f;
+}
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-info,
+.theme-minimalism.mode-dark .portal-tmicon-color-info,
+.theme-minimalism.mode-dark .portal-tmicon-color-severity-info:hover,
+.theme-minimalism.mode-dark .portal-tmicon-color-info:hover {
+  color: #888888;
+}
+.theme-minimalism.mode-dark .portal-tmicon-color-brand,
+.theme-minimalism.mode-dark .portal-tmicon-color-brand:hover {
   color: #d71920;
 }
 /* Apply minimalism theme (dark) icon defination */
