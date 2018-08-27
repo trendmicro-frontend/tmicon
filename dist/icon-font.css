@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?c1wpf5');
-  src:  url('fonts/TMicon.eot?c1wpf5#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?c1wpf5') format('woff2'),
-    url('fonts/TMicon.ttf?c1wpf5') format('truetype'),
-    url('fonts/TMicon.woff?c1wpf5') format('woff'),
-    url('fonts/TMicon.svg?c1wpf5#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?tljhuq');
+  src:  url('fonts/TMicon.eot?tljhuq#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?tljhuq') format('woff2'),
+    url('fonts/TMicon.ttf?tljhuq') format('truetype'),
+    url('fonts/TMicon.woff?tljhuq') format('woff'),
+    url('fonts/TMicon.svg?tljhuq#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -631,6 +631,15 @@
 .tmicon-window-list:before {
   content: "\e085";
 }
+.tmicon-camera:before {
+  content: "\e61c";
+}
+.tmicon-nas:before {
+  content: "\e61d";
+}
+.tmicon-router:before {
+  content: "\e61e";
+}
 .tmicon-device-an:before {
   content: "\e61b";
 }
@@ -769,6 +778,9 @@
 .tmicon-file-zip-o:before {
   content: "\eb0e";
 }
+.tmicon-link-thin:before {
+  content: "\ea14";
+}
 .tmicon-link:before {
   content: "\ea11";
 }
@@ -829,6 +841,9 @@
 .tmicon-undo:before {
   content: "\ea10";
 }
+.tmicon-caret-down:before {
+  content: "\e908";
+}
 .tmicon-arrows:before {
   content: "\e91b";
 }
@@ -874,9 +889,6 @@
 .tmicon-caret-square-up:before {
   content: "\e90f";
 }
-.tmicon-caret-down:before {
-  content: "\e908";
-}
 .tmicon-caret-left:before {
   content: "\e909";
 }
@@ -912,6 +924,9 @@
 }
 .tmicon-sort-down:before {
   content: "\e917";
+}
+.tmicon-chart-dot:before {
+  content: "\e806";
 }
 .tmicon-map:before {
   content: "\e805";

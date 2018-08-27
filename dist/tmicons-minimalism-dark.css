@@ -1,0 +1,57 @@
+.tmicon {
+  color: #bbbbbb;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.tmicon.tmicon-hoverable:hover,
+.tmicon.tmicon-hoverable.hover {
+  color: #ffffff;
+}
+.tmicon-visible-low {
+  color: #ffffff;
+  opacity: 0.3;
+}
+.tmicon-visible-low.tmicon-hoverable:hover,
+.tmicon-visible-low.tmicon-hoverable.hover {
+  opacity: 1;
+}
+.tmicon-color-severity-high,
+.tmicon-color-error,
+.tmicon-color-danger,
+.tmicon-color-severity-high:hover,
+.tmicon-color-error:hover,
+.tmicon-color-danger:hover {
+  color: #db3d44;
+}
+.tmicon-color-severity-medium,
+.tmicon-color-warn,
+.tmicon-color-warning,
+.tmicon-color-severity-medium:hover,
+.tmicon-color-warn:hover,
+.tmicon-color-warning:hover {
+  color: #ff7633;
+}
+.tmicon-color-severity-low,
+.tmicon-color-notice,
+.tmicon-color-severity-low:hover,
+.tmicon-color-notice:hover {
+  color: #faca2a;
+}
+.tmicon-color-severity-safe,
+.tmicon-color-success,
+.tmicon-color-severity-safe:hover,
+.tmicon-color-success:hover {
+  color: #00a94f;
+}
+.tmicon-color-severity-info,
+.tmicon-color-info,
+.tmicon-color-severity-info:hover,
+.tmicon-color-info:hover {
+  color: #888888;
+}
+.tmicon-color-brand,
+.tmicon-color-brand:hover {
+  color: #d71920;
+}
