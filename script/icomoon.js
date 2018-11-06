@@ -197,11 +197,11 @@ var init = () => {
     .on('click', '.sep-right .deploy-button', (e) => {
       dplMdlShow();
       var themesDeffered = $.ajax({
-        url: 'http://style-portal.tw.trendnet.org:9003/api/themes',
+        url: 'https://style-portal.tw.trendnet.org:9004/api/themes',
         dataType: 'json'
       });
       var iconsDeffered = $.ajax({
-        url: 'http://style-portal.tw.trendnet.org:9003/api/icons/info',
+        url: 'https://style-portal.tw.trendnet.org:9004/api/icons/info',
         dataType: 'json'
       });
       $.when(themesDeffered, iconsDeffered)
@@ -406,7 +406,7 @@ var init = () => {
 
       $deployMiVersion.add($dplMdlCancel).add($dplMdlClose).attr('disabled', true);
       $.ajax({
-        url: 'http://style-portal.tw.trendnet.org:9003/api/icons/deploy',
+        url: 'https://style-portal.tw.trendnet.org:9004/api/icons/deploy',
         method: 'post',
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify({
@@ -419,7 +419,7 @@ var init = () => {
         $loader.remove();
         $deployMiVersion.add($dplMdlCancel).add($dplMdlClose).attr('disabled', false);  
         $dplMdlContent.children().append('<span class="fs6-fixed ff0 mls fgc4"><i class="mrs icon-check fgc-success"></i>Deployed!</span>');
-        var openStylePortal = $('<a href="http://style-portal.tw.trendnet.org:9003/#/styles/minimalism/latest/1811bd76-57b6-4fb9-930f-b6899313fa41" target="_blank">Open Review Site!</a>');
+        var openStylePortal = $('<a href="https://style-portal.tw.trendnet.org:9004/#/styles/minimalism/latest/1811bd76-57b6-4fb9-930f-b6899313fa41" target="_blank">Open Review Site!</a>');
         $('body').append(openStylePortal);
         isDeploying = false;
         setTimeout(function () {

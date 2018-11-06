@@ -18,11 +18,11 @@ var deployModal = `<div id="modal-deploy-icons" class="modal" tabindex="-1" role
 
 var init = function () {
   var $loader = $('<span class="loader loader-small"></span>');
-  var openOfficialSite = $('<a href="http://style-portal.tw.trendnet.org/#/styles/minimalism/latest/1811bd76-57b6-4fb9-930f-b6899313fa41" target="_blank">Open Review Site!</a>');
+  var openOfficialSite = $('<a href="https://style-portal.tw.trendnet.org/#/styles/minimalism/latest/1811bd76-57b6-4fb9-930f-b6899313fa41" target="_blank">Open Review Site!</a>');
   var diff = DeepDiff.noConflict();
   var getReviewSiteIconInfo = new Promise((resolve, reject) => {
     $.ajax({
-      url: 'http://style-portal.tw.trendnet.org:9003/api/icons/info',
+      url: 'https://style-portal.tw.trendnet.org:9004/api/icons/info',
       dataType: 'json'
     })
     .done((info) => {
@@ -34,7 +34,7 @@ var init = function () {
   });
   var getOfficalSiteIconInfo = new Promise((resolve, reject) => {
     $.ajax({
-      url: 'http://style-portal.tw.trendnet.org/api/icons/info',
+      url: 'https://style-portal.tw.trendnet.org/api/icons/info',
       dataType: 'json'
     })
     .done((info) => {
@@ -66,7 +66,7 @@ var init = function () {
           deployNow.prepend($loader).add($deployCancel).add($deployModalCanel).attr('disabled', true);
           
           $.ajax({
-            url: 'http://style-portal.tw.trendnet.org/api/icons/deploy',
+            url: 'https://style-portal.tw.trendnet.org/api/icons/deploy',
             method: 'post',
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify(reviewSite)
