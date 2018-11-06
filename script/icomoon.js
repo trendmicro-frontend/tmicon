@@ -386,18 +386,19 @@ var init = () => {
         }
       });
       
-      let applyThemes = [];
+      let applyThemes = {};
       $('#themeList').find('.input-checkbox:checked').each(function (index, checkbox) {
         themesData.forEach(theme => {
           if (theme.id === checkbox.value) {
-            applyThemes.push({
+            applyThemes[theme.id + theme.mode] = {
               "id": theme.id,
               "mode": theme.mode
-            });
+            };
           }
         });
       });
-      data.preferences.fontPref.metadata.applyThemes = applyThemes;
+      
+      data.preferences.fontPref.metadata.applyThemes = Object.values(applyThemes);
       let preferences = Object.assign({
         gridSize: data.preferences.gridSize,
         fontPref: data.preferences.fontPref,
