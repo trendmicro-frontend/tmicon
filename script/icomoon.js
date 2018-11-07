@@ -130,27 +130,29 @@ var init = () => {
       )
   ).appendTo('body');
   
-  const array2object = function (array, key) {
+  const array2object = function (array, keys) {
     var object = {};
-
     array.forEach(function (item, index) {
-      if (key) {
-        object[item[key]] = item;
-      }
-
-      else {
+      if (keys && keys.length > 0) {
+        const property = keys.map(key => {
+          return key.split('.').reduce((calc, current) => {
+            return calc[current];
+          }, item);
+        }).join('-');
+        object[property] = item;
+      } else {
         object[index] = item;
       }
     });
-
     return object;
-  }
-  const getUniqueValuesOfKey = function (array, key) {
-    return array.reduce(function(carry, item){
-      if(item[key] && !~carry.indexOf(item[key])) carry.push(item[key]);
-      return carry;
-    }, []);
-  }
+  };
+
+  // const getUniqueValuesOfKey = function (array, keys) {
+  //   return array.reduce(function(carry, item){
+  //     if(item[key] && !~carry.indexOf(item[key])) carry.push(item[key]);
+  //     return carry;
+  //   }, []);
+  // }
   const dplMdlShow = (e) => $dplMdl.removeClass('hide');
   const dplMdlHide = (e) => $dplMdl.addClass('hide');
   const appendDeployIcon = (callback) => {
@@ -207,7 +209,7 @@ var init = () => {
       $.when(themesDeffered, iconsDeffered)
         .done(function (themeInfo, iconsInfo) {
           themesData = themeInfo[0];
-          oThemes = array2object(themeInfo[0], 'id');
+          oThemes = array2object(themeInfo[0], ['id', 'mode.key']);
           
           let oPreferences = iconsInfo[0].preferences;
           let oIcons = iconsInfo[0].icons.reduce((acc, icon) => {
@@ -262,8 +264,9 @@ var init = () => {
               let contents = [];
               let applyThemes = oPreferences.fontPref? oPreferences.fontPref.metadata.applyThemes : [];
               
-              applyThemes = getUniqueValuesOfKey(applyThemes, 'id');
-              
+              // applyThemes = getUniqueValuesOfKey(applyThemes, 'id');
+              applyThemes = Object.values(array2object(applyThemes, ['id', 'mode.key']));
+
               if (newIcons.length > 0) contents.push('create <strong>' + newIcons.length + '</strong> new icon(s)');
               if (removedIcons.length > 0) contents.push('remove <strong>' + removedIcons.length + '</strong> icon(s)');
               if (modifiedIcons.length > 0) contents.push('modify <strong>' + modifiedIcons.length + '</strong> icon(s)');
@@ -276,12 +279,12 @@ var init = () => {
                     Theme(s) <span class="caret"></span>
                   </button>
                   <ul id="themeList" class="dropdown-menu">
-                  ${Object.keys(oThemes).map(function(theme) {
+                  ${Object.values(oThemes).map(function(theme) {
                     return `
                     <li>
                       <sapn class="checkbox">
-                        <input id="theme_${theme}" type="checkbox" class="input-checkbox" value="${theme}" ${applyThemes.indexOf(theme) > -1 ? 'checked': ''}>
-                        <label for="theme_${theme}">${oThemes[theme].name}</label>
+                        <input id="${theme.id}-${theme.mode.key}" type="checkbox" class="input-checkbox" value="${theme.id}-${theme.mode.key}" ${applyThemes.indexOf(theme) > -1 ? 'checked': ''}>
+                        <label for="${theme.id}-${theme.mode.key}">${oThemes[theme].name}</label>
                       </sapn>
                     </li>
                     `

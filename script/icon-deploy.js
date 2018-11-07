@@ -18,7 +18,7 @@ var deployModal = `<div id="modal-deploy-icons" class="modal" tabindex="-1" role
 
 var init = function () {
   var $loader = $('<span class="loader loader-small"></span>');
-  var openOfficialSite = $('<a href="https://style-portal.tw.trendnet.org/#/styles/minimalism/latest/1811bd76-57b6-4fb9-930f-b6899313fa41" target="_blank">Open Review Site!</a>');
+  var openOfficialSite = $('<a href="https://style-portal.tw.trendnet.org/?mode=light#/styles/minimalism/latest/1811bd76-57b6-4fb9-930f-b6899313fa41" target="_blank">Open Review Site!</a>');
   var diff = DeepDiff.noConflict();
   var getReviewSiteIconInfo = new Promise((resolve, reject) => {
     $.ajax({
