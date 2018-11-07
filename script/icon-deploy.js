@@ -57,7 +57,15 @@ var init = function () {
       
       if (differents && differents.length > 0) {
         reviewSite.isOfficial = true;
-        var deployButton = $('<button class="btn btn-primary" data-toggle="modal" data-target="#modal-deploy-icons">Deploy icons!</button>').appendTo($('header > div'));
+        var deployButton = $('<button class="btn btn-primary" data-toggle="modal" data-target="#modal-deploy-icons">Deploy icons!</button>');
+        var timer = setInterval(function () {
+          var buttonGroup = $('header > div');
+          if (buttonGroup.length > 0) {
+            deployButton.appendTo(buttonGroup);
+            clearInterval(timer);
+          }
+        }, 300);
+        
         $(deployModal).appendTo('body');
         
         var deployNow = $('#deployBtn').on('click', function () {
