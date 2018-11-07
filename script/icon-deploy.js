@@ -57,7 +57,10 @@ var init = function () {
       
       if (differents && differents.length > 0) {
         reviewSite.isOfficial = true;
-        var deployButton = $('<button class="btn btn-primary" data-toggle="modal" data-target="#modal-deploy-icons">Deploy icons!</button>').css('marginTop', '15.5px');
+        var deployButton = $('<button class="btn btn-primary" data-toggle="modal" data-target="#modal-deploy-icons">Deploy icons!</button>').css({
+          'margin-top': '15.5px',
+          'margin-left': '8px'
+        });
         var timer = setInterval(function () {
           var buttonGroup = $('header > div');
           if (buttonGroup.length > 0) {
