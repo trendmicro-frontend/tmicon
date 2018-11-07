@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?tljhuq');
-  src:  url('fonts/TMicon.eot?tljhuq#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?tljhuq') format('woff2'),
-    url('fonts/TMicon.ttf?tljhuq') format('truetype'),
-    url('fonts/TMicon.woff?tljhuq') format('woff'),
-    url('fonts/TMicon.svg?tljhuq#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?ljyxnl');
+  src:  url('fonts/TMicon.eot?ljyxnl#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?ljyxnl') format('woff2'),
+    url('fonts/TMicon.ttf?ljyxnl') format('truetype'),
+    url('fonts/TMicon.woff?ljyxnl') format('woff'),
+    url('fonts/TMicon.svg?ljyxnl#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.tmicon-sherlock:before {
+  content: "\e0ca";
+}
 .tmicon-moon:before {
   content: "\e0c7";
 }
@@ -840,6 +843,12 @@
 }
 .tmicon-undo:before {
   content: "\ea10";
+}
+.tmicon-collapse-left:before {
+  content: "\e91c";
+}
+.tmicon-collapse-right:before {
+  content: "\e91d";
 }
 .tmicon-caret-down:before {
   content: "\e908";
