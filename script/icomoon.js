@@ -392,8 +392,9 @@ var init = () => {
       let applyThemes = {};
       $('#themeList').find('.input-checkbox:checked').each(function (index, checkbox) {
         themesData.forEach(theme => {
-          if (theme.id === checkbox.value) {
-            applyThemes[theme.id + theme.mode] = {
+          let pk = `${theme.id}-${theme.mode.key}`;
+          if (pk === checkbox.value) {
+            applyThemes[pk] = {
               "id": theme.id,
               "mode": theme.mode
             };
