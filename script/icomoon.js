@@ -284,7 +284,7 @@ var init = () => {
                     <li>
                       <sapn class="checkbox">
                         <input id="${theme.id}-${theme.mode.key}" type="checkbox" class="input-checkbox" value="${theme.id}-${theme.mode.key}" ${applyThemes.indexOf(theme) > -1 ? 'checked': ''}>
-                        <label for="${theme.id}-${theme.mode.key}">${oThemes[theme].name}</label>
+                        <label for="${theme.id}-${theme.mode.key}">${theme.id}-${theme.mode.key}</label>
                       </sapn>
                     </li>
                     `
