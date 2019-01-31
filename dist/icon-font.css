@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?hy13xn');
-  src:  url('fonts/TMicon.eot?hy13xn#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?hy13xn') format('woff2'),
-    url('fonts/TMicon.ttf?hy13xn') format('truetype'),
-    url('fonts/TMicon.woff?hy13xn') format('woff'),
-    url('fonts/TMicon.svg?hy13xn#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?2pm2ss');
+  src:  url('fonts/TMicon.eot?2pm2ss#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?2pm2ss') format('woff2'),
+    url('fonts/TMicon.ttf?2pm2ss') format('truetype'),
+    url('fonts/TMicon.woff?2pm2ss') format('woff'),
+    url('fonts/TMicon.svg?2pm2ss#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -25,6 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.tmicon-light2-o:before {
+  content: "\e0cd";
+}
+.tmicon-rca:before {
+  content: "\e0ce";
+}
+.tmicon-treat-investigation:before {
+  content: "\e0cf";
+}
+.tmicon-trend-link:before {
+  content: "\e0cc";
+}
 .tmicon-bolt:before {
   content: "\e0cb";
 }
@@ -987,6 +999,9 @@
 }
 .tmicon-warning-circle:before {
   content: "\ec06";
+}
+.tmicon-virustotal:before {
+  content: "\ed0c";
 }
 .tmicon-chrome:before {
   content: "\ed08";
