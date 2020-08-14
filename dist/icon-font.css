@@ -1,13 +1,14 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?i23i6y');
-  src:  url('fonts/TMicon.eot?i23i6y#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?i23i6y') format('woff2'),
-    url('fonts/TMicon.ttf?i23i6y') format('truetype'),
-    url('fonts/TMicon.woff?i23i6y') format('woff'),
-    url('fonts/TMicon.svg?i23i6y#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?4a5frs');
+  src:  url('fonts/TMicon.eot?4a5frs#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?4a5frs') format('woff2'),
+    url('fonts/TMicon.ttf?4a5frs') format('truetype'),
+    url('fonts/TMicon.woff?4a5frs') format('woff'),
+    url('fonts/TMicon.svg?4a5frs#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: block;
 }
 
 .tmicon {
@@ -25,6 +26,27 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.tmicon-registry:before {
+  content: "\e0d5";
+}
+.tmicon-winevent:before {
+  content: "\e0d7";
+}
+.tmicon-wmi:before {
+  content: "\e0d6";
+}
+.tmicon-add-square-plus-o:before {
+  content: "\e0d2";
+}
+.tmicon-ioc:before {
+  content: "\e0d4";
+}
+.tmicon-key-off:before {
+  content: "\e0d1";
+}
+.tmicon-resize-horizontal:before {
+  content: "\e0d3";
+}
 .tmicon-rca:before {
   content: "\e0ce";
 }
@@ -652,6 +674,12 @@
 .tmicon-window-list:before {
   content: "\e085";
 }
+.tmicon-desktop-block:before {
+  content: "\e602";
+}
+.tmicon-desktop:before {
+  content: "\e600";
+}
 .tmicon-desktop-off:before {
   content: "\e61f";
 }
@@ -676,14 +704,8 @@
 .tmicon-TV:before {
   content: "\e619";
 }
-.tmicon-desktop:before {
-  content: "\e600";
-}
 .tmicon-desktop-add:before {
   content: "\e601";
-}
-.tmicon-desktop-block:before {
-  content: "\e602";
 }
 .tmicon-desktop-cloud:before {
   content: "\e603";
@@ -1047,4 +1069,37 @@
 }
 .tmicon-t-ball:before {
   content: "\ed00";
+}
+.tmicon-block-app:before {
+  content: "\e500";
+}
+.tmicon-callback:before {
+  content: "\e501";
+}
+.tmicon-email-business-o:before {
+  content: "\e502";
+}
+.tmicon-firewall-o:before {
+  content: "\e503";
+}
+.tmicon-machine-learning-o:before {
+  content: "\e504";
+}
+.tmicon-malware:before {
+  content: "\e505";
+}
+.tmicon-ransomware-o:before {
+  content: "\e506";
+}
+.tmicon-spam-o:before {
+  content: "\e507";
+}
+.tmicon-spyware:before {
+  content: "\e508";
+}
+.tmicon-target-o:before {
+  content: "\e509";
+}
+.tmicon-url:before {
+  content: "\e50a";
 }
