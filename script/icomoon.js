@@ -73,7 +73,7 @@ var init = () => {
       height: 0;
       vertical-align: middle;
       border-top: 4px dashed #666666;
-      border-top: 4px solid \9;
+      border-top: 4px solid;
       border-right: 4px solid transparent;
       border-left: 4px solid transparent;
     }
