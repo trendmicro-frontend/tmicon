@@ -16,4 +16,8 @@ install:
 script:
   - yarn build
 after_success:
-  - git clone https://github.com/trendmicro-frontend/styled-ui.git
+  - cd ..
+  - git clone https://github.com/trendmicro-frontend/styled-ui.git .styled-ui > /dev/null 2>&1
+  - cd .styled-ui-demo
+  - git checkout -B feature/tmicon
+  - git merge master
