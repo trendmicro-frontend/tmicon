@@ -17,7 +17,6 @@ script:
   - yarn build
 after_success:
   - cd ..
-  - ls
   - git clone https://github.com/trendmicro-frontend/styled-ui.git .styled-ui > /dev/null 2>&1
   - cd .styled-ui
   - git checkout -B feature/tmicon
@@ -26,4 +25,4 @@ after_success:
   - git status
   - git add ./packages/react-styled-ui/src/Icon/tmIconMap.js
   - git commit -m 'core\:update tmicon'
-  - git log
+  - git push origin feature/tmicon
