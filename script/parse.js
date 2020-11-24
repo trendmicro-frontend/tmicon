@@ -41,7 +41,6 @@ fs.readdirSync(svgFolder).forEach(file => {
   dataFromSvgFile[file.split('.svg')[0]] = { paths, viewBox };
 });
 console.log("Incorrect viewBox count", count);
-
 // http.get('http://style-portal.tw.trendnet.org/api/icons/info', (res) => {
 //   const { statusCode } = res;
 //   const contentType = res.headers['content-type'];
