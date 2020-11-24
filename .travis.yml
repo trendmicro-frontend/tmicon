@@ -5,9 +5,15 @@ node_js:
   - "12"
 cache:
   yarn: true
+env:
+  - TONIC_UI_REPO: github.com/trendmicro-frontend/styled-ui.git
+
+
 before_install:
   - npm install -g yarn
 install:
   - yarn install
 script:
   - yarn build
+after_success:
+  - git clone https://github.com/trendmicro-frontend/styled-ui.git
