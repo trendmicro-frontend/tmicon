@@ -23,3 +23,6 @@ after_success:
   - git checkout -B feature/tmicon
   - git merge master
   - cp -f ../test2/tmIconMap.js ./packages/react-styled-ui/src/Icon/tmIconMap.js
+  - git status
+  - git add ./packages/react-styled-ui/src/Icon/tmIconMap.js
+  - git commit -m 'core\:update tmicon'
