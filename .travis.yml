@@ -21,4 +21,4 @@ after_success:
   - cd .styled-ui
   - git checkout -B feature/tmicon
   - git merge master
-  - cp ../tmicon/tmIconMap.js ./packages/react-styled-ui/src/Icon/tmIconMap.js -y
+  - cp -f ../tmicon/tmIconMap.js ./packages/react-styled-ui/src/Icon/tmIconMap.js
