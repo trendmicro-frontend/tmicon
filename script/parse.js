@@ -1,4 +1,5 @@
 const svgFolder = './dist/svg';
+const iconInfo = './data'
 const fs = require('fs');
 const http = require('http');
 const ejs = require('ejs');
@@ -41,6 +42,11 @@ fs.readdirSync(svgFolder).forEach(file => {
   dataFromSvgFile[file.split('.svg')[0]] = { paths, viewBox };
 });
 console.log("Incorrect viewBox count", count);
+
+fs.readdirSync(iconInfo).forEach(file => {
+  var text = fs.readFileSync(`${iconInfo}/${file}`,  "utf-8");
+  console.log(text);
+});
 http.get('http://style-portal.tw.trendnet.org/api/icons/info', (res) => {
   const { statusCode } = res;
   const contentType = res.headers['content-type'];

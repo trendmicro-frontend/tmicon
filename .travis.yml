@@ -8,6 +8,6 @@ cache:
 before_install:
   - npm install -g yarn
 install:
-  - npm install
+  - yarn install
 script:
   - yarn build
