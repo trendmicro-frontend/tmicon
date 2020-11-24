@@ -13,6 +13,7 @@ const dataParsedFromApi = {};
 
 let count = 0;
 
+
 fs.readdirSync(svgFolder).forEach(file => {
   var text = fs.readFileSync(`${svgFolder}/${file}`,  "utf-8");
   // console.log(text);
