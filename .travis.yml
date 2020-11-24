@@ -1,0 +1,19 @@
+language: node_js
+os:
+  - linux
+cache:
+  yarn: true
+
+jobs:
+  include:
+    - name: "Deploy Tonic UI"
+    node_js:
+      - '12'
+    before_install:
+      - npm install -g yarn
+    install:
+      - yarn install
+    script:
+      - yarn deploy
+    after_success: true
+    
