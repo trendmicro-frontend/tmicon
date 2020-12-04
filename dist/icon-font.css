@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?yrzws9');
-  src:  url('fonts/TMicon.eot?yrzws9#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?yrzws9') format('woff2'),
-    url('fonts/TMicon.ttf?yrzws9') format('truetype'),
-    url('fonts/TMicon.woff?yrzws9') format('woff'),
-    url('fonts/TMicon.svg?yrzws9#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?wjobx4');
+  src:  url('fonts/TMicon.eot?wjobx4#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?wjobx4') format('woff2'),
+    url('fonts/TMicon.ttf?wjobx4') format('truetype'),
+    url('fonts/TMicon.woff?wjobx4') format('woff'),
+    url('fonts/TMicon.svg?wjobx4#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,6 +26,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.tmicon-cloud:before {
+  content: "\e0df";
+}
+.tmicon-license:before {
+  content: "\e0e0";
+}
+.tmicon-object-add:before {
+  content: "\e0e1";
+}
 .tmicon-email-edit:before {
   content: "\e0da";
 }
@@ -245,7 +254,7 @@
 .tmicon-cloud-off:before {
   content: "\e090";
 }
-.tmicon-cloud:before {
+.tmicon-cloud-o:before {
   content: "\e08f";
 }
 .tmicon-cloud-user:before {
