@@ -1,4 +1,3 @@
-const svgFolder = './dist/svg';
 const fs = require('fs');
 const ejs = require('ejs');
 const svgVewBoxStart = 'viewBox="';
@@ -9,19 +8,20 @@ const svgPathStart = 'd="';
 const svgPathEnd = '"></path>';
 const dataFromSvgFile = {};
 const dataParsedFromApi = {};
+const svgFolder = './dist/svg';
 // Create tmIconMap.js file for Tonic UI
 const TEMPLATE = `/* eslint-disable */
 // This file is auto generated.
-const tmIconMap = <%- JSON.stringify(ImportObj) %>;
-export default tmIconMap;`;
+const tmiconSVG = <%- JSON.stringify(ImportObj) %>;
+export default tmiconSVG;`;
 let count = 0;
 
 fs.readdirSync(svgFolder).forEach(file => {
-  var text = fs.readFileSync(`${svgFolder}/${file}`,  "utf-8");
+  var text = fs.readFileSync(`${svgFolder}/${file}`,  'utf-8');
   // console.log(text);
-  var textByLine = text.split("\n")
+  var textByLine = text.split('\n')
   const viewBox = textByLine
-    .filter(line => line.indexOf("<svg") >= 0)
+    .filter(line => line.indexOf('<svg') >= 0)
     .reduce((acc, svg) => {
       const viewBox = svg
         .split(svgVewBoxStart)[1]
@@ -35,7 +35,7 @@ fs.readdirSync(svgFolder).forEach(file => {
     }
     , DEFAULT_VIEWBOX);
   const paths = textByLine
-    .filter(line => line.indexOf("path") >= 0)
+    .filter(line => line.indexOf('path') >= 0)
     .map(path => path
       .split(svgPathStart)[1]
       .split(svgPathEnd)[0]
@@ -43,14 +43,17 @@ fs.readdirSync(svgFolder).forEach(file => {
   // console.log(viewBox);
   dataFromSvgFile[file.split('.svg')[0]] = { paths, viewBox };
 });
-console.log("Incorrect viewBox count", count);
 
-var reference = fs.readFileSync('./data/Preferences.json',  "utf-8");
+if (count > 0) {
+  console.log('Incorrect viewBox count', count);
+}
+
+var reference = fs.readFileSync('./data/Preferences.json',  'utf-8');
 const referenceData = JSON.parse(reference);
 const _majorVersion = referenceData.fontPref.metadata.majorVersion;
 const _minorVersion = referenceData.fontPref.metadata.minorVersion;
 
-var icons = fs.readFileSync('./data/Icons.json',  "utf-8");
+var icons = fs.readFileSync('./data/Icons.json',  'utf-8');
 const iconsData = JSON.parse(icons);
 dataParsedFromApi.icons = iconsData
   .sort(function(a, b) {
@@ -73,7 +76,7 @@ dataParsedFromApi.icons = iconsData
     paths
   }));
 
-var iconSet = fs.readFileSync('./data/Iconsets.json',  "utf-8");
+var iconSet = fs.readFileSync('./data/Iconsets.json',  'utf-8');
 const iconSetData = JSON.parse(iconSet);
 dataParsedFromApi.iconsets = iconSetData.sort(function(a, b) {
   var nameA = a.id; // ignore upper and lowercase
@@ -101,10 +104,10 @@ let output = ejs.render(TEMPLATE, {
     icons: combinedIcons
   }
 });
-fs.writeFile("tmIconMap.js", output, 'utf8', function (err) {
+fs.writeFile('src/tmicon-svg.js', output, 'utf8', function (err) {
   if (err) {
-      console.log("An error occured while writing JS Object to File.");
+      console.log('An error occured while writing JS Object to File.');
       return console.log(err);
   }
-  console.log("JS file has been saved.");
+  console.log('JS file has been saved.');
 });
