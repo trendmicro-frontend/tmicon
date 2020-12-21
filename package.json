@@ -1,17 +1,51 @@
 {
-  "name": "tonic-icon",
-  "version": "1.17.0",
+  "name": "@trendmicro/tmicon",
+  "version": "1.18.0",
   "description": "",
-  "main": "",
+  "main": "build/index.cjs.js",
+  "module": "build/index.es.js",
+  "files": [
+    "build",
+    "dist"
+  ],
   "engines": {
-    "node": "<=12"
+    "node": ">=10"
   },
   "scripts": {
-    "build": "node ./script/parse.js"
+    "clean": "del build",
+    "prebuild": "npm run build-tmicon-svg",
+    "build": "rollup --config rollup.config.js",
+    "build-tmicon-svg": "node ./script/build-tmicon-svg.js"
   },
-  "author": "Joshua Tai, Austin Hung, Edward Shih, Lesley Chien, Pin Hsu, Vannie Chiang",
-  "license": "ISC",
-  "dependencies": {
-    "ejs": "^3.1.5"
+  "contributors": [
+    {
+      "name": "Joshua Tai"
+    },
+    {
+      "name": "Austin Hung"
+    },
+    {
+      "name": "Edward Shih"
+    },
+    {
+      "name": "Lesley Chien"
+    },
+    {
+      "name": "Pin Hsu"
+    },
+    {
+      "name": "Vannie Chiang"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@rollup/plugin-node-resolve": "^11.0.1",
+    "@trendmicro/babel-config": "^1.0.0-alpha",
+    "del-cli": "^3.0.1",
+    "ejs": "^3.1.5",
+    "rollup": "^2.35.1",
+    "rollup-plugin-babel": "^4.4.0"
   }
 }
