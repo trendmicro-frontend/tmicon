@@ -1,5 +1,7 @@
 const fs = require('fs');
 const ejs = require('ejs');
+const _sortBy = require('lodash.sortby');
+
 const svgVewBoxStart = 'viewBox="';
 const svgVewBoxEnd = '">';
 const DEFAULT_VIEWBOX = '0 0 16 16';
@@ -9,11 +11,7 @@ const svgPathEnd = '"></path>';
 const dataFromSvgFile = {};
 const dataParsedFromApi = {};
 const svgFolder = './dist/svg';
-// Create tmIconMap.js file for Tonic UI
-const TEMPLATE = `/* eslint-disable */
-// This file is auto generated.
-const tmiconSVG = <%- JSON.stringify(ImportObj) %>;
-export default tmiconSVG;`;
+
 let count = 0;
 
 fs.readdirSync(svgFolder).forEach(file => {
@@ -48,12 +46,12 @@ if (count > 0) {
   console.log('Incorrect viewBox count', count);
 }
 
-var reference = fs.readFileSync('./data/Preferences.json',  'utf-8');
+const reference = fs.readFileSync('./data/Preferences.json',  'utf-8');
 const referenceData = JSON.parse(reference);
 const _majorVersion = referenceData.fontPref.metadata.majorVersion;
 const _minorVersion = referenceData.fontPref.metadata.minorVersion;
 
-var icons = fs.readFileSync('./data/Icons.json',  'utf-8');
+const icons = fs.readFileSync('./data/Icons.json',  'utf-8');
 const iconsData = JSON.parse(icons);
 dataParsedFromApi.icons = iconsData
   .sort(function(a, b) {
@@ -76,38 +74,38 @@ dataParsedFromApi.icons = iconsData
     paths
   }));
 
-var iconSet = fs.readFileSync('./data/Iconsets.json',  'utf-8');
-const iconSetData = JSON.parse(iconSet);
-dataParsedFromApi.iconsets = iconSetData.sort(function(a, b) {
-  var nameA = a.id; // ignore upper and lowercase
-  var nameB = b.id; // ignore upper and lowercase
-  if (nameA < nameB) {
-    return -1;
-  }
-  if (nameA > nameB) {
-    return 1;
-  }
-  // names must be equal
-  return 0;
-});
-// merge data here
-const combinedIcons = dataParsedFromApi.icons.map(icon => {
-  return {
-    ...icon,
-    paths: dataFromSvgFile[icon.name].paths,
-    viewBox: dataFromSvgFile[icon.name].viewBox
-  }
-});
-let output = ejs.render(TEMPLATE, {
-  ImportObj: {
-    ...dataParsedFromApi,
-    icons: combinedIcons
-  }
-});
-fs.writeFile('src/tmicon-svg.js', output, 'utf8', function (err) {
-  if (err) {
-      console.log('An error occured while writing JS Object to File.');
-      return console.log(err);
-  }
-  console.log('JS file has been saved.');
-});
+{ // icons
+  const icons = dataParsedFromApi.icons.map(icon => {
+    return {
+      ...icon,
+      paths: dataFromSvgFile[icon.name].paths,
+      viewBox: dataFromSvgFile[icon.name].viewBox
+    }
+  });
+  const ejsTemplate = [
+    '/* AUTO-GENERATED FILE. DO NOT MODIFY. */',
+    `const icons = <%- JSON.stringify(icons, null, 2) %>;`,
+    '',
+    'export default icons;',
+  ].join('\n');
+  const context = {
+    icons,
+  };
+  const content = ejs.render(ejsTemplate, context);
+  fs.writeFileSync('src/icons/index.js', content, 'utf8');
+}
+
+{ // iconsets
+  const iconsets = _sortBy(require('../data/Iconsets.json'), ['id']);
+  const ejsTemplate = [
+    '/* AUTO-GENERATED FILE. DO NOT MODIFY. */',
+    `const iconsets = <%- JSON.stringify(iconsets, null, 2) %>;`,
+    '',
+    'export default iconsets;',
+  ].join('\n');
+  const context = {
+    iconsets,
+  };
+  const content = ejs.render(ejsTemplate, context);
+  fs.writeFileSync('src/iconsets/index.js', content, 'utf8');
+}

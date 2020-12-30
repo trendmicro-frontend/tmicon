@@ -13,9 +13,9 @@
   },
   "scripts": {
     "clean": "del build",
-    "prebuild": "npm run build-tmicon-svg",
+    "prebuild": "npm run build-icon-files",
     "build": "rollup --config rollup.config.js",
-    "build-tmicon-svg": "node ./script/build-tmicon-svg.js"
+    "build-icon-files": "node ./script/build-icon-files.js"
   },
   "contributors": [
     {
@@ -45,6 +45,7 @@
     "@trendmicro/babel-config": "^1.0.0-alpha",
     "del-cli": "^3.0.1",
     "ejs": "^3.1.5",
+    "lodash.sortby": "^4.7.0",
     "rollup": "^2.35.1",
     "rollup-plugin-babel": "^4.4.0"
   }
