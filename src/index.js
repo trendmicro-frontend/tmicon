@@ -1,5 +1,7 @@
-import tmiconSVG from './tmicon-svg';
+import icons from './icons';
+import iconsets from './iconsets';
 
 export {
-  tmiconSVG,
+  icons,
+  iconsets,
 };
