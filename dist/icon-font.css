@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?wjobx4');
-  src:  url('fonts/TMicon.eot?wjobx4#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?wjobx4') format('woff2'),
-    url('fonts/TMicon.ttf?wjobx4') format('truetype'),
-    url('fonts/TMicon.woff?wjobx4') format('woff'),
-    url('fonts/TMicon.svg?wjobx4#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?77yz1h');
+  src:  url('fonts/TMicon.eot?77yz1h#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?77yz1h') format('woff2'),
+    url('fonts/TMicon.ttf?77yz1h') format('truetype'),
+    url('fonts/TMicon.woff?77yz1h') format('woff'),
+    url('fonts/TMicon.svg?77yz1h#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -20,12 +20,49 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.tmicon-target:before {
+  content: "\e0eb";
+}
+.tmicon-list-close:before {
+  content: "\e0e8";
+}
+.tmicon-list-open:before {
+  content: "\e0e9";
+}
+.tmicon-base-station:before {
+  content: "\e0e2";
+}
+.tmicon-email-message-warning:before {
+  content: "\e0e3";
+}
+.tmicon-email-message:before {
+  content: "\e0e4";
+}
+.tmicon-gear-search:before {
+  content: "\e0e5";
+}
+.tmicon-gears:before {
+  content: "\e0e6";
+}
+.tmicon-sphere-search:before {
+  content: "\e0e7";
+}
 .tmicon-cloud:before {
   content: "\e0df";
 }
@@ -1099,6 +1136,15 @@
 }
 .tmicon-t-ball:before {
   content: "\ed00";
+}
+.tmicon-hook:before {
+  content: "\e50b";
+}
+.tmicon-inject:before {
+  content: "\e50c";
+}
+.tmicon-phishing:before {
+  content: "\e50d";
 }
 .tmicon-block-app:before {
   content: "\e500";
