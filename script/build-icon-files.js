@@ -1,5 +1,6 @@
 const fs = require('fs');
 const ejs = require('ejs');
+const path = require('path');
 const _sortBy = require('lodash.sortby');
 
 const svgVewBoxStart = 'viewBox="';
@@ -10,8 +11,11 @@ const svgPathStart = 'd="';
 const svgPathEnd = '"></path>';
 const dataFromSvgFile = {};
 const dataParsedFromApi = {};
-const svgFolder = './dist/svg';
-
+const svgFolder = path.resolve(__dirname, '../dist/svg');
+const preferencesDataPath = path.resolve(__dirname, '../data/Preferences.json');
+const IconsDataPath = path.resolve(__dirname, '../data/Icons.json');
+const outputIndexPath = path.resolve(__dirname, '../src/icons/index.js');
+const outputIconsetsPath = path.resolve(__dirname, '../src/iconsets/index.js');
 let count = 0;
 
 fs.readdirSync(svgFolder).forEach(file => {
@@ -46,12 +50,12 @@ if (count > 0) {
   console.log('Incorrect viewBox count', count);
 }
 
-const reference = fs.readFileSync('./data/Preferences.json',  'utf-8');
+const reference = fs.readFileSync(preferencesDataPath,  'utf-8');
 const referenceData = JSON.parse(reference);
 const _majorVersion = referenceData.fontPref.metadata.majorVersion;
 const _minorVersion = referenceData.fontPref.metadata.minorVersion;
 
-const icons = fs.readFileSync('./data/Icons.json',  'utf-8');
+const icons = fs.readFileSync(IconsDataPath,  'utf-8');
 const iconsData = JSON.parse(icons);
 dataParsedFromApi.icons = iconsData
   .sort(function(a, b) {
@@ -92,7 +96,7 @@ dataParsedFromApi.icons = iconsData
     icons,
   };
   const content = ejs.render(ejsTemplate, context);
-  fs.writeFileSync('src/icons/index.js', content, 'utf8');
+  fs.writeFileSync(outputIndexPath, content, 'utf8');
 }
 
 { // iconsets
@@ -107,5 +111,5 @@ dataParsedFromApi.icons = iconsData
     iconsets,
   };
   const content = ejs.render(ejsTemplate, context);
-  fs.writeFileSync('src/iconsets/index.js', content, 'utf8');
+  fs.writeFileSync(outputIconsetsPath, content, 'utf8');
 }
