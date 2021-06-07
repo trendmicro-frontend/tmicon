@@ -15,6 +15,14 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
+.tm-svg-flag-more-o {
+  width: 0.8857421875em;
+}
+
+.tm-svg-observable {
+  width: 1.142578125em;
+}
+
 .tm-svg-file-lock-o {
   width: 0.9375em;
 }
