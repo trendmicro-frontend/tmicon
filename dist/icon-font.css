@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?mldvzn');
-  src:  url('fonts/TMicon.eot?mldvzn#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?mldvzn') format('woff2'),
-    url('fonts/TMicon.ttf?mldvzn') format('truetype'),
-    url('fonts/TMicon.woff?mldvzn') format('woff'),
-    url('fonts/TMicon.svg?mldvzn#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?7dnpqs');
+  src:  url('fonts/TMicon.eot?7dnpqs#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?7dnpqs') format('woff2'),
+    url('fonts/TMicon.ttf?7dnpqs') format('truetype'),
+    url('fonts/TMicon.woff?7dnpqs') format('woff'),
+    url('fonts/TMicon.svg?7dnpqs#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -36,6 +36,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.tmicon-user-managed-group:before {
+  content: "\e0f0";
+}
+.tmicon-user-managed:before {
+  content: "\e0ef";
+}
 .tmicon-warning-minor:before {
   content: "\e0ee";
 }
@@ -1148,6 +1154,9 @@
 }
 .tmicon-t-ball:before {
   content: "\ed00";
+}
+.tmicon-lateral-movement:before {
+  content: "\e50e";
 }
 .tmicon-hook:before {
   content: "\e50b";
