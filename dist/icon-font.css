@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?7dnpqs');
-  src:  url('fonts/TMicon.eot?7dnpqs#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?7dnpqs') format('woff2'),
-    url('fonts/TMicon.ttf?7dnpqs') format('truetype'),
-    url('fonts/TMicon.woff?7dnpqs') format('woff'),
-    url('fonts/TMicon.svg?7dnpqs#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?7jmaun');
+  src:  url('fonts/TMicon.eot?7jmaun#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?7jmaun') format('woff2'),
+    url('fonts/TMicon.ttf?7jmaun') format('truetype'),
+    url('fonts/TMicon.woff?7jmaun') format('woff'),
+    url('fonts/TMicon.svg?7jmaun#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -36,6 +36,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.tmicon-sweeping-warning:before {
+  content: "\e0f1";
+}
+.tmicon-playbook:before {
+  content: "\e0f2";
+}
 .tmicon-user-managed-group:before {
   content: "\e0f0";
 }
