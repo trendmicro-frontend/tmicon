@@ -1,6 +1,6 @@
 {
   "name": "@trendmicro/tmicon",
-  "version": "1.27.0",
+  "version": "1.28.0",
   "description": "",
   "main": "build/index.cjs.js",
   "module": "build/index.es.js",
