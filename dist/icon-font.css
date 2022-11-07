@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?x8jvgx');
-  src:  url('fonts/TMicon.eot?x8jvgx#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?x8jvgx') format('woff2'),
-    url('fonts/TMicon.ttf?x8jvgx') format('truetype'),
-    url('fonts/TMicon.woff?x8jvgx') format('woff'),
-    url('fonts/TMicon.svg?x8jvgx#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?k7rojy');
+  src:  url('fonts/TMicon.eot?k7rojy#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?k7rojy') format('woff2'),
+    url('fonts/TMicon.ttf?k7rojy') format('truetype'),
+    url('fonts/TMicon.woff?k7rojy') format('woff'),
+    url('fonts/TMicon.svg?k7rojy#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -36,6 +36,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.tmicon-screenshot:before {
+  content: "\e0fe";
+}
+.tmicon-headset-mic:before {
+  content: "\e0fa";
+}
+.tmicon-identity:before {
+  content: "\e0fb";
+}
+.tmicon-ip:before {
+  content: "\e0fc";
+}
+.tmicon-permission:before {
+  content: "\e0fd";
+}
+.tmicon-self-service:before {
+  content: "\e0ff";
+}
 .tmicon-domain2:before {
   content: "\e0f7";
 }
