@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?dwzdp9');
-  src:  url('fonts/TMicon.eot?dwzdp9#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?dwzdp9') format('woff2'),
-    url('fonts/TMicon.ttf?dwzdp9') format('truetype'),
-    url('fonts/TMicon.woff?dwzdp9') format('woff'),
-    url('fonts/TMicon.svg?dwzdp9#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?89dk4k');
+  src:  url('fonts/TMicon.eot?89dk4k#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?89dk4k') format('woff2'),
+    url('fonts/TMicon.ttf?89dk4k') format('truetype'),
+    url('fonts/TMicon.woff?89dk4k') format('woff'),
+    url('fonts/TMicon.svg?89dk4k#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -36,8 +36,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.tmicon-query:before {
+  content: "\e101";
+}
 .tmicon-permission:before {
   content: "\e0fd";
+}
+.tmicon-workspace:before {
+  content: "\e100";
+}
+.tmicon-download-object:before {
+  content: "\e0fe";
+}
+.tmicon-file-download-o:before {
+  content: "\eb13";
 }
 .tmicon-headset-mic:before {
   content: "\e0fa";
