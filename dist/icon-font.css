@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?89dk4k');
-  src:  url('fonts/TMicon.eot?89dk4k#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?89dk4k') format('woff2'),
-    url('fonts/TMicon.ttf?89dk4k') format('truetype'),
-    url('fonts/TMicon.woff?89dk4k') format('woff'),
-    url('fonts/TMicon.svg?89dk4k#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?z40w7y');
+  src:  url('fonts/TMicon.eot?z40w7y#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?z40w7y') format('woff2'),
+    url('fonts/TMicon.ttf?z40w7y') format('truetype'),
+    url('fonts/TMicon.woff?z40w7y') format('woff'),
+    url('fonts/TMicon.svg?z40w7y#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -36,6 +36,39 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.tmicon-battery:before {
+  content: "\e102";
+}
+.tmicon-connecting:before {
+  content: "\e103";
+}
+.tmicon-credit-token:before {
+  content: "\e104";
+}
+.tmicon-feedback-dislike:before {
+  content: "\e105";
+}
+.tmicon-feedback-like:before {
+  content: "\e106";
+}
+.tmicon-filter-add:before {
+  content: "\e107";
+}
+.tmicon-filter-delete:before {
+  content: "\e108";
+}
+.tmicon-positive-benigntrue:before {
+  content: "\e109";
+}
+.tmicon-positive-false:before {
+  content: "\e10a";
+}
+.tmicon-positive-true:before {
+  content: "\e10b";
+}
+.tmicon-scan-square:before {
+  content: "\e10c";
+}
 .tmicon-query:before {
   content: "\e101";
 }
@@ -95,9 +128,6 @@
 }
 .tmicon-user-managed:before {
   content: "\e0ef";
-}
-.tmicon-warning-minor:before {
-  content: "\e0ee";
 }
 .tmicon-flag-more-o:before {
   content: "\e0ed";
@@ -366,9 +396,6 @@
 .tmicon-cloud-user:before {
   content: "\e091";
 }
-.tmicon-virus:before {
-  content: "\e0b3";
-}
 .tmicon-check-bold:before {
   content: "\e08c";
 }
@@ -587,9 +614,6 @@
 }
 .tmicon-info-o:before {
   content: "\e03f";
-}
-.tmicon-warning-triangle:before {
-  content: "\e084";
 }
 .tmicon-attach-alert:before {
   content: "\e006";
@@ -1155,6 +1179,12 @@
 .tmicon-chart-table:before {
   content: "\e804";
 }
+.tmicon-warning-minor:before {
+  content: "\e0ee";
+}
+.tmicon-warning-triangle:before {
+  content: "\e084";
+}
 .tmicon-error:before {
   content: "\ec00";
 }
@@ -1211,6 +1241,9 @@
 }
 .tmicon-t-ball:before {
   content: "\ed00";
+}
+.tmicon-virus:before {
+  content: "\e0b3";
 }
 .tmicon-lateral-movement:before {
   content: "\e50e";
