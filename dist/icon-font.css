@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?z40w7y');
-  src:  url('fonts/TMicon.eot?z40w7y#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?z40w7y') format('woff2'),
-    url('fonts/TMicon.ttf?z40w7y') format('truetype'),
-    url('fonts/TMicon.woff?z40w7y') format('woff'),
-    url('fonts/TMicon.svg?z40w7y#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?296ey8');
+  src:  url('fonts/TMicon.eot?296ey8#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?296ey8') format('woff2'),
+    url('fonts/TMicon.ttf?296ey8') format('truetype'),
+    url('fonts/TMicon.woff?296ey8') format('woff'),
+    url('fonts/TMicon.svg?296ey8#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -36,6 +36,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.tmicon-key-app-o:before {
+  content: "\e110";
+}
+.tmicon-rollback:before {
+  content: "\e10f";
+}
+.tmicon-email-read-o:before {
+  content: "\e10d";
+}
+.tmicon-email-unread-o:before {
+  content: "\e10e";
+}
 .tmicon-battery:before {
   content: "\e102";
 }
@@ -80,9 +92,6 @@
 }
 .tmicon-download-object:before {
   content: "\e0fe";
-}
-.tmicon-file-download-o:before {
-  content: "\eb13";
 }
 .tmicon-headset-mic:before {
   content: "\e0fa";
@@ -936,6 +945,9 @@
 .tmicon-device-master:before {
   content: "\e60c";
 }
+.tmicon-file-download-o:before {
+  content: "\eb13";
+}
 .tmicon-file-lock-o:before {
   content: "\eb12";
 }
@@ -1149,13 +1161,25 @@
 .tmicon-sort-down:before {
   content: "\e917";
 }
-.tmicon-chart_areastep:before {
+.tmicon-indicator-1:before {
+  content: "\e80a";
+}
+.tmicon-indicator-2:before {
+  content: "\e80b";
+}
+.tmicon-indicator-3:before {
+  content: "\e80c";
+}
+.tmicon-indicator-4:before {
+  content: "\e80d";
+}
+.tmicon-chart-areastep:before {
   content: "\e807";
 }
-.tmicon-chart_donut:before {
+.tmicon-chart-donut:before {
   content: "\e808";
 }
-.tmicon-chart_scatter:before {
+.tmicon-chart-scatter:before {
   content: "\e809";
 }
 .tmicon-chart-dot:before {
@@ -1241,6 +1265,18 @@
 }
 .tmicon-t-ball:before {
   content: "\ed00";
+}
+.tmicon-phishing-2:before {
+  content: "\e50f";
+}
+.tmicon-ransomware:before {
+  content: "\e510";
+}
+.tmicon-spam-warnimg:before {
+  content: "\e512";
+}
+.tmicon-spam:before {
+  content: "\e511";
 }
 .tmicon-virus:before {
   content: "\e0b3";
