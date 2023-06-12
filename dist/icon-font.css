@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?onq7oh');
-  src:  url('fonts/TMicon.eot?onq7oh#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?onq7oh') format('woff2'),
-    url('fonts/TMicon.ttf?onq7oh') format('truetype'),
-    url('fonts/TMicon.woff?onq7oh') format('woff'),
-    url('fonts/TMicon.svg?onq7oh#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?v18kel');
+  src:  url('fonts/TMicon.eot?v18kel#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?v18kel') format('woff2'),
+    url('fonts/TMicon.ttf?v18kel') format('truetype'),
+    url('fonts/TMicon.woff?v18kel') format('woff'),
+    url('fonts/TMicon.svg?v18kel#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -1265,6 +1265,9 @@
 }
 .tmicon-t-ball:before {
   content: "\ed00";
+}
+.tmicon-spam:before {
+  content: "\e511";
 }
 .tmicon-phishing-2:before {
   content: "\e50f";
