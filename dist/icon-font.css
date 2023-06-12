@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?a9zh2a');
-  src:  url('fonts/TMicon.eot?a9zh2a#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?a9zh2a') format('woff2'),
-    url('fonts/TMicon.ttf?a9zh2a') format('truetype'),
-    url('fonts/TMicon.woff?a9zh2a') format('woff'),
-    url('fonts/TMicon.svg?a9zh2a#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?onq7oh');
+  src:  url('fonts/TMicon.eot?onq7oh#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?onq7oh') format('woff2'),
+    url('fonts/TMicon.ttf?onq7oh') format('truetype'),
+    url('fonts/TMicon.woff?onq7oh') format('woff'),
+    url('fonts/TMicon.svg?onq7oh#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -1266,14 +1266,11 @@
 .tmicon-t-ball:before {
   content: "\ed00";
 }
-.tmicon-spam:before {
-  content: "\e511";
+.tmicon-phishing-2:before {
+  content: "\e50f";
 }
 .tmicon-spam-warning:before {
   content: "\e512";
-}
-.tmicon-phishing-2:before {
-  content: "\e50f";
 }
 .tmicon-ransomware:before {
   content: "\e510";
