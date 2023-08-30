@@ -15,6 +15,7 @@ const svgFolder = path.resolve(__dirname, '../dist/svg');
 const preferencesDataPath = path.resolve(__dirname, '../data/Preferences.json');
 const IconsDataPath = path.resolve(__dirname, '../data/Icons.json');
 const outputIndexPath = path.resolve(__dirname, '../src/icons/index.js');
+const outputIconsFolder = path.resolve(__dirname, '../src/icons');
 const outputIconsetsPath = path.resolve(__dirname, '../src/iconsets/index.js');
 let count = 0;
 
@@ -80,11 +81,23 @@ dataParsedFromApi.icons = iconsData
 
 { // icons
   const icons = dataParsedFromApi.icons.map(icon => {
-    return {
+    const iconData = {
       ...icon,
       paths: dataFromSvgFile[icon.name].paths,
       viewBox: dataFromSvgFile[icon.name].viewBox
-    }
+    };
+    const ejsTemp = [
+      '/* AUTO-GENERATED FILE. DO NOT MODIFY. */',
+      `const icon = <%- JSON.stringify(iconData, null, 2) %>;`,
+      '',
+      'export default icon;',
+    ].join('\n');
+    const iconContext = {
+      iconData
+    };
+    const iconContent = ejs.render(ejsTemp, iconContext);
+    fs.writeFileSync(path.resolve(outputIconsFolder, `${icon.name}.js`), iconContent, 'utf8');
+    return iconData;
   });
   const ejsTemplate = [
     '/* AUTO-GENERATED FILE. DO NOT MODIFY. */',
