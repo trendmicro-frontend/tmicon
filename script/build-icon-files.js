@@ -44,7 +44,7 @@ fs.readdirSync(svgFolder).forEach(file => {
       .split(svgPathEnd)[0]
     )
   // console.log(viewBox);
-  dataFromSvgFile[file.split('.svg')[0]] = { paths, viewBox };
+  dataFromSvgFile[file.split('.svg')[0].toLowerCase()] = { paths, viewBox };
 });
 
 if (count > 0) {
@@ -60,8 +60,8 @@ const icons = fs.readFileSync(IconsDataPath,  'utf-8');
 const iconsData = JSON.parse(icons);
 dataParsedFromApi.icons = iconsData
   .sort(function(a, b) {
-    var nameA = a.name.toUpperCase(); // ignore upper and lowercase
-    var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+    var nameA = a.name.toLowerCase() // ignore upper and lowercase
+    var nameB = b.name.toLowerCase(); // ignore upper and lowercase
     if (nameA < nameB) {
       return -1;
     }
@@ -74,7 +74,7 @@ dataParsedFromApi.icons = iconsData
   .map(({ name, majorVersion, minorVersion, iconset, code, paths}) => ({
     code,
     iconset,
-    name,
+    name: name.toLowerCase(),
     new: majorVersion === _majorVersion && minorVersion === _minorVersion,
     paths
   }));
