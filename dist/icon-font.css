@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?gw6asv');
-  src:  url('fonts/TMicon.eot?gw6asv#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?gw6asv') format('woff2'),
-    url('fonts/TMicon.ttf?gw6asv') format('truetype'),
-    url('fonts/TMicon.woff?gw6asv') format('woff'),
-    url('fonts/TMicon.svg?gw6asv#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?c4w1ri');
+  src:  url('fonts/TMicon.eot?c4w1ri#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?c4w1ri') format('woff2'),
+    url('fonts/TMicon.ttf?c4w1ri') format('truetype'),
+    url('fonts/TMicon.woff?c4w1ri') format('woff'),
+    url('fonts/TMicon.svg?c4w1ri#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -36,6 +36,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.tmicon-usb:before {
+  content: "\e116";
+}
 .tmicon-workbench-manual:before {
   content: "\e114";
 }
