@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?5wkiyn');
-  src:  url('fonts/TMicon.eot?5wkiyn#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?5wkiyn') format('woff2'),
-    url('fonts/TMicon.ttf?5wkiyn') format('truetype'),
-    url('fonts/TMicon.woff?5wkiyn') format('woff'),
-    url('fonts/TMicon.svg?5wkiyn#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?gw6asv');
+  src:  url('fonts/TMicon.eot?gw6asv#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?gw6asv') format('woff2'),
+    url('fonts/TMicon.ttf?gw6asv') format('truetype'),
+    url('fonts/TMicon.woff?gw6asv') format('woff'),
+    url('fonts/TMicon.svg?gw6asv#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -36,6 +36,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.tmicon-workbench-manual:before {
+  content: "\e114";
+}
+.tmicon-folder-user:before {
+  content: "\e115";
+}
+.tmicon-workbench:before {
+  content: "\e920";
+}
 .tmicon-container:before {
   content: "\e112";
 }
