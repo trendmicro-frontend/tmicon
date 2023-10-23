@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?9n2exo');
-  src:  url('fonts/TMicon.eot?9n2exo#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?9n2exo') format('woff2'),
-    url('fonts/TMicon.ttf?9n2exo') format('truetype'),
-    url('fonts/TMicon.woff?9n2exo') format('woff'),
-    url('fonts/TMicon.svg?9n2exo#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?4jauuv');
+  src:  url('fonts/TMicon.eot?4jauuv#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?4jauuv') format('woff2'),
+    url('fonts/TMicon.ttf?4jauuv') format('truetype'),
+    url('fonts/TMicon.woff?4jauuv') format('woff'),
+    url('fonts/TMicon.svg?4jauuv#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -36,11 +36,32 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.tmicon-case-log:before {
+  content: "\e122";
+}
+.tmicon-cloud-puzzle:before {
+  content: "\e123";
+}
+.tmicon-keyhole-secret-o:before {
+  content: "\e124";
+}
+.tmicon-keyhole-secret:before {
+  content: "\e125";
+}
+.tmicon-puzzle-o:before {
+  content: "\e126";
+}
+.tmicon-puzzle:before {
+  content: "\e127";
+}
+.tmicon-tools-configuration:before {
+  content: "\e128";
+}
 .tmicon-container-cluster-o:before {
   content: "\e121";
 }
 .tmicon-container-cluster:before {
-  content: "\e124";
+  content: "\e120";
 }
 .tmicon-network-configuration:before {
   content: "\e119";
@@ -62,9 +83,6 @@
 }
 .tmicon-iam:before {
   content: "\e11d";
-}
-.tmicon-service:before {
-  content: "\e117";
 }
 .tmicon-virtual-machine:before {
   content: "\e929";

@@ -15,6 +15,10 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
+.tm-svg-case-log {
+  width: 0.875em;
+}
+
 .tm-svg-flag-more-o {
   width: 0.8857421875em;
 }
