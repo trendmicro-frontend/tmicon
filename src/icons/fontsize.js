@@ -1,4 +1,5 @@
-/* AUTO-GENERATED FILE. DO NOT MODIFY. */
+// AUTO-GENERATED FILE. DO NOT MODIFY.
+
 const icon = {
   "code": "ea06",
   "iconset": 6,

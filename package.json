@@ -2,19 +2,17 @@
   "name": "@trendmicro/tmicon",
   "version": "1.37.0",
   "description": "",
-  "main": "build/index.cjs.js",
-  "module": "build/index.es.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "files": [
-    "build",
     "dist"
   ],
   "engines": {
     "node": ">=10"
   },
   "scripts": {
-    "clean": "del build",
-    "prebuild": "npm run build-icon-files",
-    "build": "rollup --config rollup.config.js",
+    "clean": "del dist/cjs dist/esm",
+    "build": "npm run build-icon-files && cross-env PACKAGE_NAME=index INPUT=src OUTPUT_DIRECTORY=dist rollup --config rollup.config.mjs",
     "build-icon-files": "node ./script/build-icon-files.js"
   },
   "contributors": [
@@ -38,12 +36,14 @@
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
-    "@rollup/plugin-node-resolve": "^11.0.1",
+    "@rollup/plugin-babel": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
     "@trendmicro/babel-config": "^1.0.0-alpha",
+    "cross-env": "^7.0.3",
     "del-cli": "^3.0.1",
     "ejs": "^3.1.5",
     "lodash.sortby": "^4.7.0",
-    "rollup": "^2.35.1",
-    "rollup-plugin-babel": "^4.4.0"
+    "rollup": "^2.35.1"
   }
 }
