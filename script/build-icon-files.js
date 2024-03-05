@@ -19,6 +19,13 @@ const outputIconsFolder = path.resolve(__dirname, '../src/icons');
 const outputIconsetsPath = path.resolve(__dirname, '../src/iconsets/index.js');
 let count = 0;
 
+const transformKebabCaseToCapitalizedCamelCase = (str) => {
+  return str
+    .split('-')
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join('');
+};
+
 fs.readdirSync(svgFolder).forEach(file => {
   var text = fs.readFileSync(`${svgFolder}/${file}`,  'utf-8');
   // console.log(text);
@@ -87,7 +94,8 @@ dataParsedFromApi.icons = iconsData
       viewBox: dataFromSvgFile[icon.name].viewBox
     };
     const ejsTemp = [
-      '/* AUTO-GENERATED FILE. DO NOT MODIFY. */',
+      '// AUTO-GENERATED FILE. DO NOT MODIFY.',
+      '',
       `const icon = <%- JSON.stringify(iconData, null, 2) %>;`,
       '',
       'export default icon;',
@@ -100,10 +108,17 @@ dataParsedFromApi.icons = iconsData
     return iconData;
   });
   const ejsTemplate = [
-    '/* AUTO-GENERATED FILE. DO NOT MODIFY. */',
-    `const icons = <%- JSON.stringify(icons, null, 2) %>;`,
+    '// AUTO-GENERATED FILE. DO NOT MODIFY.',
     '',
-    'export default icons;',
+    ...icons.map(icon => `import ${transformKebabCaseToCapitalizedCamelCase(icon.name)}Icon from './${icon.name}';`),
+    '',
+    'const icons = [',
+    ...icons.map(icon => `  ${transformKebabCaseToCapitalizedCamelCase(icon.name)}Icon,`),
+    '];',
+    '',
+    'export {',
+    '  icons,',
+    '};',
   ].join('\n');
   const context = {
     icons,
@@ -115,7 +130,8 @@ dataParsedFromApi.icons = iconsData
 { // iconsets
   const iconsets = _sortBy(require('../data/Iconsets.json'), ['id']);
   const ejsTemplate = [
-    '/* AUTO-GENERATED FILE. DO NOT MODIFY. */',
+    '// AUTO-GENERATED FILE. DO NOT MODIFY.',
+    '',
     `const iconsets = <%- JSON.stringify(iconsets, null, 2) %>;`,
     '',
     'export default iconsets;',
