@@ -118,6 +118,7 @@ dataParsedFromApi.icons = iconsData
     '',
     'export {',
     '  icons,',
+    ...icons.map(icon => `  ${transformKebabCaseToCapitalizedCamelCase(icon.name)}Icon,`),
     '};',
   ].join('\n');
   const context = {

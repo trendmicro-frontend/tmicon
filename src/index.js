@@ -1,7 +1,2 @@
-import { icons } from './icons';
-import iconsets from './iconsets';
-
-export {
-  icons,
-  iconsets,
-};
+export * from './icons';
+export { default as iconsets } from './iconsets';
