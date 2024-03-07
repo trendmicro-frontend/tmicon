@@ -15,6 +15,7 @@ import AngleDownIcon from './angle-down';
 import AngleLeftIcon from './angle-left';
 import AngleRightIcon from './angle-right';
 import AngleUpIcon from './angle-up';
+import ApiIcon from './api';
 import AppIcon from './app';
 import AppleIcon from './apple';
 import ArrowDownIcon from './arrow-down';
@@ -106,10 +107,14 @@ import ConnectingIcon from './connecting';
 import ConnectionIcon from './connection';
 import ContactIcon from './contact';
 import ContainerIcon from './container';
+import ContainerClusterIcon from './container-cluster';
+import ContainerClusterOIcon from './container-cluster-o';
 import CreditTokenIcon from './credit-token';
 import CropIcon from './crop';
 import CutIcon from './cut';
+import DataStorageIcon from './data-storage';
 import DatabaseIcon from './database';
+import DatabaseOIcon from './database-o';
 import DateIcon from './date';
 import DeleteIcon from './delete';
 import DeployIcon from './deploy';
@@ -209,6 +214,7 @@ import HelpIcon from './help';
 import HelpOIcon from './help-o';
 import HomeIcon from './home';
 import HookIcon from './hook';
+import IamIcon from './iam';
 import IdentityIcon from './identity';
 import IdentityKeyIcon from './identity-key';
 import IeIcon from './ie';
@@ -282,6 +288,7 @@ import MoreIcon from './more';
 import MoreHorizIcon from './more-horiz';
 import MoveIcon from './move';
 import NasIcon from './nas';
+import NetworkConfigurationIcon from './network-configuration';
 import NoteOIcon from './note-o';
 import ObjectAddIcon from './object-add';
 import ObjectArrowOIcon from './object-arrow-o';
@@ -346,6 +353,8 @@ import ServerOffIcon from './server-off';
 import ServerOnIcon from './server-on';
 import ServerUpdateIcon from './server-update';
 import ServerWarningIcon from './server-warning';
+import ServerlessIcon from './serverless';
+import ServiceIcon from './service';
 import SettingsIcon from './settings';
 import ShareIcon from './share';
 import ShareOIcon from './share-o';
@@ -366,6 +375,7 @@ import StarHalfIcon from './star-half';
 import StarOIcon from './star-o';
 import StopIcon from './stop';
 import StrikethroughIcon from './strikethrough';
+import SubnetIcon from './subnet';
 import SuccessIcon from './success';
 import SunIcon from './sun';
 import SunOIcon from './sun-o';
@@ -418,6 +428,7 @@ import UserUnknowIcon from './user-unknow';
 import UserWarningIcon from './user-warning';
 import ViewIcon from './view';
 import ViewOffIcon from './view-off';
+import VirtualMachineIcon from './virtual-machine';
 import VirusIcon from './virus';
 import VirustotalIcon from './virustotal';
 import WarningCircleIcon from './warning-circle';
@@ -454,6 +465,7 @@ const icons = [
   AngleLeftIcon,
   AngleRightIcon,
   AngleUpIcon,
+  ApiIcon,
   AppIcon,
   AppleIcon,
   ArrowDownIcon,
@@ -545,10 +557,14 @@ const icons = [
   ConnectionIcon,
   ContactIcon,
   ContainerIcon,
+  ContainerClusterIcon,
+  ContainerClusterOIcon,
   CreditTokenIcon,
   CropIcon,
   CutIcon,
+  DataStorageIcon,
   DatabaseIcon,
+  DatabaseOIcon,
   DateIcon,
   DeleteIcon,
   DeployIcon,
@@ -648,6 +664,7 @@ const icons = [
   HelpOIcon,
   HomeIcon,
   HookIcon,
+  IamIcon,
   IdentityIcon,
   IdentityKeyIcon,
   IeIcon,
@@ -721,6 +738,7 @@ const icons = [
   MoreHorizIcon,
   MoveIcon,
   NasIcon,
+  NetworkConfigurationIcon,
   NoteOIcon,
   ObjectAddIcon,
   ObjectArrowOIcon,
@@ -785,6 +803,8 @@ const icons = [
   ServerOnIcon,
   ServerUpdateIcon,
   ServerWarningIcon,
+  ServerlessIcon,
+  ServiceIcon,
   SettingsIcon,
   ShareIcon,
   ShareOIcon,
@@ -805,6 +825,7 @@ const icons = [
   StarOIcon,
   StopIcon,
   StrikethroughIcon,
+  SubnetIcon,
   SuccessIcon,
   SunIcon,
   SunOIcon,
@@ -857,6 +878,7 @@ const icons = [
   UserWarningIcon,
   ViewIcon,
   ViewOffIcon,
+  VirtualMachineIcon,
   VirusIcon,
   VirustotalIcon,
   WarningCircleIcon,
@@ -895,6 +917,7 @@ export {
   AngleLeftIcon,
   AngleRightIcon,
   AngleUpIcon,
+  ApiIcon,
   AppIcon,
   AppleIcon,
   ArrowDownIcon,
@@ -986,10 +1009,14 @@ export {
   ConnectionIcon,
   ContactIcon,
   ContainerIcon,
+  ContainerClusterIcon,
+  ContainerClusterOIcon,
   CreditTokenIcon,
   CropIcon,
   CutIcon,
+  DataStorageIcon,
   DatabaseIcon,
+  DatabaseOIcon,
   DateIcon,
   DeleteIcon,
   DeployIcon,
@@ -1089,6 +1116,7 @@ export {
   HelpOIcon,
   HomeIcon,
   HookIcon,
+  IamIcon,
   IdentityIcon,
   IdentityKeyIcon,
   IeIcon,
@@ -1162,6 +1190,7 @@ export {
   MoreHorizIcon,
   MoveIcon,
   NasIcon,
+  NetworkConfigurationIcon,
   NoteOIcon,
   ObjectAddIcon,
   ObjectArrowOIcon,
@@ -1226,6 +1255,8 @@ export {
   ServerOnIcon,
   ServerUpdateIcon,
   ServerWarningIcon,
+  ServerlessIcon,
+  ServiceIcon,
   SettingsIcon,
   ShareIcon,
   ShareOIcon,
@@ -1246,6 +1277,7 @@ export {
   StarOIcon,
   StopIcon,
   StrikethroughIcon,
+  SubnetIcon,
   SuccessIcon,
   SunIcon,
   SunOIcon,
@@ -1298,6 +1330,7 @@ export {
   UserWarningIcon,
   ViewIcon,
   ViewOffIcon,
+  VirtualMachineIcon,
   VirusIcon,
   VirustotalIcon,
   WarningCircleIcon,
