@@ -1,7 +1,7 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e124",
+  "code": "e120",
   "iconset": 0,
   "name": "container-cluster",
   "new": true,

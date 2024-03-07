@@ -4,7 +4,7 @@ const icon = {
   "code": "e11a",
   "iconset": 0,
   "name": "serverless",
-  "new": true,
+  "new": false,
   "paths": [
     "M0 5h2l-2-2v2z",
     "M4 7l-1-1h-3v4h7l-2-2h-3v-1h2z",
