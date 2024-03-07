@@ -11,7 +11,7 @@
     "node": ">=10"
   },
   "scripts": {
-    "clean": "del dist/cjs dist/esm",
+    "clean": "del dist/cjs dist/esm src/icons/*",
     "build": "npm run build-icon-files && cross-env PACKAGE_NAME=index INPUT=src OUTPUT_DIRECTORY=dist rollup --config rollup.config.mjs",
     "build-icon-files": "node ./script/build-icon-files.js"
   },
