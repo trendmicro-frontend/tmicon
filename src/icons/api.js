@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
-=======
-/* AUTO-GENERATED FILE. DO NOT MODIFY. */
->>>>>>> acf8db7 (feat: add/update icons)
 const icon = {
   "code": "e11f",
   "iconset": 0,
