@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
-=======
-/* AUTO-GENERATED FILE. DO NOT MODIFY. */
->>>>>>> e6fbc70 (feat: new/update icons)
 const icon = {
   "code": "e126",
   "iconset": 0,
