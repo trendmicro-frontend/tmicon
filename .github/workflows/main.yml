@@ -23,7 +23,7 @@ jobs:
         curl -o $css_file $css_url
         font_urls=$(grep -oP 'url\(\K[^)]+' style.css | sort -u)
 
-        curl -o "dist/fonts" "https://i.icomoon.io/public/a8317e20c1/TMIcons/TMicon.eot?73rtx5#iefix"
+        curl -o "dist/fonts/TMicon.eot" "https://i.icomoon.io/public/a8317e20c1/TMIcons/TMicon.eot?73rtx5#iefix"
         # for url in $font_urls; do
         #   clean_url=$(echo $url | sed 's/[?#].*//')
         #   ffilename=$(basename "$clean_url")
