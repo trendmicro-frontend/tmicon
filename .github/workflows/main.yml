@@ -24,6 +24,7 @@ jobs:
         font_urls=$(grep -oP '(?<=url\().+?(?=\))' $css_file | sort -u)
 
         for url in $font_urls; do
+          echo "URL: $url"
           filename=$(basename $url)
           echo "filename: $filename"
         done
