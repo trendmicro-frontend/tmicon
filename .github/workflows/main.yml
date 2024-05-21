@@ -33,7 +33,8 @@ jobs:
           filename=$(basename "$clean_url")
           path="$dist_dir/$filename"
           echo "$path"
-          curl -o $path "https://i.icomoon.io/public/a8317e20c1/TMIcons/TMicon.eot?73rtx5#iefix"
+          testurl="https://i.icomoon.io/public/a8317e20c1/TMIcons/TMicon.eot?73rtx5#iefix"
+          curl -o $path $testurl
         done
 
     # rm $css_file
