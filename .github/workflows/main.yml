@@ -23,9 +23,9 @@ jobs:
         font_urls=$(grep -oP 'url\(\K[^)]+' style.css | sort -u)
 
         for url in $font_urls; do
-          echo "URL: $url"
-          filename=$(basename "${url%%\?*}")
-          curl "$url"
+          clean_url=$(echo $url | sed 's/[?#].*//')
+          ffilename=$(basename "$clean_url")
+          curl -o "$dist_dir/$filename" "$clean_url"
         done
 
     # rm $css_file
