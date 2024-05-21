@@ -25,8 +25,8 @@ jobs:
 
         for url in $font_urls; do
           echo "URL: $url"
-          filename=$(basename $url)
-          echo "filename: $filename"
+          filename=$(basename "${url%%\?*}")
+          curl -o "$dist_dir/$filename" "$url"
         done
 
     # rm $css_file
