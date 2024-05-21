@@ -21,15 +21,17 @@ jobs:
         dist_dir="dist/fonts"
 
         curl -o $css_file $css_url
-        font_urls=$(grep -oP 'url\(\K[^)]+' style.css | sort -u)
+        font_urls=$(grep -oP 'url\(\K[^)]+' style.css | sort -u | sed 's/[?#].*//')
 
         curl -o "dist/fonts/TMicon.eot" "https://i.icomoon.io/public/a8317e20c1/TMIcons/TMicon.eot?73rtx5#iefix"
         for url in $font_urls; do
-          clean_url=$(echo $url | sed 's/[?#].*//')
-          echo "$clean_url"
-          filename=$(basename "$clean_url")
+          filename=$(basename "$url")
           echo "$filename"
-          # curl -o "$dist_dir/$filename" "$clean_url"
+          # clean_url=$(echo $url | sed 's/[?#].*//')
+          # echo "$clean_url"
+          # filename=$(basename "$clean_url")
+          # echo "$filename"
+          # # curl -o "$dist_dir/$filename" "$clean_url"
         done
 
     # rm $css_file
