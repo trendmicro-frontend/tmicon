@@ -1,9 +1,6 @@
 name: Build TMIcons
 
-on:
-  push:
-    branches:
-      - dev
+on: push
 
 jobs:
   update-file:
