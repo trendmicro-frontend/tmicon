@@ -20,7 +20,7 @@ jobs:
         dist_dir="dist/fonts"
 
         curl -o $css_file $css_url
-    # font_urls=$(grep -oP '(?<=url\().+?(?=\))' $css_file | sort -u)
+        font_urls=$(grep -oP '(?<=url\().+?(?=\))' $css_file | sort -u)
 
     # for url in $font_urls; do
     #   filename=$(basename $url)
