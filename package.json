@@ -41,13 +41,13 @@
     "@rollup/plugin-node-resolve": "^15.0.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@trendmicro/babel-config": "^1.0.0-alpha",
+    "ejs": "^3.1.10",
     "cross-env": "^7.0.3",
     "del-cli": "^3.0.1",
     "lodash.sortby": "^4.7.0",
     "rollup": "^2.35.1"
   },
   "dependencies": {
-    "ejs": "^3.1.10",
     "lodash": "^4.17.21"
   }
 }
