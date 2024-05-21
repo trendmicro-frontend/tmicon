@@ -40,7 +40,11 @@ jobs:
       run: |
         node ./script/buildSVGIcons.js
 
-        git status
+        echo "SVG files built successfully."
+    
+    - name: Build Tonic UI icons data
+      run: |
+        node ./script/build-icon-files.js
     # - name: Configure Git
     #   run: |
     #     git config --global user.name 'HIE UX Service'
