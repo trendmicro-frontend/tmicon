@@ -28,16 +28,13 @@ jobs:
 
         # curl -o "dist/fonts/TMicon.eot" "https://i.icomoon.io/public/a8317e20c1/TMIcons/TMicon.eot?73rtx5#iefix"
         for url in $font_urls; do
-          echo $url
           clean_url=$(echo $url | sed 's/[?#].*//')
           filename=$(basename "$clean_url")
-          path="$dist_dir/$filename"
-          echo $path
           full_url=$(echo $url | sed "s/'//g" | sed 's/"//g')
-          echo $full_url
-          curl -o $path $full_url
+          curl -o "$dist_dir/$filename" $full_url
         done
 
+        git status
     # rm $css_file
 
     # echo "Font files downloaded successfully."
