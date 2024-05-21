@@ -46,5 +46,8 @@
     "ejs": "^3.1.10",
     "lodash.sortby": "^4.7.0",
     "rollup": "^2.35.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }

@@ -12,8 +12,10 @@ const svgPathEnd = '"></path>';
 const dataFromSvgFile = {};
 const dataParsedFromApi = {};
 const svgFolder = path.resolve(__dirname, '../dist/svg');
-const preferencesDataPath = path.resolve(__dirname, '../data/Preferences.json');
-const IconsDataPath = path.resolve(__dirname, '../data/Icons.json');
+
+const preferences = require('../data/Preferences.json');
+const iconsData = require('../data/Icons.json');
+const iconsetsData = require('../data/Iconsets.json');
 const outputIndexPath = path.resolve(__dirname, '../src/icons/index.js');
 const outputIconsFolder = path.resolve(__dirname, '../src/icons');
 const outputIconsetsPath = path.resolve(__dirname, '../src/iconsets/index.js');
@@ -54,17 +56,15 @@ fs.readdirSync(svgFolder).forEach(file => {
   dataFromSvgFile[file.split('.svg')[0].toLowerCase()] = { paths, viewBox };
 });
 
+// console.log(dataFromSvgFile);
 if (count > 0) {
   console.log('Incorrect viewBox count', count);
 }
 
-const reference = fs.readFileSync(preferencesDataPath,  'utf-8');
-const referenceData = JSON.parse(reference);
-const _majorVersion = referenceData.fontPref.metadata.majorVersion;
-const _minorVersion = referenceData.fontPref.metadata.minorVersion;
+const _majorVersion = preferences.fontPref.metadata.majorVersion;
+const _minorVersion = preferences.fontPref.metadata.minorVersion;
 
-const icons = fs.readFileSync(IconsDataPath,  'utf-8');
-const iconsData = JSON.parse(icons);
+
 dataParsedFromApi.icons = iconsData
   .sort(function(a, b) {
     var nameA = a.name.toLowerCase() // ignore upper and lowercase
@@ -129,7 +129,7 @@ dataParsedFromApi.icons = iconsData
 }
 
 { // iconsets
-  const iconsets = _sortBy(require('../data/Iconsets.json'), ['id']);
+  const iconsets = _sortBy(iconsetsData, ['id']);
   const ejsTemplate = [
     '// AUTO-GENERATED FILE. DO NOT MODIFY.',
     '',
