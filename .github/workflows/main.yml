@@ -15,6 +15,7 @@ jobs:
 
     - name: Download font files
       run: |
+        ls
         css_url="https://i.icomoon.io/public/a8317e20c1/TMIcons/style.css"
         css_file="style.css"
         dist_dir="dist/fonts"
