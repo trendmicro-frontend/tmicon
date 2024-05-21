@@ -20,16 +20,16 @@ jobs:
         dist_dir="dist/fonts"
 
         curl -o $css_file $css_url
-        font_urls=$(grep -oP '(?<=url\().+?(?=\))' $css_file | sort -u)
+    # font_urls=$(grep -oP '(?<=url\().+?(?=\))' $css_file | sort -u)
 
-        for url in $font_urls; do
-          filename=$(basename $url)
-          curl -o $dist_dir/$filename $url
-        done
+    # for url in $font_urls; do
+    #   filename=$(basename $url)
+    #   curl -o $dist_dir/$filename $url
+    # done
 
-        rm $css_file
+    # rm $css_file
 
-        echo "Font files downloaded successfully."
+    # echo "Font files downloaded successfully."
 
     # - name: Configure Git
     #   run: |
