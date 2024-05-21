@@ -38,7 +38,7 @@ jobs:
 
     - name: Build SVG files
       run: |
-        node ../script/buildSVGIcons.js
+        node ./script/buildSVGIcons.js
 
         git status
     # - name: Configure Git
