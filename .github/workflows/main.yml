@@ -34,7 +34,7 @@ jobs:
           echo "$clean_url"
           filename=$(basename "$clean_url")
           echo "$filename"
-          curl -o "dist/fonts/$filename" "$url"
+          curl -o "dist/fonts/$filename" "$clean_url"
         done
 
     # rm $css_file
