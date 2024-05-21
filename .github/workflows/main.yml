@@ -1,0 +1,63 @@
+name: Build TMIcons
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  update-file:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set up Node.js 20
+      uses: actions/setup-node@v3
+
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Download font files
+      run: |
+        ls
+        css_url="https://i.icomoon.io/public/a8317e20c1/TMIcons/style.css"
+        css_file="style.css"
+        dist_dir="dist/fonts"
+
+        curl -o $css_file $css_url
+        font_urls=$(grep -oP 'url\(\K[^)]+' style.css | sort -u)
+
+        for url in $font_urls; do
+          clean_url=$(echo $url | sed 's/[?#].*//')
+          filename=$(basename "$clean_url")
+          full_url=$(echo $url | sed "s/'//g" | sed 's/"//g')
+          curl -o "$dist_dir/$filename" $full_url
+        done
+
+        rm $css_file
+        echo "Font files downloaded successfully."
+
+    - name: Build SVG files
+      run: |
+        node ./script/buildSVGIcons.js
+
+        echo "SVG files built successfully."
+    
+    - name: Build Tonic UI icons data
+      run: |
+        npm i
+        node ./script/build-icon-files.js
+    # - name: Configure Git
+    #   run: |
+    #     git config --global user.name 'HIE UX Service'
+    #     git config --global user.email 'hie_ux_service@trendmicro.com'
+
+    # - name: Add changes
+    #   run: git add test.txt
+
+    # - name: Commit changes
+    #   run: git commit -m "Add test.txt with dynamic content"
+
+    # - name: Push changes
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+    #   run: git push origin dev
