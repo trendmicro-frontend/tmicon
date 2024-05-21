@@ -31,10 +31,11 @@ jobs:
           echo "$url"
           filename=$(basename "$url")
           clean_url=$(echo $url | sed 's/[?#].*//')
-          # echo "$clean_url"
-          # filename=$(basename "$clean_url")
-          # echo "$filename"
-          curl -o "dist/fonts/TMicon.eot" "$clean_url"
+          echo "$clean_url"
+          filename=$(basename "$clean_url")
+          echo "$filename"
+          full_url=$url
+          curl -o "$dist_dir/$filename" "$full_url"
         done
 
     # rm $css_file
