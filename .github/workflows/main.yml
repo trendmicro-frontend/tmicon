@@ -45,7 +45,8 @@ jobs:
     - name: Build Tonic UI icons data
       run: |
         npm i
-        node ./script/build-icon-files.js
+
+        git status
     # - name: Configure Git
     #   run: |
     #     git config --global user.name 'HIE UX Service'
