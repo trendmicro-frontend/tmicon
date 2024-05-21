@@ -1,0 +1,48 @@
+name: Build TMIcons
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  update-file:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Download font files
+      run: |
+        css_url="https://i.icomoon.io/public/a8317e20c1/TMIcons/style.css"
+        css_file="style.css"
+        dist_dir="dist/fonts"
+
+        curl -o $css_file $css_url
+        font_urls=$(grep -oP '(?<=url\().+?(?=\))' $css_file | sort -u)
+
+        for url in $font_urls; do
+          filename=$(basename $url)
+          curl -o $dist_dir/$filename $url
+        done
+
+        rm $css_file
+
+        echo "Font files downloaded successfully."
+
+    # - name: Configure Git
+    #   run: |
+    #     git config --global user.name 'HIE UX Service'
+    #     git config --global user.email 'hie_ux_service@trendmicro.com'
+
+    # - name: Add changes
+    #   run: git add test.txt
+
+    # - name: Commit changes
+    #   run: git commit -m "Add test.txt with dynamic content"
+
+    # - name: Push changes
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+    #   run: git push origin dev
