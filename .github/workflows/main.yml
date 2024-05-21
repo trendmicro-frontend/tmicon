@@ -44,6 +44,7 @@ jobs:
     
     - name: Build Tonic UI icons data
       run: |
+        npm i
         node ./script/build-icon-files.js
     # - name: Configure Git
     #   run: |
