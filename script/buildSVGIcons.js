@@ -29,7 +29,7 @@ icons.sort(function (a, b) {
 });
 
 icons.forEach((icon) => {
-  const targetPath = path.join(targetDir, `${icon.name}.svg`);
+  const targetPath = path.join(targetDir, `${icon.name.toLowerCase()}.svg`);
   icon.width = icon.height = icon.grid;
   icon.svgPath = svgGen(icon.paths);
   const scale = icon.height / viewBox;
