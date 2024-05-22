@@ -67,8 +67,9 @@ jobs:
         commit_message=$(git log -n 1 --pretty=format:%B)
         echo "$commit_message" > last_commit.txt
 
-        encoded_commit_message=$(echo "$commit_message" | base64)
-        echo "description=$encoded_commit_message" >> $GITHUB_ENV
+        echo "description<<EOF" >> $GITHUB_ENV
+        echo "$commit_message" >> $GITHUB_ENV
+        echo "EOF" >> $GITHUB_ENV
 
         git add --all
         git reset last_commit.txt
@@ -85,6 +86,6 @@ jobs:
       with:
         tag_name: v${{ env.version }}
         release_name: TMIcon <v${{ env.version }}>
-        body: ${{ env.description | fromBase64 }}
+        body: ${{ env.description }}
         draft: false
         prerelease: false
