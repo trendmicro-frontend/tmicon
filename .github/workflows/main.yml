@@ -67,4 +67,6 @@ jobs:
         git add --all
         git reset last_commit.txt
         git commit -F last_commit.txt
-        git push
+        
+        git tag "v$NEW_VERSION"
+        git push origin "v$NEW_VERSION"
