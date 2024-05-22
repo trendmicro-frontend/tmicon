@@ -65,7 +65,7 @@ jobs:
         git config --global user.email 'hie_ux_service@trendmicro.com'
 
         commit_message=$(git log -n 1 --pretty=format:%B)
-        $commit_message > last_commit.txt
+        echo "$commit_message" > last_commit.txt
         echo "description=$commit_message" >> $GITHUB_ENV
 
         git add --all
