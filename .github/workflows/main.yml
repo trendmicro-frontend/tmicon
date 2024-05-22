@@ -1,6 +1,11 @@
 name: Build TMIcons
 
-on: push
+on:
+  push:
+    branches:
+      - v4
+    paths:
+      - 'data/**'
 
 jobs:
   update-file:
@@ -43,7 +48,17 @@ jobs:
       run: |
         npm i
 
+        echo "Tonic UI data built successfully."
+
+    - name: Update fonts, svg icons, and Tonic UI data
+      run: |
+        majorVersion=$(jq -r '.fontPref.metadata.majorVersion' data/Preferences.json)
+        minorVersion=$(jq -r '.fontPref.metadata.minorVersion' data/Preferences.json)
+        version="$majorVersion.$minorVersion.0"
+        echo "VERSION=$version" >> $GITHUB_ENV
         git status
+        
+    
     # - name: Configure Git
     #   run: |
     #     git config --global user.name 'HIE UX Service'
