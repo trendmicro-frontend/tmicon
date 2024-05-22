@@ -57,13 +57,17 @@ jobs:
         majorVersion=$(jq -r '.fontPref.metadata.majorVersion' data/Preferences.json)
         minorVersion=$(jq -r '.fontPref.metadata.minorVersion' data/Preferences.json)
         version="$majorVersion.$minorVersion.0"
+        echo "version=$version" >> $GITHUB_ENV
 
         jq --arg new_version "$version" '.version = $new_version' package.json > tmp.json && mv tmp.json package.json
 
         git config --global user.name 'HIE UX Service'
         git config --global user.email 'hie_ux_service@trendmicro.com'
 
-        git log -n 1 --pretty=format:%B > last_commit.txt
+        commit_message=$(git log -n 1 --pretty=format:%B)
+        $commit_message > last_commit.txt
+        echo "description=$commit_message" >> $GITHUB_ENV
+
         git add --all
         git reset last_commit.txt
         git commit -F last_commit.txt
@@ -71,3 +75,14 @@ jobs:
 
         git tag "v$version"
         git push origin "v$version"
+
+    - name: Create GitHub Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        with:
+          tag_name: v${{ env.version }}
+          release_name: TMIcon <v${{ env.version }}>
+          body: ${{ env.description }}
+          draft: false
+          prerelease: false
