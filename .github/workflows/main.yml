@@ -68,5 +68,5 @@ jobs:
         git reset last_commit.txt
         git commit -F last_commit.txt
         
-        git tag "v$NEW_VERSION"
-        git push origin "v$NEW_VERSION"
+        git tag "v$version"
+        git push origin "v$version"
