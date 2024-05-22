@@ -64,5 +64,6 @@ jobs:
 
         git log -n 1 --pretty=format:%B > last_commit.txt
         git add --all
+        git reset last_commit.txt
         git commit -F last_commit.txt
         git push
