@@ -57,7 +57,8 @@ jobs:
         majorVersion=$(jq -r '.fontPref.metadata.majorVersion' data/Preferences.json)
         minorVersion=$(jq -r '.fontPref.metadata.minorVersion' data/Preferences.json)
         version="$majorVersion.$minorVersion.0"
-        echo "VERSION=$version" >> $GITHUB_ENV
+
+        jq --arg new_version "$version" '.version = $new_version' package.json > tmp.json && mv tmp.json package.json
 
         git config --global user.name 'HIE UX Service'
         git config --global user.email 'hie_ux_service@trendmicro.com'
