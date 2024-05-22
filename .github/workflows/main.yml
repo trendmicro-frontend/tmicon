@@ -50,27 +50,19 @@ jobs:
 
         echo "Tonic UI data built successfully."
 
-    - name: Update fonts, svg icons, and Tonic UI data
+    - name: Commit fonts, svg icons, and Tonic UI data
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         majorVersion=$(jq -r '.fontPref.metadata.majorVersion' data/Preferences.json)
         minorVersion=$(jq -r '.fontPref.metadata.minorVersion' data/Preferences.json)
         version="$majorVersion.$minorVersion.0"
         echo "VERSION=$version" >> $GITHUB_ENV
-        git status
-        
-    
-    # - name: Configure Git
-    #   run: |
-    #     git config --global user.name 'HIE UX Service'
-    #     git config --global user.email 'hie_ux_service@trendmicro.com'
 
-    # - name: Add changes
-    #   run: git add test.txt
+        git config --global user.name 'HIE UX Service'
+        git config --global user.email 'hie_ux_service@trendmicro.com'
 
-    # - name: Commit changes
-    #   run: git commit -m "Add test.txt with dynamic content"
-
-    # - name: Push changes
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-    #   run: git push origin dev
+        git log -n 1 --pretty=format:%B > last_commit.txt
+        git add --all
+        git commit -F last_commit.txt
+        git push
