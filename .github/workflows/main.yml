@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - v4
-    # paths:
-    #   - 'data/**'
+    paths:
+      - 'data/**'
 
 jobs:
   update-file:
@@ -54,42 +54,43 @@ jobs:
       run: |
         node ./script/svg2png.js
 
-    # - name: Commit fonts, svg icons, png files, and Tonic UI data
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-    #   run: |
-    #     majorVersion=$(jq -r '.fontPref.metadata.majorVersion' data/Preferences.json)
-    #     minorVersion=$(jq -r '.fontPref.metadata.minorVersion' data/Preferences.json)
-    #     version="$majorVersion.$minorVersion.0"
-    #     echo "version=$version" >> $GITHUB_ENV
+    - name: Commit fonts, svg icons, png files, and Tonic UI data
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: |
+        majorVersion=$(jq -r '.fontPref.metadata.majorVersion' data/Preferences.json)
+        minorVersion=$(jq -r '.fontPref.metadata.minorVersion' data/Preferences.json)
+        version="$majorVersion.$minorVersion.0"
+        echo "version=$version" >> $GITHUB_ENV
 
-    #     jq --arg new_version "$version" '.version = $new_version' package.json > tmp.json && mv tmp.json package.json
+        jq --arg new_version "$version" '.version = $new_version' package.json > tmp.json && mv tmp.json package.json
 
-    #     git config --global user.name 'HIE UX Service'
-    #     git config --global user.email 'hie_ux_service@trendmicro.com'
+        git config --global user.name 'HIE UX Service'
+        git config --global user.email 'hie_ux_service@trendmicro.com'
 
-    #     commit_message=$(git log -n 1 --pretty=format:%B)
-    #     echo "$commit_message" > last_commit.txt
+        commit_message=$(git log -n 1 --pretty=format:%B)
+        echo "$commit_message" > last_commit.txt
 
-    #     echo "description<<EOF" >> $GITHUB_ENV
-    #     echo "$commit_message" >> $GITHUB_ENV
-    #     echo "EOF" >> $GITHUB_ENV
+        echo "description<<EOF" >> $GITHUB_ENV
+        echo "$commit_message" >> $GITHUB_ENV
+        echo "EOF" >> $GITHUB_ENV
 
-    #     git add --all
-    #     git reset last_commit.txt
-    #     git commit -F last_commit.txt
-    #     git push
+        git status
+        git add --all
+        git reset last_commit.txt
+        git commit -F last_commit.txt
+        git push
 
-    #     git tag "v$version"
-    #     git push origin "v$version"
+        git tag "v$version"
+        git push origin "v$version"
 
-    # - name: Create GitHub Release
-    #   uses: actions/create-release@v1
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-    #   with:
-    #     tag_name: v${{ env.version }}
-    #     release_name: TMIcon <v${{ env.version }}>
-    #     body: ${{ env.description }}
-    #     draft: false
-    #     prerelease: false
+    - name: Create GitHub Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      with:
+        tag_name: v${{ env.version }}
+        release_name: TMIcon <v${{ env.version }}>
+        body: ${{ env.description }}
+        draft: false
+        prerelease: false
