@@ -15,6 +15,7 @@ const defaultColor = `rgb(${preferences.imagePref.color
   .join(",")})`;
 const viewBox = preferences.fontPref.metrics.emSize;
 const files = fs.readdirSync(targetDir);
+
 files.forEach(file => {
   const filePath = path.join(targetDir, file);
   if (fs.lstatSync(filePath).isFile()) {
@@ -48,3 +49,5 @@ icons.forEach((icon) => {
   svgContent = svgContent.replace('<!--paths-->', paths.join('\n  '));
   fs.writeFileSync(targetPath, svgContent);
 });
+
+console.log('SVG files built successfully.');

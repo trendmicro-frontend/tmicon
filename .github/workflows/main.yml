@@ -18,41 +18,22 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Download font files
-      run: |
-        ls
-        css_url="https://i.icomoon.io/public/a8317e20c1/TMIcons/style.css"
-        css_file="style.css"
-        dist_dir="dist/fonts"
-
-        curl -o $css_file $css_url
-        font_urls=$(grep -oP 'url\(\K[^)]+' style.css | sort -u)
-
-        for url in $font_urls; do
-          clean_url=$(echo $url | sed 's/[?#].*//')
-          filename=$(basename "$clean_url")
-          full_url=$(echo $url | sed "s/'//g" | sed 's/"//g')
-          curl -o "$dist_dir/$filename" $full_url
-        done
-
-        rm $css_file
-        echo "Font files downloaded successfully."
-
     - name: Build SVG files
       run: |
-        node ./script/buildSVGIcons.js
-
-        echo "SVG files built successfully."
-    
+        node ./script/build-icon-svg.js
+  
     - name: Build Tonic UI icons data
       run: |
         npm i
-
         echo "Tonic UI data built successfully."
     
     - name: Convert SVG to PNG files
       run: |
         node ./script/svg2png.js
+
+    - name: Build font icons
+      run: |
+        node ./script/build-icon-font.js
 
     - name: Commit fonts, svg icons, png files, and Tonic UI data
       env:
@@ -76,21 +57,21 @@ jobs:
         echo "EOF" >> $GITHUB_ENV
 
         git status
-        git add --all
-        git reset last_commit.txt
-        git commit -F last_commit.txt
-        git push
+        # git add --all
+        # git reset last_commit.txt
+        # git commit -F last_commit.txt
+        # git push
 
-        git tag "v$version"
-        git push origin "v$version"
+        # git tag "v$version"
+        # git push origin "v$version"
 
-    - name: Create GitHub Release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      with:
-        tag_name: v${{ env.version }}
-        release_name: TMIcon <v${{ env.version }}>
-        body: ${{ env.description }}
-        draft: false
-        prerelease: false
+    # - name: Create GitHub Release
+    #   uses: actions/create-release@v1
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+    #   with:
+    #     tag_name: v${{ env.version }}
+    #     release_name: TMIcon <v${{ env.version }}>
+    #     body: ${{ env.description }}
+    #     draft: false
+    #     prerelease: false

@@ -43,10 +43,12 @@
     "@trendmicro/babel-config": "^1.0.0-alpha",
     "cross-env": "^7.0.3",
     "del-cli": "^3.0.1",
+    "download": "^8.0.0",
     "ejs": "^3.1.10",
     "lodash.sortby": "^4.7.0",
     "rollup": "^2.35.1",
-    "sharp": "^0.33.4"
+    "sharp": "^0.33.4",
+    "sync-request": "^6.1.0"
   },
   "dependencies": {
     "lodash": "^4.17.21"
