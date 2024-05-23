@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - v4
-    paths:
-      - 'data/**'
+    # paths:
+    #   - 'data/**'
 
 jobs:
   update-file:
