@@ -4,7 +4,7 @@ const icon = {
   "code": "e120",
   "iconset": 0,
   "name": "container-cluster",
-  "new": true,
+  "new": false,
   "paths": [
     "M11.742 2.799l-3.242 1.908v3.712l3.242-1.922v-3.698z",
     "M8 0l-3.263 1.92 3.263 1.92 3.263-1.92-3.263-1.92z",

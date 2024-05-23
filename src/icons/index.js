@@ -16,7 +16,9 @@ import AngleLeftIcon from './angle-left';
 import AngleRightIcon from './angle-right';
 import AngleUpIcon from './angle-up';
 import ApiIcon from './api';
+import ApiManagementIcon from './api-management';
 import AppIcon from './app';
+import AppServiceIcon from './app-service';
 import AppleIcon from './apple';
 import ArrowDownIcon from './arrow-down';
 import ArrowLeftIcon from './arrow-left';
@@ -30,6 +32,7 @@ import AttachIcon from './attach';
 import AttachAlertIcon from './attach-alert';
 import AttachFileIcon from './attach-file';
 import AttachNewIcon from './attach-new';
+import AuthorizerIcon from './authorizer';
 import BackupIcon from './backup';
 import BaseStationIcon from './base-station';
 import BatteryIcon from './battery';
@@ -105,12 +108,14 @@ import ConnectIcon from './connect';
 import ConnectErrorIcon from './connect-error';
 import ConnectNoipIcon from './connect-noip';
 import ConnectWarningIcon from './connect-warning';
+import ConnecterIcon from './connecter';
 import ConnectingIcon from './connecting';
 import ConnectionIcon from './connection';
 import ContactIcon from './contact';
 import ContainerIcon from './container';
 import ContainerClusterIcon from './container-cluster';
 import ContainerClusterOIcon from './container-cluster-o';
+import Container2Icon from './container2';
 import CreditTokenIcon from './credit-token';
 import CropIcon from './crop';
 import CutIcon from './cut';
@@ -205,6 +210,7 @@ import FolderUserIcon from './folder-user';
 import FontsizeIcon from './fontsize';
 import FullscreenIcon from './fullscreen';
 import FullscreenExitIcon from './fullscreen-exit';
+import FunctionIcon from './function';
 import GavelIcon from './gavel';
 import GearSearchIcon from './gear-search';
 import GearsIcon from './gears';
@@ -216,6 +222,7 @@ import HelpIcon from './help';
 import HelpOIcon from './help-o';
 import HomeIcon from './home';
 import HookIcon from './hook';
+import HttpIcon from './http';
 import IamIcon from './iam';
 import IdentityIcon from './identity';
 import IdentityKeyIcon from './identity-key';
@@ -248,6 +255,7 @@ import KeyResetOIcon from './key-reset-o';
 import KeyUpOIcon from './key-up-o';
 import KeyholeSecretIcon from './keyhole-secret';
 import KeyholeSecretOIcon from './keyhole-secret-o';
+import KinesesIcon from './kineses';
 import LanguageIcon from './language';
 import LaptopIcon from './laptop';
 import LaptopGroupIcon from './laptop-group';
@@ -271,6 +279,7 @@ import LockOIcon from './lock-o';
 import LockOpenIcon from './lock-open';
 import LockOpenOIcon from './lock-open-o';
 import LogIcon from './log';
+import LogicIcon from './logic';
 import LowIcon from './low';
 import MachineLearningOIcon from './machine-learning-o';
 import MagicIcon from './magic';
@@ -286,6 +295,7 @@ import MinusSquareOIcon from './minus-square-o';
 import MobileIcon from './mobile';
 import MobileGroupIcon from './mobile-group';
 import MobileOffIcon from './mobile-off';
+import MockIcon from './mock';
 import MonitoringIcon from './monitoring';
 import MoonIcon from './moon';
 import MoreIcon from './more';
@@ -360,6 +370,7 @@ import ServerOnIcon from './server-on';
 import ServerUpdateIcon from './server-update';
 import ServerWarningIcon from './server-warning';
 import ServerlessIcon from './serverless';
+import ServiceFabricIcon from './service-fabric';
 import SettingsIcon from './settings';
 import ShareIcon from './share';
 import ShareOIcon from './share-o';
@@ -472,7 +483,9 @@ const icons = [
   AngleRightIcon,
   AngleUpIcon,
   ApiIcon,
+  ApiManagementIcon,
   AppIcon,
+  AppServiceIcon,
   AppleIcon,
   ArrowDownIcon,
   ArrowLeftIcon,
@@ -486,6 +499,7 @@ const icons = [
   AttachAlertIcon,
   AttachFileIcon,
   AttachNewIcon,
+  AuthorizerIcon,
   BackupIcon,
   BaseStationIcon,
   BatteryIcon,
@@ -561,12 +575,14 @@ const icons = [
   ConnectErrorIcon,
   ConnectNoipIcon,
   ConnectWarningIcon,
+  ConnecterIcon,
   ConnectingIcon,
   ConnectionIcon,
   ContactIcon,
   ContainerIcon,
   ContainerClusterIcon,
   ContainerClusterOIcon,
+  Container2Icon,
   CreditTokenIcon,
   CropIcon,
   CutIcon,
@@ -661,6 +677,7 @@ const icons = [
   FontsizeIcon,
   FullscreenIcon,
   FullscreenExitIcon,
+  FunctionIcon,
   GavelIcon,
   GearSearchIcon,
   GearsIcon,
@@ -672,6 +689,7 @@ const icons = [
   HelpOIcon,
   HomeIcon,
   HookIcon,
+  HttpIcon,
   IamIcon,
   IdentityIcon,
   IdentityKeyIcon,
@@ -704,6 +722,7 @@ const icons = [
   KeyUpOIcon,
   KeyholeSecretIcon,
   KeyholeSecretOIcon,
+  KinesesIcon,
   LanguageIcon,
   LaptopIcon,
   LaptopGroupIcon,
@@ -727,6 +746,7 @@ const icons = [
   LockOpenIcon,
   LockOpenOIcon,
   LogIcon,
+  LogicIcon,
   LowIcon,
   MachineLearningOIcon,
   MagicIcon,
@@ -742,6 +762,7 @@ const icons = [
   MobileIcon,
   MobileGroupIcon,
   MobileOffIcon,
+  MockIcon,
   MonitoringIcon,
   MoonIcon,
   MoreIcon,
@@ -816,6 +837,7 @@ const icons = [
   ServerUpdateIcon,
   ServerWarningIcon,
   ServerlessIcon,
+  ServiceFabricIcon,
   SettingsIcon,
   ShareIcon,
   ShareOIcon,
@@ -930,7 +952,9 @@ export {
   AngleRightIcon,
   AngleUpIcon,
   ApiIcon,
+  ApiManagementIcon,
   AppIcon,
+  AppServiceIcon,
   AppleIcon,
   ArrowDownIcon,
   ArrowLeftIcon,
@@ -944,6 +968,7 @@ export {
   AttachAlertIcon,
   AttachFileIcon,
   AttachNewIcon,
+  AuthorizerIcon,
   BackupIcon,
   BaseStationIcon,
   BatteryIcon,
@@ -1019,12 +1044,14 @@ export {
   ConnectErrorIcon,
   ConnectNoipIcon,
   ConnectWarningIcon,
+  ConnecterIcon,
   ConnectingIcon,
   ConnectionIcon,
   ContactIcon,
   ContainerIcon,
   ContainerClusterIcon,
   ContainerClusterOIcon,
+  Container2Icon,
   CreditTokenIcon,
   CropIcon,
   CutIcon,
@@ -1119,6 +1146,7 @@ export {
   FontsizeIcon,
   FullscreenIcon,
   FullscreenExitIcon,
+  FunctionIcon,
   GavelIcon,
   GearSearchIcon,
   GearsIcon,
@@ -1130,6 +1158,7 @@ export {
   HelpOIcon,
   HomeIcon,
   HookIcon,
+  HttpIcon,
   IamIcon,
   IdentityIcon,
   IdentityKeyIcon,
@@ -1162,6 +1191,7 @@ export {
   KeyUpOIcon,
   KeyholeSecretIcon,
   KeyholeSecretOIcon,
+  KinesesIcon,
   LanguageIcon,
   LaptopIcon,
   LaptopGroupIcon,
@@ -1185,6 +1215,7 @@ export {
   LockOpenIcon,
   LockOpenOIcon,
   LogIcon,
+  LogicIcon,
   LowIcon,
   MachineLearningOIcon,
   MagicIcon,
@@ -1200,6 +1231,7 @@ export {
   MobileIcon,
   MobileGroupIcon,
   MobileOffIcon,
+  MockIcon,
   MonitoringIcon,
   MoonIcon,
   MoreIcon,
@@ -1274,6 +1306,7 @@ export {
   ServerUpdateIcon,
   ServerWarningIcon,
   ServerlessIcon,
+  ServiceFabricIcon,
   SettingsIcon,
   ShareIcon,
   ShareOIcon,
