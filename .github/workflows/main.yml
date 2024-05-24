@@ -57,13 +57,13 @@ jobs:
         echo "EOF" >> $GITHUB_ENV
 
         git status
-        # git add --all
-        # git reset last_commit.txt
-        # git commit -F last_commit.txt
-        # git push
+        git add --all
+        git reset last_commit.txt
+        git commit -F last_commit.txt
+        git push
 
-        # git tag "v$version"
-        # git push origin "v$version"
+        git tag "v$version"
+        git push origin "v$version"
 
     # - name: Create GitHub Release
     #   uses: actions/create-release@v1
