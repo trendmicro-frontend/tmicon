@@ -78,8 +78,8 @@ function asyncRequest(url) {
   });
 
   icons.sort(function (a, b) {
-    if (a.name > b.name) return 1;
-    if (a.name < b.name) return -1;
+    if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
+    if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
     return 0;
   });
 
@@ -93,7 +93,7 @@ function asyncRequest(url) {
 
     let svgContent = svgTpl.replace(/_viewBox/gi, icon.grid);
     let paths = [];
-    svgContent = svgContent.replace(/_title/gi, icon.name);
+    svgContent = svgContent.replace(/_title/gi, icon.name.toLowerCase());
     icon.paths.forEach((path, pathIndex) => {
       let attr = Object.assign({ fill: defaultColor }, icon.attrs[pathIndex]);
       let genAttrs = [];
@@ -103,7 +103,7 @@ function asyncRequest(url) {
     svgContent = svgContent.replace('<!--paths-->', paths.join('\n  '));
     fs.writeFileSync(targetPath, svgContent);
     if (!iconGroupBySize[icon.grid]) iconGroupBySize[icon.grid] = [];
-    iconGroupBySize[icon.grid].push(`<div class="glyph fs1"><div class="clearfix pbs"><svg class="${classSelector} ${prefix}${icon.name}"><use xlink:href="#${prefix}${icon.name}"></use></svg><span class="name"> ${prefix}${icon.name}</span></div></div>`);
+    iconGroupBySize[icon.grid].push(`<div class="glyph fs1"><div class="clearfix pbs"><svg class="${classSelector} ${prefix}${icon.name.toLowerCase()}"><use xlink:href="#${prefix}${icon.name}"></use></svg><span class="name"> ${prefix}${icon.name.toLowerCase()}</span></div></div>`);
   });
 
   svgDemoTpl = svgDemoTpl.replace('_symbol', svgDefs);
