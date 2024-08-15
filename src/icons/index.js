@@ -6,6 +6,7 @@ import AddGroupIcon from './add-group';
 import AddSquareOIcon from './add-square-o';
 import AddSquarePlusOIcon from './add-square-plus-o';
 import AddressIcon from './address';
+import AiSecurityIcon from './ai-security';
 import AlertIcon from './alert';
 import AlignCenterIcon from './align-center';
 import AlignLeftIcon from './align-left';
@@ -186,6 +187,7 @@ import FilePptOIcon from './file-ppt-o';
 import FileSourceOIcon from './file-source-o';
 import FileTextIcon from './file-text';
 import FileTextOIcon from './file-text-o';
+import FileUnzipOIcon from './file-unzip-o';
 import FileVideoOIcon from './file-video-o';
 import FileWordOIcon from './file-word-o';
 import FileZipOIcon from './file-zip-o';
@@ -359,6 +361,7 @@ import ScanOIcon from './scan-o';
 import ScanSquareIcon from './scan-square';
 import ScreenshotIcon from './screenshot';
 import SearchOIcon from './search-o';
+import SecurityAiIcon from './security-ai';
 import SelfServiceIcon from './self-service';
 import SendIcon from './send';
 import ServerIcon from './server';
@@ -473,6 +476,7 @@ const icons = [
   AddSquareOIcon,
   AddSquarePlusOIcon,
   AddressIcon,
+  AiSecurityIcon,
   AlertIcon,
   AlignCenterIcon,
   AlignLeftIcon,
@@ -653,6 +657,7 @@ const icons = [
   FileSourceOIcon,
   FileTextIcon,
   FileTextOIcon,
+  FileUnzipOIcon,
   FileVideoOIcon,
   FileWordOIcon,
   FileZipOIcon,
@@ -826,6 +831,7 @@ const icons = [
   ScanSquareIcon,
   ScreenshotIcon,
   SearchOIcon,
+  SecurityAiIcon,
   SelfServiceIcon,
   SendIcon,
   ServerIcon,
@@ -942,6 +948,7 @@ export {
   AddSquareOIcon,
   AddSquarePlusOIcon,
   AddressIcon,
+  AiSecurityIcon,
   AlertIcon,
   AlignCenterIcon,
   AlignLeftIcon,
@@ -1122,6 +1129,7 @@ export {
   FileSourceOIcon,
   FileTextIcon,
   FileTextOIcon,
+  FileUnzipOIcon,
   FileVideoOIcon,
   FileWordOIcon,
   FileZipOIcon,
@@ -1295,6 +1303,7 @@ export {
   ScanSquareIcon,
   ScreenshotIcon,
   SearchOIcon,
+  SecurityAiIcon,
   SelfServiceIcon,
   SendIcon,
   ServerIcon,

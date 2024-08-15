@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'TMicon';
-  src:  url('fonts/TMicon.eot?yz30va');
-  src:  url('fonts/TMicon.eot?yz30va#iefix') format('embedded-opentype'),
-    url('fonts/TMicon.woff2?yz30va') format('woff2'),
-    url('fonts/TMicon.ttf?yz30va') format('truetype'),
-    url('fonts/TMicon.woff?yz30va') format('woff'),
-    url('fonts/TMicon.svg?yz30va#TMicon') format('svg');
+  src:  url('fonts/TMicon.eot?ehxguo');
+  src:  url('fonts/TMicon.eot?ehxguo#iefix') format('embedded-opentype'),
+    url('fonts/TMicon.woff2?ehxguo') format('woff2'),
+    url('fonts/TMicon.ttf?ehxguo') format('truetype'),
+    url('fonts/TMicon.woff?ehxguo') format('woff'),
+    url('fonts/TMicon.svg?ehxguo#TMicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -36,6 +36,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.tmicon-ai-security:before {
+  content: "\e134";
+}
+.tmicon-file-unzip-o:before {
+  content: "\eb14";
+}
+.tmicon-security-ai:before {
+  content: "\e13a";
+}
 .tmicon-connecter:before {
   content: "\e133";
 }
