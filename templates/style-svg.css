@@ -1,0 +1,32 @@
+.tm-svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.tm-svg-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.tm-svg-case-log {
+  width: 0.875em;
+}
+
+.tm-svg-flag-more-o {
+  width: 0.8857421875em;
+}
+
+.tm-svg-observable {
+  width: 1.142578125em;
+}
+
+.tm-svg-file-lock-o {
+  width: 0.9375em;
+}
