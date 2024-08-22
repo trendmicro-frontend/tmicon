@@ -4,8 +4,8 @@ body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 13px;
   line-height: 20px;
-  color: #222;
-  background: #fff;
+  color: #eee;
+  background: #000000;
   left: 0;
   right: 0;
   height: 100%;
@@ -17,8 +17,18 @@ body {
   display: inline-block;
 }
 h1 {
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: normal;
+}
+h2 {
+  color: #9c9c9c;
+  font-weight: normal;
+}
+h3 {
+  color: #ddd;
+  font-size: 1.3em;
+  font-weight: normal;
+  margin-bottom: 24px;
 }
 .grid-size {
   margin-bottom: 24px !important;
@@ -55,7 +65,17 @@ input:focus {
   outline: none;
   box-shadow: inset 0 -2px #449fdb;
 }
+.svg-category {
+  border: 1px solid #444;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.cate-container {
+  display: inline-block;
+}
 .glyph {
+  color: #eee;
   font-size: 13px;
   width: 240px;
   padding-bottom: 1em;
@@ -85,7 +105,7 @@ svg {
   text-align: center;
 }
 .bgc1 {
-  background: #f1f1f1;
+  background: #222;
   padding-left: 24px;
   padding-right: 24px;
 }
