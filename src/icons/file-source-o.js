@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "eb0a",
-  "iconset": 7,
+  "iconset": 3,
   "name": "file-source-o",
-  "new": false,
-  "paths": [
-    "M12 0h-8c-0.5 0-1 0.5-1 1v1h-1c-0.5 0-1 0.5-1 1v12c0 0.5 0.5 1 1 1h10c0.5 0 1-0.5 1-1v-1h1c0.5 0 1-0.5 1-1v-10l-3-3zM12 15h-10v-5h4.1c0.2 0.6 0.8 1 1.4 1 0.8 0 1.5-0.7 1.5-1.5s-0.7-1.5-1.5-1.5c-0.7 0-1.2 0.4-1.4 1h-4.1v-6h7v3h3v9zM10 5v-1.6l1.6 1.6h-1.6zM14 13h-1v-8l-3-3h-6v-1h7.6l2.4 2.4v9.6z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>file-source-o</title><path d=\"M12 0H4C3.5 0 3 0.5 3 1V2H2C1.5 2 1 2.5 1 3V15C1 15.5 1.5 16 2 16H12C12.5 16 13 15.5 13 15V14H14C14.5 14 15 13.5 15 13V3L12 0ZM12 15H2V10H6.1C6.3 10.6 6.9 11 7.5 11C8.3 11 9 10.3 9 9.5C9 8.7 8.3 8 7.5 8C6.8 8 6.3 8.4 6.1 9H2V3H9V6H12V15ZM10 5V3.4L11.6 5H10ZM14 13H13V5L10 2H4V1H11.6L14 3.4V13Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

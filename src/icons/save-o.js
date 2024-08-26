@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e061",
-  "iconset": 0,
+  "iconset": 1,
   "name": "save-o",
-  "new": false,
-  "paths": [
-    "M11 1h-9c-0.6 0-1 0.4-1 1v12c0 0.6 0.4 1 1 1h12c0.6 0 1-0.4 1-1v-9l-4-4zM8 2v2h1v-2h1v3h-6v-3h4zM14 14h-12v-12h1v4h8v-3.6l3 3v8.6zM3 13h10v-5h-10v5zM4 9h8v3h-8v-3z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>save-o</title><path d=\"M11 1H2C1.4 1 1 1.4 1 2V14C1 14.6 1.4 15 2 15H14C14.6 15 15 14.6 15 14V5L11 1ZM8 2V4H9V2H10V5H4V2H8ZM14 14H2V2H3V6H11V2.4L14 5.4V14ZM3 13H13V8H3V13ZM4 9H12V12H4V9Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

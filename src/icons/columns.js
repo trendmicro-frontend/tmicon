@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e0ae",
-  "iconset": 0,
+  "iconset": 1,
   "name": "columns",
-  "new": false,
-  "paths": [
-    "M15 1h-14c-0.6 0-1 0.4-1 1v12c0 0.6 0.4 1 1 1h14c0.6 0 1-0.4 1-1v-12c0-0.6-0.4-1-1-1zM1 14v-11h4v11h-4zM6 14v-11h4v11h-4zM15 14h-4v-11h4v11z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>columns</title><path d=\"M15 1H1C0.4 1 0 1.4 0 2V14C0 14.6 0.4 15 1 15H15C15.6 15 16 14.6 16 14V2C16 1.4 15.6 1 15 1ZM1 14V3H5V14H1ZM6 14V3H10V14H6ZM15 14H11V3H15V14Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

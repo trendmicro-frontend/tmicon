@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e02e",
-  "iconset": 0,
+  "iconset": 1,
   "name": "filter",
-  "new": false,
-  "paths": [
-    "M14 1v1h-13v-1h13zM1 4l5 5v7l3-2v-5l5-5v-1h-13v1z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>filter</title><path d=\"M14 1V2H1V1H14ZM1 4L6 9V16L9 14V9L14 4V3H1V4Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

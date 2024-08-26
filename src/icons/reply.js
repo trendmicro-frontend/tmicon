@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e0a5",
-  "iconset": 0,
+  "iconset": 1,
   "name": "reply",
-  "new": false,
-  "paths": [
-    "M14 16c0.8-2.3 0-8-4-8-1.1 0-2.4 0-4 0v4l-6-6 6-6v4c1.4 0 2.9 0 4 0 5.1 0 8.3 6 4 12z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>reply</title><path d=\"M14 16C14.8 13.7 14 8 10 8C8.9 8 7.6 8 6 8V12L0 6L6 0V4C7.4 4 8.9 4 10 4C15.1 4 18.3 10 14 16Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

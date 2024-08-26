@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e60c",
-  "iconset": 1,
+  "iconset": 2,
   "name": "device-master",
-  "new": false,
-  "paths": [
-    "M5 3h-3v-1h3v-1h6v1h3v1h-3v1h-2v3h-2v-3h-2v-1zM16 8v6c0 0.6-0.4 1-1 1h-14c-0.6 0-1-0.4-1-1v-6l2-3h4v1h-3l-1.3 2h12.5l-1.2-2h-3v-1h4l2 3zM11 10h-1v3h1v-3zM14 10h-2v3h2v-3z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>device-master</title><path d=\"M5 3H2V2H5V1H11V2H14V3H11V4H9V7H7V4H5V3ZM16 8V14C16 14.6 15.6 15 15 15H1C0.4 15 0 14.6 0 14V8L2 5H6V6H3L1.7 8H14.2L13 6H10V5H14L16 8ZM11 10H10V13H11V10ZM14 10H12V13H14V10Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

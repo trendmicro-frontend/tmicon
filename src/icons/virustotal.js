@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "ed0c",
-  "iconset": 2,
+  "iconset": 8,
   "name": "virustotal",
-  "new": false,
-  "paths": [
-    "M14 15h-13l6.6-7-6.6-7h13c0.6 0 1 0.4 1 1v12c0 0.6-0.4 1-1 1zM3.3 14h10.7v-12h-10.7l5.7 6-5.7 6z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>virustotal</title><path d=\"M14 15H1L7.6 8L1 1H14C14.6 1 15 1.4 15 2V14C15 14.6 14.6 15 14 15ZM3.3 14H14V2H3.3L9 8L3.3 14Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

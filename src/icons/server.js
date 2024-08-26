@@ -1,15 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e611",
-  "iconset": 1,
+  "iconset": 2,
   "name": "server",
-  "new": false,
-  "paths": [
-    "M0 1v4h16v-4zM7 3h-5v-1h5zM14 3h-1v-1h1z",
-    "M0 10h16v-4h-16zM13 7h1v1h-1zM2 7h5v1h-5z",
-    "M0 15h16v-4h-16zM13 12h1v1h-1zM2 12h5v1h-5z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>server</title><path d=\"M0 1V5H16V1H0ZM7 3H2V2H7V3ZM14 3H13V2H14V3Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/><path d=\"M0 10H16V6H0V10ZM13 7H14V8H13V7ZM2 7H7V8H2V7Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/><path d=\"M0 15H16V11H0V15ZM13 12H14V13H13V12ZM2 12H7V13H2V12Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

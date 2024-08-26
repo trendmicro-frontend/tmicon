@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e618",
-  "iconset": 1,
+  "iconset": 2,
   "name": "server-warning",
-  "new": false,
-  "paths": [
-    "M11 6c-2.761 0-5 2.239-5 5s2.239 5 5 5c2.761 0 5-2.239 5-5v0c0-2.761-2.239-5-5-5v0zM12 14h-2v-1h2zM12 12h-2v-4h2zM14 0h-14v3h14zM5 2h-3v-1h3zM0 8v3h5c0.002-1.105 0.303-2.14 0.825-3.028l-0.015 0.028zM2 10v-1h2v1zM11 5c1.105 0.002 2.14 0.303 3.028 0.825l-0.028-0.015v-1.81h-14v3h6.54c1.101-1.227 2.69-1.996 4.459-2h0.001zM2 6v-1h3v1z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>server-warning</title><path d=\"M11 6C8.239 6 6 8.239 6 11C6 13.761 8.239 16 11 16C13.761 16 16 13.761 16 11C16 8.239 13.761 6 11 6ZM12 14H10V13H12V14ZM12 12H10V8H12V12ZM14 0H0V3H14V0ZM5 2H2V1H5V2ZM0 8V11H5C5.002 9.895 5.303 8.86 5.825 7.972L5.81 8H0ZM2 10V9H4V10H2ZM11 5C12.105 5.002 13.14 5.303 14.028 5.825L14 5.81V4H0V7H6.54C7.641 5.773 9.23 5.004 10.999 5H11ZM2 6V5H5V6H2Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

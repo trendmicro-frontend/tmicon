@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e070",
-  "iconset": 0,
+  "iconset": 1,
   "name": "task-add-o",
-  "new": false,
-  "paths": [
-    "M16 11v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM2 15h8v1h-8c-0.552 0-1-0.448-1-1v0-13c0-0.552 0.448-1 1-1v0h2v-1h8v1h2c0.552 0 1 0.448 1 1v0 8h-1v-8h-2v1h-8v-1h-2v13zM5 1v1h6v-1h-6z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>task-add-o</title><path d=\"M16 11V13H13V16H11V13H8V11H11V8H13V11H16ZM2 15H10V16H2C1.448 16 1 15.552 1 15V2C1 1.448 1.448 1 2 1H4V0H12V1H14C14.552 1 15 1.448 15 2V10H14V2H12V3H4V2H2V15ZM5 1V2H11V1H5Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e069",
-  "iconset": 0,
+  "iconset": 1,
   "name": "star",
-  "new": false,
-  "paths": [
-    "M12.008 10.21l0.945 5.79-4.953-2.735-4.952 2.735 0.945-5.79-3.993-4.088 5.519-0.842 2.481-5.28 2.481 5.28 5.519 0.842z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>star</title><path d=\"M12.008 10.21L12.953 16L8 13.265L3.048 16L3.993 10.21L0 6.122L5.519 5.28L8 0L10.481 5.28L16 6.122L12.008 10.21Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

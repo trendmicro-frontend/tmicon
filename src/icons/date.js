@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e021",
-  "iconset": 0,
+  "iconset": 1,
   "name": "date",
-  "new": false,
-  "paths": [
-    "M7 13.080l-3.53-3.56 1.060-1.050 2.47 2.53 4.47-4.49 1.060 1.060zM16 2v13c0 0.552-0.448 1-1 1v0h-14c-0.552 0-1-0.448-1-1v0-13c0-0.552 0.448-1 1-1v0h2v-1h3v1h4v-1h3v1h2c0.552 0 1 0.448 1 1v0zM11 3h1v-2h-1v2zM4 3h1v-2h-1v2zM15 4h-14v11h14v-11z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>date</title><path d=\"M7 13.08L3.47 9.52L4.53 8.47L7 11L11.47 6.51L12.53 7.57L7 13.08ZM16 2V15C16 15.552 15.552 16 15 16H1C0.448 16 0 15.552 0 15V2C0 1.448 0.448 1 1 1H3V0H6V1H10V0H13V1H15C15.552 1 16 1.448 16 2ZM11 3H12V1H11V3ZM4 3H5V1H4V3ZM15 4H1V15H15V4Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

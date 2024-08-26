@@ -12,9 +12,33 @@ const path = require("path");
     .match(/\w\w/gi)
     .map((color) => parseInt(color, 16))
     .join(",")})`;
+  const distPath = path.join(__dirname, '..', 'dist');
   const cssSrc = path.join(__dirname, "..", "templates", "style-svg.css");
   const cssDist = path.join(__dirname, '..', 'dist', 'icon-svg.css');
   const svgDest = path.join(__dirname, '..', 'dist', 'svg');
+
+  function deleteDirectoryContents(directory) {
+    if (fs.existsSync(directory)) {
+      fs.readdirSync(directory).forEach((file) => {
+        const curPath = path.join(directory, file);
+        if (fs.lstatSync(curPath).isDirectory()) {
+          // 遞迴刪除子目錄
+          deleteDirectoryContents(curPath);
+          fs.rmdirSync(curPath);
+        } else {
+          // 刪除檔案
+          fs.unlinkSync(curPath);
+        }
+      });
+    }
+  }
+
+  function createDirectory(directory) {
+    if (!fs.existsSync(directory)) {
+      fs.mkdirSync(directory, { recursive: true });
+      console.log(`已創建目錄: ${directory}`);
+    }
+  }
 
   function changeSVGFillColor(svgString, newColor) {
     // 顏色轉換邏輯保持不變
@@ -78,18 +102,12 @@ const path = require("path");
   let iconGroupBySize = {};
   let svgDemoTpl = fs.readFileSync(svgDemoTplPath, 'utf8');
   
+  deleteDirectoryContents();
+  createDirectory(path.join(distPath, 'demo-files'));
+  createDirectory(path.join(distPath, 'svg'));
   fs.copyFileSync(cssSrc, cssDist);
-  // fs.copyFileSync(jsSrc, jsDist);
   fs.copyFileSync(svgDemoCSSSrc, svgDemoCSSDist);
 
-  const files = fs.readdirSync(svgDest);
-  files.forEach(file => {
-    const filePath = path.join(svgDest, file);
-    if (fs.lstatSync(filePath).isFile()) {
-      fs.unlinkSync(filePath);
-    }
-  });
-  
   icons.forEach((icon) => {
     const targetPath = path.join(svgDest, `${icon.name.toLowerCase()}.svg`);
     icon.grid = Math.round(icon.grid);
@@ -123,4 +141,3 @@ const path = require("path");
 
   console.log('SVG files built successfully.');
 })();
-

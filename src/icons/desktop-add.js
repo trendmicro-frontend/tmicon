@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e601",
-  "iconset": 1,
+  "iconset": 2,
   "name": "desktop-add",
-  "new": false,
-  "paths": [
-    "M16 11v2h-3v3h-2v-3h-3v-2h3v-3h2v3zM2 2h10v5h2v-6c0-0.552-0.448-1-1-1v0h-12c-0.552 0-1 0.448-1 1v0 9c0 0.552 0.448 1 1 1v0h5v0.5l-3.75 1.57c-0.148 0.089-0.245 0.248-0.245 0.43 0 0.274 0.221 0.497 0.495 0.5h4.5v-5h-5z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>desktop-add</title><path d=\"M16 11V13H13V16H11V13H8V11H11V8H13V11H16ZM2 2H12V7H14V1C14 0.448 13.552 0 13 0H1C0.448 0 0 0.448 0 1V10C0 10.552 0.448 11 1 11H6V11.5L2.25 13.07C2.102 13.159 2.005 13.318 2.005 13.5C2.005 13.774 2.226 13.997 2.5 14H7V9H2V2Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

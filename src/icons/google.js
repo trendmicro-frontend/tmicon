@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "ed04",
-  "iconset": 2,
+  "iconset": 8,
   "name": "google",
-  "new": false,
-  "paths": [
-    "M16 8c0 4.4-3.6 8-8 8s-8-3.6-8-8 3.6-8 8-8c1.9 0 3.7 0.7 5.1 1.9l-2.1 2.1c-2.2-1.7-5.3-1.2-7 1s-1.2 5.3 1 7 5.3 1.2 7-1c0.3-0.5 0.6-1 0.8-1.5h-4.8v-2.5h7.9c0.1 0.3 0.1 0.7 0.1 1z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>google</title><path d=\"M16 8C16 12.4 12.4 16 8 16C3.6 16 0 12.4 0 8C0 3.6 3.6 0 8 0C9.9 0 11.7 0.7 13.1 1.9L11 4C8.8 2.3 5.7 2.8 4 5C2.3 7.2 2.8 10.3 5 12C7.2 13.7 10.3 13.2 12 11C12.3 10.5 12.6 10 12.8 9.5H8V7H15.9C16 7.3 16 7.7 16 8Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

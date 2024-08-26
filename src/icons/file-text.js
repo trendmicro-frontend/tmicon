@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "eb0b",
-  "iconset": 7,
+  "iconset": 3,
   "name": "file-text",
-  "new": false,
-  "paths": [
-    "M15 4h-4v-4l4 4zM10 5h5v10c0 0.5-0.5 1-1 1h-12c-0.5 0-1-0.5-1-1v-14c0-0.5 0.5-1 1-1h8v5zM4 8h6v-1h-6v1zM12 11h-8v1h8v-1zM4 9v1h8v-1h-8z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>file-text</title><path d=\"M15 4H11V0L15 4ZM10 5H15V15C15 15.5 14.5 16 14 16H2C1.5 16 1 15.5 1 15V1C1 0.5 1.5 0 2 0H10V5ZM4 8H10V7H4V8ZM12 11H4V12H12V11ZM4 9V10H12V9H4Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

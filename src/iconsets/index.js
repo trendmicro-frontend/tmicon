@@ -2,40 +2,48 @@
 
 const iconsets = [
   {
-    "id": 0,
-    "name": "Utility Icons"
-  },
-  {
     "id": 1,
-    "name": "Device Icons"
+    "name": "Utility"
   },
   {
     "id": 2,
-    "name": "Branding Icons"
+    "name": "Device"
   },
   {
     "id": 3,
-    "name": "Severity Icons"
+    "name": "File"
   },
   {
     "id": 4,
-    "name": "Chart Icons"
+    "name": "Edit"
   },
   {
     "id": 5,
-    "name": "Direction Icons"
+    "name": "Direction"
   },
   {
     "id": 6,
-    "name": "Edit Icons"
+    "name": "Chart"
   },
   {
     "id": 7,
-    "name": "File Icons"
+    "name": "Functional"
   },
   {
     "id": 8,
-    "name": "Threat Type"
+    "name": "Branding"
+  },
+  {
+    "id": 9,
+    "name": "Threat"
+  },
+  {
+    "id": 10,
+    "name": "Chart legend"
+  },
+  {
+    "id": 11,
+    "name": "New (undecided)"
   }
 ];
 

@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e038",
-  "iconset": 0,
+  "iconset": 1,
   "name": "folder-open",
-  "new": false,
-  "paths": [
-    "M16 8l-2.1 6.43c-0.164 0.339-0.505 0.569-0.9 0.57h-12c-0.552 0-1-0.448-1-1v0-12c0-0.552 0.448-1 1-1v0h4l1 2h7c0.552 0 1 0.448 1 1v0 3h-10.64l-2.36 7h1l2-6h12z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>folder-open</title><path d=\"M16 8L13.9 14.43C13.736 14.769 13.395 14.999 13 15H1C0.448 15 0 14.552 0 14V2C0 1.448 0.448 1 1 1H5L6 3H13C13.552 3 14 3.448 14 4V7H3.36L1 14H2L4 8H16Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

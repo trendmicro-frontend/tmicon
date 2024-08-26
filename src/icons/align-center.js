@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "ea00",
-  "iconset": 6,
+  "iconset": 4,
   "name": "align-center",
-  "new": false,
-  "paths": [
-    "M11 5h-6v-2h6zM13 6h-10v2h10zM12 9h-8v2h8zM14 12h-12v2h12z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>align-center</title><path d=\"M11 5H5V3H11V5ZM13 6H3V8H13V6ZM12 9H4V11H12V9ZM14 12H2V14H14V12Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

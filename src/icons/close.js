@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e018",
-  "iconset": 0,
+  "iconset": 1,
   "name": "close",
-  "new": false,
-  "paths": [
-    "M15 2l-1-1-6 6-6-6-0.99 0.99 5.99 6.010-6 6 1 1 6-6 6 6 1-1-6-6 6-6z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>close</title><path d=\"M15 2L14 1L8 7L2 1L1.01 1.99L7 8L1 14L2 15L8 9L14 15L15 14L9 8L15 2Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

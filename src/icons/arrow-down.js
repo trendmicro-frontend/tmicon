@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e902",
   "iconset": 5,
   "name": "arrow-down",
-  "new": false,
-  "paths": [
-    "M13.708 9.297l-5.705 5.726-5.739-5.707 1.41-1.418 3.326 3.307v-10.205h2v10.189l3.292-3.305z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>arrow-down</title><path d=\"M13.708 9.297L8.00298 15.023L2.26398 9.316L3.67398 7.898L6.99998 11.205V1H8.99998V11.189L12.292 7.884L13.708 9.297Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

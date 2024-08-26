@@ -3,7 +3,7 @@ name: Build TMIcons
 on:
   push:
     branches:
-      - v4
+      - main
     paths:
       - 'data/**'
 
@@ -31,11 +31,7 @@ jobs:
       run: |
         node ./script/svg2png.js
 
-    - name: Build font icons
-      run: |
-        node ./script/build-icon-font.js
-
-    - name: Commit fonts, svg icons, png files, and Tonic UI data
+    - name: Commit svg icons, png files, and Tonic UI data
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |

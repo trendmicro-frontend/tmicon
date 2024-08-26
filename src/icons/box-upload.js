@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e0c2",
-  "iconset": 0,
+  "iconset": 1,
   "name": "box-upload",
-  "new": false,
-  "paths": [
-    "M14 1h-1v1l1.3 2h-12.6l1.3-2v-1h-1l-2 3v10c0 0.6 0.4 1 1 1h14c0.6 0 1-0.4 1-1v-10l-2-3zM10 10v4h-4v-4h-3l5-5 5 5h-3zM12 3h-8v-1h8v1zM11 1h-6v-1h6v1z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>box-upload</title><path d=\"M14 1H13V2L14.3 4H1.7L3 2V1H2L0 4V14C0 14.6 0.4 15 1 15H15C15.6 15 16 14.6 16 14V4L14 1ZM10 10V14H6V10H3L8 5L13 10H10ZM12 3H4V2H12V3ZM11 1H5V0H11V1Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

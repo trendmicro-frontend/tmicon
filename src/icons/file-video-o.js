@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "eb11",
-  "iconset": 7,
+  "iconset": 3,
   "name": "file-video-o",
-  "new": false,
-  "paths": [
-    "M11 0h-9c-0.5 0-1 0.5-1 1v14c0 0.5 0.5 1 1 1h12c0.5 0 1-0.5 1-1v-11l-4-4zM11 1.4l2.6 2.6h-2.6v-2.6zM14 15h-12v-14h8v4h4v10zM10 9.2l3-2.2v6l-3-2.3v1.3c0 0.5-0.5 1-1 1h-5c-0.5 0-1-0.5-1-1v-4c0-0.5 0.5-1 1-1h5c0.5 0 1 0.5 1 1v1.2z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>file-video-o</title><path d=\"M11 0H2C1.5 0 1 0.5 1 1V15C1 15.5 1.5 16 2 16H14C14.5 16 15 15.5 15 15V4L11 0ZM11 1.4L13.6 4H11V1.4ZM14 15H2V1H10V5H14V15ZM10 9.2L13 7V13L10 10.7V12C10 12.5 9.5 13 9 13H4C3.5 13 3 12.5 3 12V8C3 7.5 3.5 7 4 7H9C9.5 7 10 7.5 10 8V9.2Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

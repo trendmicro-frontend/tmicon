@@ -15,10 +15,8 @@ import AngleDownIcon from './angle-down';
 import AngleLeftIcon from './angle-left';
 import AngleRightIcon from './angle-right';
 import AngleUpIcon from './angle-up';
-import ApiIcon from './api';
-import ApiManagementIcon from './api-management';
-import AppIcon from './app';
-import AppServiceIcon from './app-service';
+import APIIcon from './api';
+import APPIcon from './app';
 import AppleIcon from './apple';
 import ArrowDownIcon from './arrow-down';
 import ArrowLeftIcon from './arrow-left';
@@ -32,7 +30,6 @@ import AttachIcon from './attach';
 import AttachAlertIcon from './attach-alert';
 import AttachFileIcon from './attach-file';
 import AttachNewIcon from './attach-new';
-import AuthorizerIcon from './authorizer';
 import BackupIcon from './backup';
 import BaseStationIcon from './base-station';
 import BatteryIcon from './battery';
@@ -68,6 +65,10 @@ import ChartAreastepIcon from './chart-areastep';
 import ChartBarIcon from './chart-bar';
 import ChartDonutIcon from './chart-donut';
 import ChartDotIcon from './chart-dot';
+import ChartLegend01Icon from './chart-legend-01';
+import ChartLegend02Icon from './chart-legend-02';
+import ChartLegend03Icon from './chart-legend-03';
+import ChartLegend04Icon from './chart-legend-04';
 import ChartLineIcon from './chart-line';
 import ChartPieIcon from './chart-pie';
 import ChartScatterIcon from './chart-scatter';
@@ -97,6 +98,7 @@ import CloudOIcon from './cloud-o';
 import CloudOffIcon from './cloud-off';
 import CloudPuzzleIcon from './cloud-puzzle';
 import CloudUserIcon from './cloud-user';
+import CloudWorkloadTBDIcon from './cloud-workload-tbd';
 import CodeIcon from './code';
 import CollapseLeftIcon from './collapse-left';
 import CollapseRightIcon from './collapse-right';
@@ -104,18 +106,18 @@ import ColorIcon from './color';
 import ColortextIcon from './colortext';
 import ColumnsIcon from './columns';
 import CommentIcon from './comment';
+import CompanionIcon from './companion';
+import ConditionalAccessPolicyIcon from './conditional-access-policy';
 import ConnectIcon from './connect';
 import ConnectErrorIcon from './connect-error';
 import ConnectNoipIcon from './connect-noip';
 import ConnectWarningIcon from './connect-warning';
-import ConnecterIcon from './connecter';
 import ConnectingIcon from './connecting';
 import ConnectionIcon from './connection';
 import ContactIcon from './contact';
 import ContainerIcon from './container';
 import ContainerClusterIcon from './container-cluster';
 import ContainerClusterOIcon from './container-cluster-o';
-import Container2Icon from './container2';
 import CreditTokenIcon from './credit-token';
 import CropIcon from './crop';
 import CutIcon from './cut';
@@ -147,6 +149,7 @@ import DomainIcon from './domain';
 import Domain2Icon from './domain2';
 import DownloadIcon from './download';
 import DownloadObjectIcon from './download-object';
+import DragHandleIcon from './drag-handle';
 import DropletIcon from './droplet';
 import EdgeIcon from './edge';
 import EditIcon from './edit';
@@ -181,8 +184,8 @@ import FileExcelOIcon from './file-excel-o';
 import FileImageOIcon from './file-image-o';
 import FileLockOIcon from './file-lock-o';
 import FileOIcon from './file-o';
-import FilePdfOIcon from './file-pdf-o';
-import FilePptOIcon from './file-ppt-o';
+import FilePDFOIcon from './file-pdf-o';
+import FilePPTOIcon from './file-ppt-o';
 import FileSourceOIcon from './file-source-o';
 import FileTextIcon from './file-text';
 import FileTextOIcon from './file-text-o';
@@ -210,7 +213,6 @@ import FolderUserIcon from './folder-user';
 import FontsizeIcon from './fontsize';
 import FullscreenIcon from './fullscreen';
 import FullscreenExitIcon from './fullscreen-exit';
-import FunctionIcon from './function';
 import GavelIcon from './gavel';
 import GearSearchIcon from './gear-search';
 import GearsIcon from './gears';
@@ -222,11 +224,10 @@ import HelpIcon from './help';
 import HelpOIcon from './help-o';
 import HomeIcon from './home';
 import HookIcon from './hook';
-import HttpIcon from './http';
-import IamIcon from './iam';
+import IAMIcon from './iam';
 import IdentityIcon from './identity';
 import IdentityKeyIcon from './identity-key';
-import IeIcon from './ie';
+import IEIcon from './ie';
 import ImportIcon from './import';
 import InboxIcon from './inbox';
 import InboxUploadIcon from './inbox-upload';
@@ -241,8 +242,8 @@ import InfoSIcon from './info-s';
 import InjectIcon from './inject';
 import InstallIcon from './install';
 import InvestigationIcon from './investigation';
-import IocIcon from './ioc';
-import IpIcon from './ip';
+import IOCIcon from './ioc';
+import IPIcon from './ip';
 import ItalicIcon from './italic';
 import KeyIcon from './key';
 import KeyAddOIcon from './key-add-o';
@@ -255,7 +256,6 @@ import KeyResetOIcon from './key-reset-o';
 import KeyUpOIcon from './key-up-o';
 import KeyholeSecretIcon from './keyhole-secret';
 import KeyholeSecretOIcon from './keyhole-secret-o';
-import KinesesIcon from './kineses';
 import LanguageIcon from './language';
 import LaptopIcon from './laptop';
 import LaptopGroupIcon from './laptop-group';
@@ -270,16 +270,15 @@ import LinkBreakIcon from './link-break';
 import LinkThinIcon from './link-thin';
 import LinuxIcon from './linux';
 import ListCloseIcon from './list-close';
-import ListOlIcon from './list-ol';
+import ListOLIcon from './list-ol';
 import ListOpenIcon from './list-open';
-import ListUlIcon from './list-ul';
+import ListULIcon from './list-ul';
 import LocationIcon from './location';
 import LockIcon from './lock';
 import LockOIcon from './lock-o';
 import LockOpenIcon from './lock-open';
 import LockOpenOIcon from './lock-open-o';
 import LogIcon from './log';
-import LogicIcon from './logic';
 import LowIcon from './low';
 import MachineLearningOIcon from './machine-learning-o';
 import MagicIcon from './magic';
@@ -295,13 +294,12 @@ import MinusSquareOIcon from './minus-square-o';
 import MobileIcon from './mobile';
 import MobileGroupIcon from './mobile-group';
 import MobileOffIcon from './mobile-off';
-import MockIcon from './mock';
 import MonitoringIcon from './monitoring';
 import MoonIcon from './moon';
 import MoreIcon from './more';
 import MoreHorizIcon from './more-horiz';
 import MoveIcon from './move';
-import NasIcon from './nas';
+import NASIcon from './nas';
 import NetworkConfigurationIcon from './network-configuration';
 import NoteOIcon from './note-o';
 import ObjectAddIcon from './object-add';
@@ -318,6 +316,7 @@ import PartnerOIcon from './partner-o';
 import PasteIcon from './paste';
 import PauseIcon from './pause';
 import PermissionIcon from './permission';
+import PermissionKeyTBDIcon from './permission-key-tbd';
 import PhishingIcon from './phishing';
 import Phishing2Icon from './phishing-2';
 import PictureIcon from './picture';
@@ -336,7 +335,7 @@ import PuzzleOIcon from './puzzle-o';
 import QueryIcon from './query';
 import RansomwareIcon from './ransomware';
 import RansomwareOIcon from './ransomware-o';
-import RcaIcon from './rca';
+import RCAIcon from './rca';
 import RedoIcon from './redo';
 import RefreshIcon from './refresh';
 import RegistryIcon from './registry';
@@ -346,9 +345,10 @@ import ReplyIcon from './reply';
 import ReportIcon from './report';
 import ReportExportIcon from './report-export';
 import ResizeHorizontalIcon from './resize-horizontal';
-import ResizeNeswIcon from './resize-nesw';
-import ResizeNwseIcon from './resize-nwse';
+import ResizeNESWIcon from './resize-nesw';
+import ResizeNWSEIcon from './resize-nwse';
 import RocketIcon from './rocket';
+import RoleIcon from './role';
 import RollbackIcon from './rollback';
 import RootCauseIcon from './root-cause';
 import RouterIcon from './router';
@@ -370,7 +370,6 @@ import ServerOnIcon from './server-on';
 import ServerUpdateIcon from './server-update';
 import ServerWarningIcon from './server-warning';
 import ServerlessIcon from './serverless';
-import ServiceFabricIcon from './service-fabric';
 import SettingsIcon from './settings';
 import ShareIcon from './share';
 import ShareOIcon from './share-o';
@@ -417,14 +416,14 @@ import ToolsConfigurationIcon from './tools-configuration';
 import TreatInvestigationIcon from './treat-investigation';
 import TreeviewIcon from './treeview';
 import TrendLinkIcon from './trend-link';
-import TvIcon from './tv';
+import TVIcon from './tv';
 import UnavailableIcon from './unavailable';
 import UnderlineIcon from './underline';
 import UndoIcon from './undo';
-import UnknowIcon from './unknow';
+import UnknownIcon from './unknown';
 import UploadIcon from './upload';
-import UrlIcon from './url';
-import UsbIcon from './usb';
+import URLIcon from './url';
+import USBIcon from './usb';
 import UserIcon from './user';
 import UserAddIcon from './user-add';
 import UserAddOIcon from './user-add-o';
@@ -441,7 +440,7 @@ import UserManagedIcon from './user-managed';
 import UserManagedGroupIcon from './user-managed-group';
 import UserOIcon from './user-o';
 import UserTeamIcon from './user-team';
-import UserUnknowIcon from './user-unknow';
+import UserUnknownIcon from './user-unknown';
 import UserWarningIcon from './user-warning';
 import ViewIcon from './view';
 import ViewOffIcon from './view-off';
@@ -458,7 +457,7 @@ import Window8Icon from './window8';
 import WineventIcon from './winevent';
 import WipeIcon from './wipe';
 import WipeCloseIcon from './wipe-close';
-import WmiIcon from './wmi';
+import WMIIcon from './wmi';
 import WorkbenchIcon from './workbench';
 import WorkbenchManualIcon from './workbench-manual';
 import WorkspaceIcon from './workspace';
@@ -482,10 +481,8 @@ const icons = [
   AngleLeftIcon,
   AngleRightIcon,
   AngleUpIcon,
-  ApiIcon,
-  ApiManagementIcon,
-  AppIcon,
-  AppServiceIcon,
+  APIIcon,
+  APPIcon,
   AppleIcon,
   ArrowDownIcon,
   ArrowLeftIcon,
@@ -499,7 +496,6 @@ const icons = [
   AttachAlertIcon,
   AttachFileIcon,
   AttachNewIcon,
-  AuthorizerIcon,
   BackupIcon,
   BaseStationIcon,
   BatteryIcon,
@@ -535,6 +531,10 @@ const icons = [
   ChartBarIcon,
   ChartDonutIcon,
   ChartDotIcon,
+  ChartLegend01Icon,
+  ChartLegend02Icon,
+  ChartLegend03Icon,
+  ChartLegend04Icon,
   ChartLineIcon,
   ChartPieIcon,
   ChartScatterIcon,
@@ -564,6 +564,7 @@ const icons = [
   CloudOffIcon,
   CloudPuzzleIcon,
   CloudUserIcon,
+  CloudWorkloadTBDIcon,
   CodeIcon,
   CollapseLeftIcon,
   CollapseRightIcon,
@@ -571,18 +572,18 @@ const icons = [
   ColortextIcon,
   ColumnsIcon,
   CommentIcon,
+  CompanionIcon,
+  ConditionalAccessPolicyIcon,
   ConnectIcon,
   ConnectErrorIcon,
   ConnectNoipIcon,
   ConnectWarningIcon,
-  ConnecterIcon,
   ConnectingIcon,
   ConnectionIcon,
   ContactIcon,
   ContainerIcon,
   ContainerClusterIcon,
   ContainerClusterOIcon,
-  Container2Icon,
   CreditTokenIcon,
   CropIcon,
   CutIcon,
@@ -614,6 +615,7 @@ const icons = [
   Domain2Icon,
   DownloadIcon,
   DownloadObjectIcon,
+  DragHandleIcon,
   DropletIcon,
   EdgeIcon,
   EditIcon,
@@ -648,8 +650,8 @@ const icons = [
   FileImageOIcon,
   FileLockOIcon,
   FileOIcon,
-  FilePdfOIcon,
-  FilePptOIcon,
+  FilePDFOIcon,
+  FilePPTOIcon,
   FileSourceOIcon,
   FileTextIcon,
   FileTextOIcon,
@@ -677,7 +679,6 @@ const icons = [
   FontsizeIcon,
   FullscreenIcon,
   FullscreenExitIcon,
-  FunctionIcon,
   GavelIcon,
   GearSearchIcon,
   GearsIcon,
@@ -689,11 +690,10 @@ const icons = [
   HelpOIcon,
   HomeIcon,
   HookIcon,
-  HttpIcon,
-  IamIcon,
+  IAMIcon,
   IdentityIcon,
   IdentityKeyIcon,
-  IeIcon,
+  IEIcon,
   ImportIcon,
   InboxIcon,
   InboxUploadIcon,
@@ -708,8 +708,8 @@ const icons = [
   InjectIcon,
   InstallIcon,
   InvestigationIcon,
-  IocIcon,
-  IpIcon,
+  IOCIcon,
+  IPIcon,
   ItalicIcon,
   KeyIcon,
   KeyAddOIcon,
@@ -722,7 +722,6 @@ const icons = [
   KeyUpOIcon,
   KeyholeSecretIcon,
   KeyholeSecretOIcon,
-  KinesesIcon,
   LanguageIcon,
   LaptopIcon,
   LaptopGroupIcon,
@@ -737,16 +736,15 @@ const icons = [
   LinkThinIcon,
   LinuxIcon,
   ListCloseIcon,
-  ListOlIcon,
+  ListOLIcon,
   ListOpenIcon,
-  ListUlIcon,
+  ListULIcon,
   LocationIcon,
   LockIcon,
   LockOIcon,
   LockOpenIcon,
   LockOpenOIcon,
   LogIcon,
-  LogicIcon,
   LowIcon,
   MachineLearningOIcon,
   MagicIcon,
@@ -762,13 +760,12 @@ const icons = [
   MobileIcon,
   MobileGroupIcon,
   MobileOffIcon,
-  MockIcon,
   MonitoringIcon,
   MoonIcon,
   MoreIcon,
   MoreHorizIcon,
   MoveIcon,
-  NasIcon,
+  NASIcon,
   NetworkConfigurationIcon,
   NoteOIcon,
   ObjectAddIcon,
@@ -785,6 +782,7 @@ const icons = [
   PasteIcon,
   PauseIcon,
   PermissionIcon,
+  PermissionKeyTBDIcon,
   PhishingIcon,
   Phishing2Icon,
   PictureIcon,
@@ -803,7 +801,7 @@ const icons = [
   QueryIcon,
   RansomwareIcon,
   RansomwareOIcon,
-  RcaIcon,
+  RCAIcon,
   RedoIcon,
   RefreshIcon,
   RegistryIcon,
@@ -813,9 +811,10 @@ const icons = [
   ReportIcon,
   ReportExportIcon,
   ResizeHorizontalIcon,
-  ResizeNeswIcon,
-  ResizeNwseIcon,
+  ResizeNESWIcon,
+  ResizeNWSEIcon,
   RocketIcon,
+  RoleIcon,
   RollbackIcon,
   RootCauseIcon,
   RouterIcon,
@@ -837,7 +836,6 @@ const icons = [
   ServerUpdateIcon,
   ServerWarningIcon,
   ServerlessIcon,
-  ServiceFabricIcon,
   SettingsIcon,
   ShareIcon,
   ShareOIcon,
@@ -884,14 +882,14 @@ const icons = [
   TreatInvestigationIcon,
   TreeviewIcon,
   TrendLinkIcon,
-  TvIcon,
+  TVIcon,
   UnavailableIcon,
   UnderlineIcon,
   UndoIcon,
-  UnknowIcon,
+  UnknownIcon,
   UploadIcon,
-  UrlIcon,
-  UsbIcon,
+  URLIcon,
+  USBIcon,
   UserIcon,
   UserAddIcon,
   UserAddOIcon,
@@ -908,7 +906,7 @@ const icons = [
   UserManagedGroupIcon,
   UserOIcon,
   UserTeamIcon,
-  UserUnknowIcon,
+  UserUnknownIcon,
   UserWarningIcon,
   ViewIcon,
   ViewOffIcon,
@@ -925,7 +923,7 @@ const icons = [
   WineventIcon,
   WipeIcon,
   WipeCloseIcon,
-  WmiIcon,
+  WMIIcon,
   WorkbenchIcon,
   WorkbenchManualIcon,
   WorkspaceIcon,
@@ -951,10 +949,8 @@ export {
   AngleLeftIcon,
   AngleRightIcon,
   AngleUpIcon,
-  ApiIcon,
-  ApiManagementIcon,
-  AppIcon,
-  AppServiceIcon,
+  APIIcon,
+  APPIcon,
   AppleIcon,
   ArrowDownIcon,
   ArrowLeftIcon,
@@ -968,7 +964,6 @@ export {
   AttachAlertIcon,
   AttachFileIcon,
   AttachNewIcon,
-  AuthorizerIcon,
   BackupIcon,
   BaseStationIcon,
   BatteryIcon,
@@ -1004,6 +999,10 @@ export {
   ChartBarIcon,
   ChartDonutIcon,
   ChartDotIcon,
+  ChartLegend01Icon,
+  ChartLegend02Icon,
+  ChartLegend03Icon,
+  ChartLegend04Icon,
   ChartLineIcon,
   ChartPieIcon,
   ChartScatterIcon,
@@ -1033,6 +1032,7 @@ export {
   CloudOffIcon,
   CloudPuzzleIcon,
   CloudUserIcon,
+  CloudWorkloadTBDIcon,
   CodeIcon,
   CollapseLeftIcon,
   CollapseRightIcon,
@@ -1040,18 +1040,18 @@ export {
   ColortextIcon,
   ColumnsIcon,
   CommentIcon,
+  CompanionIcon,
+  ConditionalAccessPolicyIcon,
   ConnectIcon,
   ConnectErrorIcon,
   ConnectNoipIcon,
   ConnectWarningIcon,
-  ConnecterIcon,
   ConnectingIcon,
   ConnectionIcon,
   ContactIcon,
   ContainerIcon,
   ContainerClusterIcon,
   ContainerClusterOIcon,
-  Container2Icon,
   CreditTokenIcon,
   CropIcon,
   CutIcon,
@@ -1083,6 +1083,7 @@ export {
   Domain2Icon,
   DownloadIcon,
   DownloadObjectIcon,
+  DragHandleIcon,
   DropletIcon,
   EdgeIcon,
   EditIcon,
@@ -1117,8 +1118,8 @@ export {
   FileImageOIcon,
   FileLockOIcon,
   FileOIcon,
-  FilePdfOIcon,
-  FilePptOIcon,
+  FilePDFOIcon,
+  FilePPTOIcon,
   FileSourceOIcon,
   FileTextIcon,
   FileTextOIcon,
@@ -1146,7 +1147,6 @@ export {
   FontsizeIcon,
   FullscreenIcon,
   FullscreenExitIcon,
-  FunctionIcon,
   GavelIcon,
   GearSearchIcon,
   GearsIcon,
@@ -1158,11 +1158,10 @@ export {
   HelpOIcon,
   HomeIcon,
   HookIcon,
-  HttpIcon,
-  IamIcon,
+  IAMIcon,
   IdentityIcon,
   IdentityKeyIcon,
-  IeIcon,
+  IEIcon,
   ImportIcon,
   InboxIcon,
   InboxUploadIcon,
@@ -1177,8 +1176,8 @@ export {
   InjectIcon,
   InstallIcon,
   InvestigationIcon,
-  IocIcon,
-  IpIcon,
+  IOCIcon,
+  IPIcon,
   ItalicIcon,
   KeyIcon,
   KeyAddOIcon,
@@ -1191,7 +1190,6 @@ export {
   KeyUpOIcon,
   KeyholeSecretIcon,
   KeyholeSecretOIcon,
-  KinesesIcon,
   LanguageIcon,
   LaptopIcon,
   LaptopGroupIcon,
@@ -1206,16 +1204,15 @@ export {
   LinkThinIcon,
   LinuxIcon,
   ListCloseIcon,
-  ListOlIcon,
+  ListOLIcon,
   ListOpenIcon,
-  ListUlIcon,
+  ListULIcon,
   LocationIcon,
   LockIcon,
   LockOIcon,
   LockOpenIcon,
   LockOpenOIcon,
   LogIcon,
-  LogicIcon,
   LowIcon,
   MachineLearningOIcon,
   MagicIcon,
@@ -1231,13 +1228,12 @@ export {
   MobileIcon,
   MobileGroupIcon,
   MobileOffIcon,
-  MockIcon,
   MonitoringIcon,
   MoonIcon,
   MoreIcon,
   MoreHorizIcon,
   MoveIcon,
-  NasIcon,
+  NASIcon,
   NetworkConfigurationIcon,
   NoteOIcon,
   ObjectAddIcon,
@@ -1254,6 +1250,7 @@ export {
   PasteIcon,
   PauseIcon,
   PermissionIcon,
+  PermissionKeyTBDIcon,
   PhishingIcon,
   Phishing2Icon,
   PictureIcon,
@@ -1272,7 +1269,7 @@ export {
   QueryIcon,
   RansomwareIcon,
   RansomwareOIcon,
-  RcaIcon,
+  RCAIcon,
   RedoIcon,
   RefreshIcon,
   RegistryIcon,
@@ -1282,9 +1279,10 @@ export {
   ReportIcon,
   ReportExportIcon,
   ResizeHorizontalIcon,
-  ResizeNeswIcon,
-  ResizeNwseIcon,
+  ResizeNESWIcon,
+  ResizeNWSEIcon,
   RocketIcon,
+  RoleIcon,
   RollbackIcon,
   RootCauseIcon,
   RouterIcon,
@@ -1306,7 +1304,6 @@ export {
   ServerUpdateIcon,
   ServerWarningIcon,
   ServerlessIcon,
-  ServiceFabricIcon,
   SettingsIcon,
   ShareIcon,
   ShareOIcon,
@@ -1353,14 +1350,14 @@ export {
   TreatInvestigationIcon,
   TreeviewIcon,
   TrendLinkIcon,
-  TvIcon,
+  TVIcon,
   UnavailableIcon,
   UnderlineIcon,
   UndoIcon,
-  UnknowIcon,
+  UnknownIcon,
   UploadIcon,
-  UrlIcon,
-  UsbIcon,
+  URLIcon,
+  USBIcon,
   UserIcon,
   UserAddIcon,
   UserAddOIcon,
@@ -1377,7 +1374,7 @@ export {
   UserManagedGroupIcon,
   UserOIcon,
   UserTeamIcon,
-  UserUnknowIcon,
+  UserUnknownIcon,
   UserWarningIcon,
   ViewIcon,
   ViewOffIcon,
@@ -1394,7 +1391,7 @@ export {
   WineventIcon,
   WipeIcon,
   WipeCloseIcon,
-  WmiIcon,
+  WMIIcon,
   WorkbenchIcon,
   WorkbenchManualIcon,
   WorkspaceIcon,

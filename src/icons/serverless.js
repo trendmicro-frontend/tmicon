@@ -1,16 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e11a",
-  "iconset": 0,
+  "iconset": 1,
   "name": "serverless",
-  "new": false,
-  "paths": [
-    "M0 5h2l-2-2v2z",
-    "M4 7l-1-1h-3v4h7l-2-2h-3v-1h2z",
-    "M16 1h-14l-1-1-1 1 15 15 1-1v-4h-4l-1-1h5v-4h-9l-1-1h10v-4zM14 12v1l-1-1h1zM13 7h1v1h-1v-1zM7 3h-3l-1-1h4v1zM14 3h-1v-1h1v1z",
-    "M8 11h-8v4h12l-4-4zM2 13v-1h5v1h-5z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>serverless</title><g clip-path=\"url(#clip0_281_995)\"><path d=\"M0 5H2L0 3V5Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/><path d=\"M4 7L3 6H0V10H7L5 8H2V7H4Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/><path d=\"M16 1H2L1 0L0 1L15 16L16 15V11H12L11 10H16V6H7L6 5H16V1ZM14 12V13L13 12H14ZM13 7H14V8H13V7ZM7 3H4L3 2H7V3ZM14 3H13V2H14V3Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/><path d=\"M8 11H0V15H12L8 11ZM2 13V12H7V13H2Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></g><defs><clipPath id=\"clip0_281_995\"><rect width=\"16\" height=\"16\" fill=\"rgb(34, 34, 34)\"/></clipPath></defs></svg>",
   "viewBox": "0 0 16 16"
 };
 

@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e0ee",
-  "iconset": 3,
+  "iconset": 7,
   "name": "warning-minor",
-  "new": false,
-  "paths": [
-    "M15.7 7.3l-7-7c-0.4-0.4-1-0.4-1.4 0l-7 7c-0.4 0.4-0.4 1 0 1.4l7 7c0.4 0.4 1 0.4 1.4 0l7-7c0.4-0.4 0.4-1 0-1.4zM9 12h-2v-2h2v2zM9 9h-2v-5h2v5z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>warning-minor</title><path d=\"M15.7 7.3L8.7 0.3C8.3 -0.1 7.7 -0.1 7.3 0.3L0.3 7.3C-0.1 7.7 -0.1 8.3 0.3 8.7L7.3 15.7C7.7 16.1 8.3 16.1 8.7 15.7L15.7 8.7C16.1 8.3 16.1 7.7 15.7 7.3ZM9 12H7V10H9V12ZM9 9H7V4H9V9Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

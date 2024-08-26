@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e010",
-  "iconset": 0,
+  "iconset": 1,
   "name": "check",
-  "new": false,
-  "paths": [
-    "M5 15l-5-5 1-1 4 3.88 10-11.88 1 1-11 13z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>check</title><path d=\"M5 15L0 10L1 9L5 12.88L15 1L16 2L5 15Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

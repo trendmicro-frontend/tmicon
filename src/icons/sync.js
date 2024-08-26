@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e06c",
-  "iconset": 0,
+  "iconset": 1,
   "name": "sync",
-  "new": false,
-  "paths": [
-    "M14 8v2c-0.001 0.552-0.448 0.999-1 1h-7.002l0.002-2-4 3 4 3-0.002-2h7.002c1.656-0.002 2.998-1.344 3-3v-2zM2 6c0-0.552 0.448-1 1-1h7v2l3.996-3-3.996-3v2h-7c-1.656 0.001-2.999 1.344-3 3v2h2z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>sync</title><path d=\"M14 8V10C13.999 10.552 13.552 10.999 13 11H5.998L6 9L2 12L6 15L5.998 13H13C14.656 12.998 15.998 11.656 16 10V8H14ZM2 6C2 5.448 2.448 5 3 5H10V7L13.996 4L10 1V3H3C1.344 3.001 0.001 4.344 0 6V8H2V6Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

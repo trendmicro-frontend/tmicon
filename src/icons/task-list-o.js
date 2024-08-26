@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e073",
-  "iconset": 0,
+  "iconset": 1,
   "name": "task-list-o",
-  "new": false,
-  "paths": [
-    "M4 8h8v1h-8v-1zM4 7h8v-1h-8v1zM4 11h8v-1h-8v1zM15 2v13c0 0.552-0.448 1-1 1v0h-12c-0.552 0-1-0.448-1-1v0-13c0-0.552 0.448-1 1-1v0h2v-1h8v1h2c0.552 0 1 0.448 1 1v0zM5 2h6v-1h-6v1zM14 2h-2v1h-8v-1h-2v13h12v-13z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>task-list-o</title><path d=\"M4 8H12V9H4V8ZM4 7H12V6H4V7ZM4 11H12V10H4V11ZM15 2V15C15 15.552 14.552 16 14 16H2C1.448 16 1 15.552 1 15V2C1 1.448 1.448 1 2 1H4V0H12V1H14C14.552 1 15 1.448 15 2ZM5 2H11V1H5V2ZM14 2H12V3H4V2H2V15H14V2Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

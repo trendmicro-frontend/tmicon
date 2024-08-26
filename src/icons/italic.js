@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "ea08",
-  "iconset": 6,
+  "iconset": 4,
   "name": "italic",
-  "new": false,
-  "paths": [
-    "M6.649 2h4.351v0.856l-1.016 0.070-0.248 0.253-1.559 9.624 0.188 0.245 1.001 0.079v0.873h-4.366v-0.873l1.016-0.097 0.234-0.262 1.559-9.59-0.158-0.253-1.001-0.070z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>italic</title><path d=\"M6.649 2H11V2.856L9.984 2.926L9.736 3.179L8.177 12.803L8.365 13.048L9.366 13.127V14H5V13.127L6.016 13.03L6.25 12.768L7.809 3.178L7.651 2.925L6.65 2.855L6.649 2Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

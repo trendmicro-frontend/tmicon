@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e0fc",
-  "iconset": 0,
-  "name": "ip",
-  "new": false,
-  "paths": [
-    "M3 4h1.5v8h-1.5zM7 4h6v5h-4.5v3h-1.5zM8.5 7.5h3v-2h-3zM16 4v8c0 0 0 0 0 0 0 1.657-1.343 3-3 3-0 0-0 0-0 0h-10c-1.657 0-3-1.343-3-3v0-8c0-1.657 1.343-3 3-3v0h10c1.657 0 3 1.343 3 3v0zM15 4c0-1.105-0.895-2-2-2v0h-10c-1.105 0-2 0.895-2 2v0 8c0 1.105 0.895 2 2 2v0h10c1.105 0 2-0.895 2-2v0z"
-  ],
+  "iconset": 1,
+  "name": "IP",
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>IP</title><path d=\"M3 4H4.5V12H3V4ZM7 4H13V9H8.5V12H7V4ZM8.5 7.5H11.5V5.5H8.5V7.5ZM16 4V12C16 13.657 14.657 15 13 15H3C1.343 15 0 13.657 0 12V4C0 2.343 1.343 1 3 1H13C14.657 1 16 2.343 16 4ZM15 4C15 2.895 14.105 2 13 2H3C1.895 2 1 2.895 1 4V12C1 13.105 1.895 14 3 14H13C14.105 14 15 13.105 15 12V4Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

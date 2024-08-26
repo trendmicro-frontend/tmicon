@@ -1,13 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "code": "e09e",
-  "iconset": 0,
+  "iconset": 1,
   "name": "move",
-  "new": false,
-  "paths": [
-    "M10 12v-4c-1.6 0-2.9 0-4 0-4 0-4.8 5.7-4 8-4.3-6-1.1-12 4-12 1.1 0 2.6 0 4 0v-4l6 6-6 6z"
-  ],
+  "new": true,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>move</title><path d=\"M10 12V8C8.4 8 7.1 8 6 8C2 8 1.2 13.7 2 16C-2.3 10 0.900002 4 6 4C7.1 4 8.6 4 10 4V0L16 6L10 12Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 
