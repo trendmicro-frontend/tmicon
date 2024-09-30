@@ -3,27 +3,27 @@
 const iconsets = [
   {
     "id": 1,
-    "name": "Utility"
+    "name": "Branding"
   },
   {
     "id": 2,
-    "name": "Device"
+    "name": "Chart"
   },
   {
     "id": 3,
-    "name": "File"
+    "name": "Device"
   },
   {
     "id": 4,
-    "name": "Edit"
-  },
-  {
-    "id": 5,
     "name": "Direction"
   },
   {
+    "id": 5,
+    "name": "Edit"
+  },
+  {
     "id": 6,
-    "name": "Chart"
+    "name": "File"
   },
   {
     "id": 7,
@@ -31,19 +31,11 @@ const iconsets = [
   },
   {
     "id": 8,
-    "name": "Branding"
-  },
-  {
-    "id": 9,
     "name": "Threat"
   },
   {
-    "id": 10,
-    "name": "Chart legend"
-  },
-  {
-    "id": 11,
-    "name": "New (undecided)"
+    "id": 9,
+    "name": "Utility"
   }
 ];
 
