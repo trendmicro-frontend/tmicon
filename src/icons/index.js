@@ -6,6 +6,7 @@ import AddGroupIcon from './add-group';
 import AddSquareOIcon from './add-square-o';
 import AddSquarePlusOIcon from './add-square-plus-o';
 import AddressIcon from './address';
+import AISecurityIcon from './ai-security';
 import AlertIcon from './alert';
 import AlignCenterIcon from './align-center';
 import AlignLeftIcon from './align-left';
@@ -16,7 +17,7 @@ import AngleLeftIcon from './angle-left';
 import AngleRightIcon from './angle-right';
 import AngleUpIcon from './angle-up';
 import APIIcon from './api';
-import APPIcon from './app';
+import AppIcon from './app';
 import AppleIcon from './apple';
 import ArrowDownIcon from './arrow-down';
 import ArrowLeftIcon from './arrow-left';
@@ -65,10 +66,6 @@ import ChartAreastepIcon from './chart-areastep';
 import ChartBarIcon from './chart-bar';
 import ChartDonutIcon from './chart-donut';
 import ChartDotIcon from './chart-dot';
-import ChartLegend01Icon from './chart-legend-01';
-import ChartLegend02Icon from './chart-legend-02';
-import ChartLegend03Icon from './chart-legend-03';
-import ChartLegend04Icon from './chart-legend-04';
 import ChartLineIcon from './chart-line';
 import ChartPieIcon from './chart-pie';
 import ChartScatterIcon from './chart-scatter';
@@ -98,7 +95,6 @@ import CloudOIcon from './cloud-o';
 import CloudOffIcon from './cloud-off';
 import CloudPuzzleIcon from './cloud-puzzle';
 import CloudUserIcon from './cloud-user';
-import CloudWorkloadTBDIcon from './cloud-workload-tbd';
 import CodeIcon from './code';
 import CollapseLeftIcon from './collapse-left';
 import CollapseRightIcon from './collapse-right';
@@ -106,8 +102,6 @@ import ColorIcon from './color';
 import ColortextIcon from './colortext';
 import ColumnsIcon from './columns';
 import CommentIcon from './comment';
-import CompanionIcon from './companion';
-import ConditionalAccessPolicyIcon from './conditional-access-policy';
 import ConnectIcon from './connect';
 import ConnectErrorIcon from './connect-error';
 import ConnectNoipIcon from './connect-noip';
@@ -316,7 +310,6 @@ import PartnerOIcon from './partner-o';
 import PasteIcon from './paste';
 import PauseIcon from './pause';
 import PermissionIcon from './permission';
-import PermissionKeyTBDIcon from './permission-key-tbd';
 import PhishingIcon from './phishing';
 import Phishing2Icon from './phishing-2';
 import PictureIcon from './picture';
@@ -348,7 +341,6 @@ import ResizeHorizontalIcon from './resize-horizontal';
 import ResizeNESWIcon from './resize-nesw';
 import ResizeNWSEIcon from './resize-nwse';
 import RocketIcon from './rocket';
-import RoleIcon from './role';
 import RollbackIcon from './rollback';
 import RootCauseIcon from './root-cause';
 import RouterIcon from './router';
@@ -472,6 +464,7 @@ const icons = [
   AddSquareOIcon,
   AddSquarePlusOIcon,
   AddressIcon,
+  AISecurityIcon,
   AlertIcon,
   AlignCenterIcon,
   AlignLeftIcon,
@@ -482,7 +475,7 @@ const icons = [
   AngleRightIcon,
   AngleUpIcon,
   APIIcon,
-  APPIcon,
+  AppIcon,
   AppleIcon,
   ArrowDownIcon,
   ArrowLeftIcon,
@@ -531,10 +524,6 @@ const icons = [
   ChartBarIcon,
   ChartDonutIcon,
   ChartDotIcon,
-  ChartLegend01Icon,
-  ChartLegend02Icon,
-  ChartLegend03Icon,
-  ChartLegend04Icon,
   ChartLineIcon,
   ChartPieIcon,
   ChartScatterIcon,
@@ -564,7 +553,6 @@ const icons = [
   CloudOffIcon,
   CloudPuzzleIcon,
   CloudUserIcon,
-  CloudWorkloadTBDIcon,
   CodeIcon,
   CollapseLeftIcon,
   CollapseRightIcon,
@@ -572,8 +560,6 @@ const icons = [
   ColortextIcon,
   ColumnsIcon,
   CommentIcon,
-  CompanionIcon,
-  ConditionalAccessPolicyIcon,
   ConnectIcon,
   ConnectErrorIcon,
   ConnectNoipIcon,
@@ -782,7 +768,6 @@ const icons = [
   PasteIcon,
   PauseIcon,
   PermissionIcon,
-  PermissionKeyTBDIcon,
   PhishingIcon,
   Phishing2Icon,
   PictureIcon,
@@ -814,7 +799,6 @@ const icons = [
   ResizeNESWIcon,
   ResizeNWSEIcon,
   RocketIcon,
-  RoleIcon,
   RollbackIcon,
   RootCauseIcon,
   RouterIcon,
@@ -940,6 +924,7 @@ export {
   AddSquareOIcon,
   AddSquarePlusOIcon,
   AddressIcon,
+  AISecurityIcon,
   AlertIcon,
   AlignCenterIcon,
   AlignLeftIcon,
@@ -950,7 +935,7 @@ export {
   AngleRightIcon,
   AngleUpIcon,
   APIIcon,
-  APPIcon,
+  AppIcon,
   AppleIcon,
   ArrowDownIcon,
   ArrowLeftIcon,
@@ -999,10 +984,6 @@ export {
   ChartBarIcon,
   ChartDonutIcon,
   ChartDotIcon,
-  ChartLegend01Icon,
-  ChartLegend02Icon,
-  ChartLegend03Icon,
-  ChartLegend04Icon,
   ChartLineIcon,
   ChartPieIcon,
   ChartScatterIcon,
@@ -1032,7 +1013,6 @@ export {
   CloudOffIcon,
   CloudPuzzleIcon,
   CloudUserIcon,
-  CloudWorkloadTBDIcon,
   CodeIcon,
   CollapseLeftIcon,
   CollapseRightIcon,
@@ -1040,8 +1020,6 @@ export {
   ColortextIcon,
   ColumnsIcon,
   CommentIcon,
-  CompanionIcon,
-  ConditionalAccessPolicyIcon,
   ConnectIcon,
   ConnectErrorIcon,
   ConnectNoipIcon,
@@ -1250,7 +1228,6 @@ export {
   PasteIcon,
   PauseIcon,
   PermissionIcon,
-  PermissionKeyTBDIcon,
   PhishingIcon,
   Phishing2Icon,
   PictureIcon,
@@ -1282,7 +1259,6 @@ export {
   ResizeNESWIcon,
   ResizeNWSEIcon,
   RocketIcon,
-  RoleIcon,
   RollbackIcon,
   RootCauseIcon,
   RouterIcon,

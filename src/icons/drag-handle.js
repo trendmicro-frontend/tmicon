@@ -1,10 +1,10 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "iconset": 1,
+  "iconset": 9,
   "name": "drag-handle",
-  "new": true,
-  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>drag-handle</title><circle cx=\"6\" cy=\"4\" r=\"1\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/><circle cx=\"6\" cy=\"8\" r=\"1\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/><circle cx=\"6\" cy=\"12\" r=\"1\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/><circle cx=\"10\" cy=\"4\" r=\"1\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/><circle cx=\"10\" cy=\"8\" r=\"1\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/><circle cx=\"10\" cy=\"12\" r=\"1\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
+  "new": false,
+  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>drag-handle</title><path d=\"M6 5C6.55228 5 7 4.55228 7 4C7 3.44772 6.55228 3 6 3C5.44772 3 5 3.44772 5 4C5 4.55228 5.44772 5 6 5Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/><path d=\"M6 9C6.55228 9 7 8.55228 7 8C7 7.44772 6.55228 7 6 7C5.44772 7 5 7.44772 5 8C5 8.55228 5.44772 9 6 9Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/><path d=\"M7 12C7 12.5523 6.55228 13 6 13C5.44772 13 5 12.5523 5 12C5 11.4477 5.44772 11 6 11C6.55228 11 7 11.4477 7 12Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/><path d=\"M10 5C10.5523 5 11 4.55228 11 4C11 3.44772 10.5523 3 10 3C9.44771 3 9 3.44772 9 4C9 4.55228 9.44771 5 10 5Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/><path d=\"M11 8C11 8.55228 10.5523 9 10 9C9.44771 9 9 8.55228 9 8C9 7.44772 9.44771 7 10 7C10.5523 7 11 7.44772 11 8Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/><path d=\"M10 13C10.5523 13 11 12.5523 11 12C11 11.4477 10.5523 11 10 11C9.44771 11 9 11.4477 9 12C9 12.5523 9.44771 13 10 13Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
 

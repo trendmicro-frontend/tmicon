@@ -1,9 +1,9 @@
 // AUTO-GENERATED FILE. DO NOT MODIFY.
 
 const icon = {
-  "iconset": 1,
+  "iconset": 9,
   "name": "location",
-  "new": true,
+  "new": false,
   "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"rgb(34, 34, 34)\" xmlns=\"http://www.w3.org/2000/svg\"><title>location</title><path d=\"M2 1V16H14V1H2ZM6 4H7V5H6V4ZM6 6H7V7H6V6ZM6 8H7V9H6V8ZM6 10H7V11H6V10ZM5 13H4V12H5V13ZM5 11H4V10H5V11ZM5 9H4V8H5V9ZM5 7H4V6H5V7ZM5 5H4V4H5V5ZM10 15H6V13H10V15ZM10 11H9V10H10V11ZM10 9H9V8H10V9ZM10 7H9V6H10V7ZM10 5H9V4H10V5ZM12 13H11V12H12V13ZM12 11H11V10H12V11ZM12 9H11V8H12V9ZM12 7H11V6H12V7ZM12 5H11V4H12V5Z\" fill=\"rgb(34, 34, 34)\" fill-opacity=\"1.00\"/></svg>",
   "viewBox": "0 0 16 16"
 };
